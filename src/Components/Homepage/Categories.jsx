@@ -39,18 +39,7 @@ const Categories = () => {
           </div>
         </div>
       </div>
-      <div className="find-job">
-        <img src="" alt="" />
-        <div>
-            <h2>
-                Get the job of your dreams quickly.
-            </h2>
-            <p>Commonly used in the graphic, print publishing industries for previewing visual mockups. Limited social discrimination</p>
-            <div>
-                <p>Find your job. <span className="underline">Explore all</span></p>
-            </div>
-        </div>
-      </div>
+   
     </>
   );
 };

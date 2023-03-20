@@ -151,3 +151,76 @@ header {
     }
   }
 }
+
+.find-job {
+  margin: 4rem 0 0 0;
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+
+  img,
+  .job-quick {
+    width: calc(50% - 10rem);
+    height: 65rem;
+  }
+  img {
+    border-radius: 4rem 0 0 4rem;
+  }
+  .job-quick {
+    background: rgb(81, 12, 12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 4rem 4rem 0;
+
+    h2 {
+      font-family: $heading1;
+      font-size: 7.2rem;
+      color: #fff;
+      line-height: normal;
+      margin: 0 0 4rem 0;
+    }
+    p {
+      font-size: 2rem;
+      color: #fff;
+      line-height: 3rem;
+      font-family: $heading2;
+      margin: 4rem 0 0 0;
+    }
+    h2,
+    p
+     {
+      margin: 2.8rem auto;
+      width: 75%;
+    }
+    .find-your-job {
+      border: 2px solid #fff;
+      border-radius: 5rem;
+      width: 75%;
+      margin: 0rem;
+      padding: 0;
+
+      .underline {
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+}
+.flex-container {
+    margin: 8rem 0 0 0;
+  align-items: center;
+  justify-content: space-evenly;
+  .stats {
+      h3 {
+          font-size: 4rem;
+          font-family: $heading2;
+      }
+      p {
+        font-size: 1.4rem;
+        font-family: $heading2;
+        text-align: center;
+      }
+  }
+}

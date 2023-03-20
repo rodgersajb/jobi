@@ -421,4 +421,72 @@ header h5 {
   font-size: 1.4rem;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+}
+
+.find-job {
+  margin: 4rem 0 0 0;
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+}
+.find-job img,
+.find-job .job-quick {
+  width: calc(50% - 10rem);
+  height: 65rem;
+}
+.find-job img {
+  border-radius: 4rem 0 0 4rem;
+}
+.find-job .job-quick {
+  background: rgb(81, 12, 12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 4rem 4rem 0;
+}
+.find-job .job-quick h2 {
+  font-family: "EB Garamond", serif;
+  font-size: 7.2rem;
+  color: #fff;
+  line-height: normal;
+  margin: 0 0 4rem 0;
+}
+.find-job .job-quick p {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 3rem;
+  font-family: "Montserrat", sans-serif;
+  margin: 4rem 0 0 0;
+}
+.find-job .job-quick h2,
+.find-job .job-quick p {
+  margin: 2.8rem auto;
+  width: 75%;
+}
+.find-job .job-quick .find-your-job {
+  border: 2px solid #fff;
+  border-radius: 5rem;
+  width: 75%;
+  margin: 0rem;
+  padding: 0;
+}
+.find-job .job-quick .find-your-job .underline {
+  border-bottom: 1px solid #fff;
+}
+
+.flex-container {
+  margin: 8rem 0 0 0;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.flex-container .stats h3 {
+  font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
+}
+.flex-container .stats p {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
