@@ -1,11 +1,10 @@
-import { useState } from "react";
-
 import "./styles/sass/styles.scss";
+import Home from "./Components/Home";
 
 function App() {
   return (
     <div className="App">
-      <h1>JOBI HEY</h1>
+      <Home />
     </div>
   );
 }
