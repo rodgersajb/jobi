@@ -8,6 +8,20 @@ ul {
   list-style-type: none;
 }
 
+.flex-container {
+  display: flex;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1580px;
+  width: 95%;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -302,6 +316,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 800px;
+  background: #f5f5f5;
 }
 header h1 {
   font-style: "EB Garamond", serif;
@@ -319,8 +334,91 @@ header form {
   align-items: center;
   justify-content: space-evenly;
   gap: 2rem;
+  background: #fff;
 }
 header form div {
   display: flex;
   flex-direction: column;
+}
+header form div label {
+  font-size: 1.4rem;
+  padding: 0 0 1rem 0;
+}
+header form div #jobs,
+header form div #location,
+header form div #title {
+  font-style: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+}
+header form div select {
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+header form div input {
+  border: none;
+}
+header form button {
+  border: none;
+  background: #31795A;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  border-radius: 0.4rem;
+  text-transform: uppercase;
+  height: 75%;
+}
+header h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  border-bottom: 3px solid black;
+  padding: 2rem 0;
+}
+
+.wrapper .categories {
+  margin: 4rem 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .categories h3 {
+  font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
+}
+.wrapper .categories p {
+  font-size: 2rem;
+  border-bottom: 2px solid green;
+  line-height: normal;
+  color: green;
+  font-family: "EB Garamond", serif;
+}
+.wrapper .grid-container {
+  margin: 4rem 0 0 0;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+.wrapper .grid-container div {
+  border: 2px solid #f5f5f5;
+  border-radius: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .grid-container div:hover, .wrapper .grid-container div:focus {
+  border: 2px solid green;
+  transition: ease-in-out 0.3s;
+}
+.wrapper .grid-container div .fa-code {
+  font-size: 2rem;
+}
+.wrapper .grid-container div h5 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.wrapper .grid-container div p {
+  font-size: 1.4rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
 }/*# sourceMappingURL=styles.css.map */

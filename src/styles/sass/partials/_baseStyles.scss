@@ -8,3 +8,17 @@ ul {
   margin: 0;
   list-style-type: none;
 }
+
+.flex-container {
+    display: flex;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1580px;
+    width: 95%;
+}
