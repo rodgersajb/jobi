@@ -4,6 +4,7 @@ import Categories from "./Categories";
 import JobFind from "./JobFind";
 import Trusted from "./Trusted";
 import FindTalent from "./FindTalent";
+import QA from "./QA";
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
     <JobFind />
     <Trusted />
     <FindTalent />
+    <QA />
 
       
     </>
