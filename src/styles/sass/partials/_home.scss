@@ -224,3 +224,47 @@ header {
       }
   }
 }
+
+.trusted {
+    width: 90%;
+    h3 {
+        font-family: $heading1;
+        font-size: 5.8rem;
+        line-height: normal;
+        width: 35%;
+    }
+    .flex-container {
+        gap: 3rem;
+
+        .card {
+            border-radius: 1.6rem;
+            padding: 2rem;
+            
+            h5 {
+                font-family: $heading2;
+                font-size: 2rem;
+                color: #fff;
+            }
+            p {
+                color: #fff;
+                border-bottom: 1px solid #fff;
+                padding: 0 0 4rem 0;
+            }
+            .flex-container {
+                justify-content: space-between;
+                .rating {
+                    border: none;
+                }
+            }
+        }
+
+        .card:first-child {
+            background: $greenCard;
+            
+    
+        }
+        .card:nth-child(2) {
+            background: $brownCard;
+        }
+    }
+}

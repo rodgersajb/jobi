@@ -1,6 +1,5 @@
 html {
   font-size: 62.5%;
-  line-height: 1.2rem;
 }
 
 ul {
@@ -18,8 +17,14 @@ ul {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1580px;
+  max-width: 1880px;
   width: 95%;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  line-height: normal;
 }
 
 html {
@@ -274,7 +279,7 @@ html {
 }
 
 .App {
-  max-width: 1580px;
+  max-width: 2080px;
 }
 
 nav {
@@ -489,4 +494,43 @@ header h5 {
   font-size: 1.4rem;
   font-family: "Montserrat", sans-serif;
   text-align: center;
+}
+
+.trusted {
+  width: 90%;
+}
+.trusted h3 {
+  font-family: "EB Garamond", serif;
+  font-size: 5.8rem;
+  line-height: normal;
+  width: 35%;
+}
+.trusted .flex-container {
+  gap: 3rem;
+}
+.trusted .flex-container .card {
+  border-radius: 1.6rem;
+  padding: 2rem;
+}
+.trusted .flex-container .card h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+}
+.trusted .flex-container .card p {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding: 0 0 4rem 0;
+}
+.trusted .flex-container .card .flex-container {
+  justify-content: space-between;
+}
+.trusted .flex-container .card .flex-container .rating {
+  border: none;
+}
+.trusted .flex-container .card:first-child {
+  background: #249F47;
+}
+.trusted .flex-container .card:nth-child(2) {
+  background: #755146;
 }/*# sourceMappingURL=styles.css.map */
