@@ -36,6 +36,12 @@ button {
   font-family: "Montserrat", sans-serif;
 }
 
+li {
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -453,7 +459,7 @@ header h5 {
   border-radius: 4rem 0 0 4rem;
 }
 .find-job .job-quick {
-  background: rgb(81, 12, 12);
+  background: #755146;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -635,4 +641,84 @@ header h5 {
 .questions-answers p span {
   color: #31795A;
   border-bottom: 1px solid #31795A;
+}
+
+.job-portal .flex-container {
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+}
+.job-portal .flex-container h4 {
+  font-family: "EB Garamond", serif;
+  font-size: 3.6rem;
+  margin-bottom: 0;
+}
+.job-portal .flex-container .button-container {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0 0 0;
+}
+.job-portal .flex-container .button-container button {
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+.job-portal .flex-container .button-container button:nth-child(1) {
+  background: #fff;
+  color: #31795A;
+  border: 2px solid #31795A;
+  font-size: 1.4rem;
+}
+.job-portal .flex-container .button-container button:nth-child(1):hover, .job-portal .flex-container .button-container button:nth-child(1):focus {
+  background: #31795A;
+  color: #fff;
+  transition: ease-in-out 0.3s;
+}
+.job-portal .flex-container .button-container button:nth-child(2) {
+  background: #31795A;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+}
+.job-portal .flex-container .button-container button:nth-child(2):hover, .job-portal .flex-container .button-container button:nth-child(2):focus {
+  background: #fff;
+  color: #31795A;
+  transition: ease-in-out 0.3s;
+  border: 2px solid #31795A;
+}
+
+footer .flex-container {
+  align-items: flex-start;
+}
+footer .flex-container li:first-child {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+footer .flex-container li:not(li:first-child):hover, footer .flex-container li:not(li:first-child):focus {
+  color: #249F47;
+  transition: ease 0.3s;
+}
+footer .footer {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0 0 0;
+}
+footer .footer .content {
+  display: flex;
+  gap: 1rem;
+}
+footer .footer .content p {
+  font-weight: 600;
+}
+footer .footer .socials {
+  display: flex;
+  gap: 2rem;
+}
+footer .footer .socials span {
+  font-size: 1.4rem;
 }/*# sourceMappingURL=styles.css.map */

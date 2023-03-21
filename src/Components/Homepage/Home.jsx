@@ -5,6 +5,7 @@ import JobFind from "./JobFind";
 import Trusted from "./Trusted";
 import FindTalent from "./FindTalent";
 import QA from "./QA";
+import Footer from "./Footer";
 
 
 const Home = () => {
@@ -18,6 +19,9 @@ const Home = () => {
     <Trusted />
     <FindTalent />
     <QA />
+    <Footer />
+    
+    
 
       
     </>

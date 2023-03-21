@@ -168,7 +168,7 @@ header {
     border-radius: 4rem 0 0 4rem;
   }
   .job-quick {
-    background: rgb(81, 12, 12);
+    background: $brownCard;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -347,7 +347,7 @@ header {
       }
     }
     .flex-container:nth-child(5) {
-        border-bottom: none;
+      border-bottom: none;
     }
   }
   p {
@@ -358,10 +358,100 @@ header {
     padding: 0.4rem 0;
     border-radius: 2rem;
     font-weight: 600;
-    
+
     span {
-        color: $green;
-        border-bottom: 1px solid $green;
+      color: $green;
+      border-bottom: 1px solid $green;
+    }
   }
 }
+.job-portal {
+  .flex-container {
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+    h4 {
+      font-family: $heading1;
+      font-size: 3.6rem;
+      margin-bottom: 0;
+    }
+    .button-container {
+      display: flex;
+      gap: 1rem;
+      margin: 2rem 0 0 0;
+
+      button {
+        border-radius: 1rem;
+        font-size: 1.4rem;
+        padding: 1rem;
+      }
+      button:nth-child(1) {
+        background: #fff;
+        color: $green;
+        border: 2px solid $green;
+
+        font-size: 1.4rem;
+        &:hover,
+        &:focus {
+          background: $green;
+          color: #fff;
+          transition: ease-in-out 0.3s;
+        }
+      }
+      button:nth-child(2) {
+        background: $green;
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        &:hover,
+        &:focus {
+          background: #fff;
+          color: $green;
+          transition: ease-in-out 0.3s;
+          border: 2px solid $green;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .flex-container {
+    align-items: flex-start;
+    li:first-child {
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+    li:not(li:first-child) {
+      &:hover,
+      &:focus {
+        color: $greenCard;
+        transition: ease 0.3s;
+      }
+    }
+  }
+  .footer {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0 0 0;
+    .content {
+      display: flex;
+      gap: 1rem;
+      p {
+        font-weight: 600;
+      }
+    }
+    .socials {
+      display: flex;
+      gap: 2rem;
+      span {
+        font-size: 1.4rem;
+      }
+    }
+  }
 }
