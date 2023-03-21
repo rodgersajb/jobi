@@ -1,0 +1,81 @@
+.register {
+    max-width: 2080px;
+    nav {
+        width: 100%;
+
+        
+        background: $registerGreen;
+        .flex-container {
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 2rem;
+            width: 95%;
+            li:first-child {
+                color: $lime;
+                background: $lightgrey;
+                border-radius: 4rem;
+                border: 2px solid #fff;
+                padding: 0.1rem;
+                margin: 0 1rem 0 0;
+                
+            }
+            li {
+                color: #fff;
+            }
+            .buttons {
+                display: flex;
+                gap: 1rem;
+                font-family: $heading2;
+                button {
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                }
+                button:nth-child(1) {
+                    outline: none;
+                    border: none;
+                    background: none;
+                    color: #fff;
+                    border-right: 2px solid $lightgrey;
+                    padding: 0 2rem 0 6rem;
+                    
+
+                }
+                button:nth-child(2) {
+                    outline: none;
+                    border: none;
+                    background: none;
+                    color: $lightLime;
+                }
+                button:nth-child(3) {
+                    outline: none;
+                    color: black;
+                    border: none;
+                    background: $lime;
+                    padding: 1rem;
+                    border: 1px solid $registerGreen;
+                    border-radius: 4rem;
+                }            }
+        }
+    }
+    .content-container {
+        padding: 0 0 6rem 0;
+        background: $registerGreen;
+        position: relative;
+        h2 {
+            margin-top: 0;
+            color: #fff;
+            text-align: center;
+            font-size: 7.2rem;
+            font-family: $heading1;
+        }
+        h5 {
+            text-align: center;
+            color: #fff;
+        }
+        img {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}

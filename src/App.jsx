@@ -1,7 +1,9 @@
 import "./styles/sass/styles.scss";
 import Home from "./Components/Homepage/Home";
+import Register from "./Components/Register";
 import { AuthProvider } from "./Contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 
 function App() {
   return (
@@ -11,7 +13,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />             
             
-            <Route path="/register" />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </Router>
       </AuthProvider>

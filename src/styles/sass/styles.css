@@ -722,4 +722,82 @@ footer .footer .socials {
 }
 footer .footer .socials span {
   font-size: 1.4rem;
+}
+
+.register {
+  max-width: 2080px;
+}
+.register nav {
+  width: 100%;
+  background: #244034;
+}
+.register nav .flex-container {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 2rem;
+  width: 95%;
+}
+.register nav .flex-container li:first-child {
+  color: #D2F34C;
+  background: #f5f5f5;
+  border-radius: 4rem;
+  border: 2px solid #fff;
+  padding: 0.1rem;
+  margin: 0 1rem 0 0;
+}
+.register nav .flex-container li {
+  color: #fff;
+}
+.register nav .flex-container .buttons {
+  display: flex;
+  gap: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.register nav .flex-container .buttons button {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.register nav .flex-container .buttons button:nth-child(1) {
+  outline: none;
+  border: none;
+  background: none;
+  color: #fff;
+  border-right: 2px solid #f5f5f5;
+  padding: 0 2rem 0 6rem;
+}
+.register nav .flex-container .buttons button:nth-child(2) {
+  outline: none;
+  border: none;
+  background: none;
+  color: #e3ff75;
+}
+.register nav .flex-container .buttons button:nth-child(3) {
+  outline: none;
+  color: black;
+  border: none;
+  background: #D2F34C;
+  padding: 1rem;
+  border: 1px solid #244034;
+  border-radius: 4rem;
+}
+.register .content-container {
+  padding: 0 0 6rem 0;
+  background: #244034;
+  position: relative;
+}
+.register .content-container h2 {
+  margin-top: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 7.2rem;
+  font-family: "EB Garamond", serif;
+}
+.register .content-container h5 {
+  text-align: center;
+  color: #fff;
+}
+.register .content-container img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }/*# sourceMappingURL=styles.css.map */
