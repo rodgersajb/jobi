@@ -1,26 +1,79 @@
+import { firebase, db } from "./firebase";
+import { set, ref } from "firebase/database";
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+
+import { useState } from "react";
+
 const RegisterForm = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+
+  const handleSignUp = () => {
+    const auth = getAuth(firebase);
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((response) => {
+        const user = response.user;
+
+        alert("Successfully signed up!");
+        set(ref(db, "users/" + user.uid), {
+          email: email,
+          displayName: name,
+        });
+      })
+
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorCode);
+        // ..
+      });
+  };
+
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <>
       <section className="register-form">
-        <div className="content">
+        <div className="form-container">
           <h2>Create Account</h2>
           <div className="button-select">
             <button>Candidates</button>
             <button>Employer</button>
           </div>
           <form
+            onSubmit={handleOnSubmit}
             action="
                 "
           >
-            <label htmlFor="name">Name*</label>
-            <input type="text" />
-            <label htmlFor="email">Email*</label>
-            <input type="text" />
-            <label htmlFor="password">Password*</label>
-            <input type="password" />
-            <button>LOGIN</button>
+            <span>
+              <label htmlFor="name">Name*</label>
+              <input
+                type="text"
+                onChange={(event) => setName(event.target.value)}
+              />
+            </span>
+            <span>
+              <label htmlFor="email">Email*</label>
+              <input
+                type="text"
+                onChange={(event) => setEmail(event.target.value)}
+              />
+            </span>
+            <span>
+              <label htmlFor="password">Password*</label>
+              <input
+                type="password"
+                onChange={(event) => setPassword(event.target.value)}
+              />
+            </span>
+            <button onClick={handleSignUp}>REGISTER</button>
           </form>
-          <p>Have an account? <span className="underline">Sign In</span></p>
+          <p>
+            Have an account? <span className="underline">Sign In</span>
+          </p>
         </div>
       </section>
     </>

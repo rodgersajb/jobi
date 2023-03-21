@@ -4,13 +4,13 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_DOMAIN,
-  projectId: import.meta.env.VITE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: "AIzaSyA7khADx-NVdnlHdAfPSolZJJ1hZ3eeD3Y",
+  authDomain: "jobi-122d7.firebaseapp.com",
   databaseURL: "https://jobi-122d7-default-rtdb.firebaseio.com",
+  projectId: "jobi-122d7",
+  storageBucket: "jobi-122d7.appspot.com",
+  messagingSenderId: "6623742296",
+  appId: "1:6623742296:web:89d421e57644fc845d7d2d",
 };
 
 // Initialize Firebase
