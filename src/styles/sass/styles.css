@@ -424,6 +424,7 @@ header h5 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 4rem;
 }
 .wrapper .grid-container div:hover, .wrapper .grid-container div:focus {
   border: 2px solid green;
