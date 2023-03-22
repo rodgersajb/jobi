@@ -4,15 +4,14 @@ import Register from "./Components/Register";
 import { AuthProvider } from "./Contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
           <Routes>
-            <Route exact path="/" element={<Home />} />             
-            
+            <Route exact path="/" element={<Home />} />
+
             <Route path="/register" element={<Register />} />
           </Routes>
         </Router>

@@ -6,24 +6,25 @@ import Trusted from "./Trusted";
 import FindTalent from "./FindTalent";
 import QA from "./QA";
 import Footer from "../Footer";
+import LoginModal from "../LoginModal";
+import { ModalProvider } from "../../Contexts/ModalContext";
 
 
 const Home = () => {
   return (
     <>
-    
-    <Nav/>
-    <Header />
-    <Categories />
-    <JobFind />
-    <Trusted />
-    <FindTalent />
-    <QA />
-    <Footer />
-    
-    
+    <ModalProvider>
 
-      
+      <Nav />
+      <Header />
+      <Categories />
+      <JobFind />
+      <Trusted />
+      <FindTalent />
+      <QA />
+      <Footer />
+      <LoginModal />
+    </ModalProvider>
     </>
   );
 };
