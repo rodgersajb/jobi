@@ -3,6 +3,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 2rem 0;
   img {
     margin: 0 0 0 2rem;
   }
@@ -22,13 +23,17 @@ nav {
       border: none;
       background: none;
       font-family: $heading2;
+      height: 5rem;
+      width: 10rem;
+      color: black;
 
       &:hover,
       &:focus {
         color: #fff;
         background: $green;
         border-radius: 5rem;
-        padding: 1.2rem;
+        height: 5rem;
+        width: 10rem;
         transition: ease 0.3s;
       }
     }

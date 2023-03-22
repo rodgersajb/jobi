@@ -1,7 +1,7 @@
 import { firebase, db } from "./firebase";
 import { set, ref } from "firebase/database";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
-import { googleSignUp, facebookSignUp } from "./GoogleSignUp";
+import { googleSignUp, facebookSignUp } from "./SignUps";
 
 import { useState } from "react";
 
@@ -73,8 +73,23 @@ const RegisterForm = () => {
             <button onClick={handleSignUp}>REGISTER</button>
             <span>OR</span>
             <div className="sign-in-buttons">
-              <button onClick={googleSignUp}>Sign In With Google</button>
-              <button onClick={facebookSignUp}>Sign In With Facebok</button>
+              <button onClick={googleSignUp}>
+                <img
+                  src="src/assets/btn_google_signin_light_pressed_web.png"
+                  alt="google sign in button"
+                />
+              </button>
+              <button onClick={facebookSignUp}>
+                <div
+                  className="fb-login-button"
+                  data-width="191px"
+                  data-size=""
+                  data-button-type=""
+                  data-layout=""
+                  data-auto-logout-link="false"
+                  data-use-continue-as="false"
+                ></div>
+              </button>
             </div>
           </form>
           <p>

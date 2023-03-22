@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import RegisterForm from "./RegisterForm";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -10,7 +11,9 @@ const Register = () => {
             <img src="src/assets/jobiLogoDark.png" alt="jobi logo" />
             <ul>
               <li>Category</li>
-              <li>Home</li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
               <li>Job</li>
               <li>Explore</li>
               <li>Contact</li>

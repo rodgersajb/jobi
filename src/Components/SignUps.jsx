@@ -26,6 +26,13 @@ export const googleSignUp = () => {
 export const facebookSignUp = () => {
    signInWithPopup(auth, facebookProvider).then((result) => {
     console.log(result)
+     const user = result.user;
+
+     set(ref(db, "users/" + user.uid), {
+       email: result.user.email,
+       name: result.user.displayName,
+       photo: result.user.photoURL,
+     });
    }).catch((error) => {
     console.log(error)
    })

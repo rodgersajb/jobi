@@ -34,12 +34,19 @@ h5 {
 
 button {
   font-family: "Montserrat", sans-serif;
+  text-decoration: none;
 }
 
 li {
   font-family: "Montserrat", sans-serif;
   padding: 1rem 0;
   font-size: 1.4rem;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 html {
@@ -302,6 +309,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 2rem 0;
 }
 nav img {
   margin: 0 0 0 2rem;
@@ -321,12 +329,16 @@ nav .login-buttons button {
   border: none;
   background: none;
   font-family: "Montserrat", sans-serif;
+  height: 5rem;
+  width: 10rem;
+  color: black;
 }
 nav .login-buttons button:hover, nav .login-buttons button:focus {
   color: #fff;
   background: #31795A;
   border-radius: 5rem;
-  padding: 1.2rem;
+  height: 5rem;
+  width: 10rem;
   transition: ease 0.3s;
 }
 
@@ -746,6 +758,9 @@ footer .footer .socials span {
   margin: 0 1rem 0 0;
 }
 .register nav .flex-container li {
+  color: #fff;
+}
+.register nav .flex-container li a {
   color: #fff;
 }
 .register nav .flex-container .buttons {

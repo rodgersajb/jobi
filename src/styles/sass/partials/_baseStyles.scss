@@ -1,7 +1,5 @@
 html {
   font-size: 62.5%;
-
-  
 }
 
 ul {
@@ -10,17 +8,17 @@ ul {
 }
 
 .flex-container {
-    display: flex;
+  display: flex;
 }
 
 .grid-container {
-    display: grid;
+  display: grid;
 }
 
 .wrapper {
-    margin: 0 auto;
-    max-width: 1880px;
-    width: 95%;
+  margin: 0 auto;
+  max-width: 1880px;
+  width: 95%;
 }
 
 p {
@@ -36,10 +34,17 @@ h5 {
 
 button {
   font-family: $heading2;
+  text-decoration: none;
 }
 
 li {
   font-family: $heading2;
   padding: 1rem 0;
   font-size: 1.4rem;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
