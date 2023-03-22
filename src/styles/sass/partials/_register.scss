@@ -137,9 +137,10 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          width: 100%;
           label,
           input {
-            width: 225%;
+            width: 125%;
           }
           label {
             font-family: $heading2;
@@ -193,13 +194,34 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 50%;
-    margin: 20rem auto;
+    margin: 10rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     h2 {
       color: $registerGreen;
+      margin-bottom: 0;
+      a {
+        color: $green;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .login-btn {
+        width: 125%;
+        margin: 1rem 0 0 0;
+        color: #fff;
+        background: $green;
+        font-family: $heading2;
+        font-size: 1.4rem;
+        padding: 1rem 0;
+        border: 1px solid $green;
+        border-radius: 0.6rem;
+      }
       
     }
     

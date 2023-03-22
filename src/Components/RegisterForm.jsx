@@ -45,6 +45,7 @@ const RegisterForm = () => {
             <button>Employer</button>
           </div>
           <form
+          className="sign-in-form"
             onSubmit={handleOnSubmit}
             action="
                 "
@@ -82,7 +83,7 @@ const RegisterForm = () => {
               <button onClick={facebookSignUp}>
                 <div
                   className="fb-login-button"
-                  data-width="191px"
+                  data-width="291px"
                   data-size=""
                   data-button-type=""
                   data-layout=""

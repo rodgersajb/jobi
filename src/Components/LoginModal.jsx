@@ -18,33 +18,31 @@ const LoginModal = () => {
 
   return (
     <>
-      
-        <div
-          className="modal"
-          style={{ display: showModal ? "block" : "none" }}
-        >
-            <div className="content">
-
+      <div className="modal" style={{ display: showModal ? "block" : "none" }}>
+        <div className="content">
           <h2>Hi, Welcome Back!</h2>
           <h5>
-            Still don't have an account? <Link to="/register">Sign up</Link>
+            Still don't have an account?{" "}
+            <span className="inputs">
+              <Link to="/register">Sign up</Link>
+            </span>
           </h5>
           <form action="">
-            <span>
+            <span className="inputs">
               <label htmlFor="name">Name*</label>
               <input
                 type="text"
                 onChange={(event) => setName(event.target.value)}
               />
             </span>
-            <span>
+            <span className="inputs">
               <label htmlFor="password">Password*</label>
               <input
                 type="password"
                 onChange={(event) => setPassword(event.target.value)}
               />
             </span>
-            <button>Login</button>
+            <button className="login-btn">Login</button>
             <span>OR</span>
             <div className="sign-in-buttons">
               <button onClick={googleSignUp}>
@@ -70,9 +68,8 @@ const LoginModal = () => {
               <button onClick={closeModal}>close Modal</button>
             </div>
           </form>
-            </div>
         </div>
-      
+      </div>
     </>
   );
 };

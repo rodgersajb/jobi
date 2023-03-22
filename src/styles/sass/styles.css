@@ -54,6 +54,30 @@ h2 {
   font-size: 7rem;
 }
 
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.inputs label,
+.inputs input {
+  width: 125%;
+}
+.inputs label {
+  font-family: "Montserrat", sans-serif;
+  color: grey;
+  font-size: 1.4rem;
+  padding: 1rem 0 1rem 0;
+}
+.inputs input {
+  outline: none;
+  border: none;
+  border: 2px solid grey;
+  border-radius: 0.4rem;
+  padding: 0.6rem;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -880,10 +904,11 @@ footer .footer .socials span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .register .register-form .form-container form span label,
 .register .register-form .form-container form span input {
-  width: 225%;
+  width: 125%;
 }
 .register .register-form .form-container form span label {
   font-family: "Montserrat", sans-serif;
@@ -933,7 +958,7 @@ footer .footer .socials span {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 50%;
-  margin: 20rem auto;
+  margin: 10rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -941,4 +966,25 @@ footer .footer .socials span {
 }
 .modal .content h2 {
   color: #244034;
+  margin-bottom: 0;
+}
+.modal .content h2 a {
+  color: #31795A;
+}
+.modal .content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal .content form .login-btn {
+  width: 125%;
+  margin: 1rem 0 0 0;
+  color: #fff;
+  background: #31795A;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  border: 1px solid #31795A;
+  border-radius: 0.6rem;
 }/*# sourceMappingURL=styles.css.map */

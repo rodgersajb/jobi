@@ -53,3 +53,32 @@ h2 {
   font-family: $heading1;
   font-size: 7rem;
 }
+
+
+
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  label,
+          input {
+            width: 125%;
+          }
+          label {
+            font-family: $heading2;
+            color: grey;
+            font-size: 1.4rem;
+            padding: 1rem 0 1rem 0;
+          }
+          input {
+            outline: none;
+            border: none;
+            border: 2px solid grey;
+            border-radius: 0.4rem;
+            padding: 0.6rem;
+          }
+ 
+}
+
