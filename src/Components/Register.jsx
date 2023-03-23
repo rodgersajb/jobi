@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 const Register = () => {
   return (
     <>
-      <div className="register">
+      <div className="pages">
         <Navbar />
         
         <div className="content-container">

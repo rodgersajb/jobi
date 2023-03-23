@@ -5,6 +5,7 @@ html {
 ul {
   margin: 0;
   list-style-type: none;
+  
 }
 
 .flex-container {
@@ -148,3 +149,28 @@ h2 {
     }
   }
 }
+
+.content-container {
+    padding: 0 0 6rem 0;
+    background: $registerGreen;
+    position: relative;
+    h2 {
+      margin-top: 0;
+      color: #fff;
+      text-align: center;
+      font-size: 5.2rem;
+      font-family: $heading1;
+    }
+    h5 {
+      text-align: center;
+      color: #fff;
+      span {
+        padding: 0 0.8rem;
+      }
+    }
+     img {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }

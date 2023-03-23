@@ -437,7 +437,40 @@ footer {
       &:focus {
         color: $greenCard;
         transition: ease 0.3s;
+        
       }
+    }
+    .enter-mail {
+      background: $lightgrey;
+      padding: 1rem 0;
+      width: 75%;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 0.6rem;
+      input {
+        border: none;
+        background: inherit;
+        padding: 0 0 0 1rem;
+        font-family: $heading2;
+
+      }
+      button {
+        font-family: $heading2;
+        background: $registerGreen;
+        color: #fff;
+        border: none;
+        border-radius: 0.4rem;
+        
+        padding: 0.6rem;
+        margin-right: 0.6rem;
+        font-size: 1.2rem;
+      }
+    }
+    p {
+      font-size: 1.2rem;
+      font-family: $heading2;
+      color: grey;
+  
     }
   }
   .footer {

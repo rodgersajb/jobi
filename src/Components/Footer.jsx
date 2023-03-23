@@ -41,20 +41,32 @@ const Footer = () => {
             <li>Terms & conditions</li>
             <li>Privacy</li>
             <li>Cookie policy</li>
+          </ul>
+          <ul>
+            <li>Newsletter</li>
+            <li>Join & get import news regularly</li>
 
+            <div className="enter-mail">
+              <input type="text" placeholder="Enter your email" />
+              <button>Send</button>
+            </div>
+
+            <p>
+              We only send interesting and relevant emails.
+            </p>
           </ul>
         </div>
         <div className="footer">
-            <div className="content">
-                <p>Privacy & Terms.</p>
-                <p>Contact Us</p>
-            </div>
-            <p>Copyright @2022 jobi inc.</p>
-            <div className="socials">
-                <span>f</span>
-                <span>@</span>
-                <span>P</span>
-            </div>
+          <div className="content">
+            <p>Privacy & Terms.</p>
+            <p>Contact Us</p>
+          </div>
+          <p>Copyright @2022 jobi inc.</p>
+          <div className="socials">
+            <span>f</span>
+            <span>@</span>
+            <span>P</span>
+          </div>
         </div>
       </footer>
     </>

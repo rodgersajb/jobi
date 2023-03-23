@@ -1,7 +1,8 @@
-.register {
-  max-width: 2080px;
+
+  
   .pages {
     width: 100%;
+    max-width: 2080px;
 
     background: $registerGreen;
     .flex-container .pages {
@@ -27,7 +28,7 @@
         }
       }
     }
-      .buttons pages {
+      .buttons {
         display: flex;
         gap: 1rem;
         font-family: $heading2;
@@ -60,7 +61,7 @@
         }
       }
     }
-  }
+  
   .content-container {
     padding: 0 0 6rem 0;
     background: $registerGreen;
