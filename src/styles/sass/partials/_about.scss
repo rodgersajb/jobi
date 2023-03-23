@@ -1,93 +1,154 @@
 .one {
-    width: 95%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .flex-container {
-        width: 80%;
-        gap: 2rem;
-        
-        .content {
-            width: calc(100% / 2 - 4rem);
-            h2 {
-                color: $registerGreen;
-            }
-            .flex-container {
-                justify-content: space-between;
-                border-bottom: 2px solid $lightgrey;
-                h5 {
-                    color: $registerGreen;
-                }
-                .fa-plus {
-                    color: $registerGreen;
-                    font-size: 1.6rem;
-                }
-            }
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .flex-container {
+    width: 80%;
+    gap: 2rem;
+
+    .content {
+      width: calc(100% / 2 - 4rem);
+      h2 {
+        color: $registerGreen;
+      }
+      .flex-container {
+        justify-content: space-between;
+        border-bottom: 2px solid $lightgrey;
+        h5 {
+          color: $registerGreen;
         }
-        
+        .fa-plus {
+          color: $registerGreen;
+          font-size: 1.6rem;
+        }
+      }
     }
+  }
 }
 .two {
-    width: 95%;
-    margin: 0 auto;
+  width: 95%;
+  margin: 0 auto;
+  .flex-container {
+    flex-direction: column;
     .flex-container {
-        flex-direction: column;
-        .flex-container {
-            flex-direction: row;
-            gap: 3rem;
-            justify-content: space-between;
-            align-items: center;
-            width: 75%;
-            border-bottom: 3px solid $lightgrey;
-            padding: 0 0 4rem 0;
-            h2 {
-                color: $registerGreen;
-                margin-bottom: 0;
-            }
-            p {
-                color: $registerGreen;
-            }
-        }
+      flex-direction: row;
+      gap: 3rem;
+      justify-content: space-between;
+      align-items: center;
+      width: 75%;
+      border-bottom: 3px solid $lightgrey;
+      padding: 0 0 4rem 0;
+      h2 {
+        color: $registerGreen;
+        margin-bottom: 0;
+      }
+      p {
+        color: $registerGreen;
+      }
     }
+  }
 }
 .three {
-    width: 95%;
-    margin: 0 auto;
-    padding: 8rem 0;
-    .content:first-child {
-        width: 55%;
+  width: 95%;
+  margin: 0 auto;
+  padding: 8rem 0;
+  .content:first-child {
+    width: 55%;
+  }
+  .content:nth-child(2) {
+    width: 35%;
+    p:first-child {
+      color: grey;
+      font-size: 1.4rem;
     }
-    .content:nth-child(2) {
-        width: 35%;
-        p:first-child {
-            color: grey;
-            font-size: 1.4rem;
+    h2 {
+      color: $heading2;
+      margin: 0;
+    }
+    p:nth-of-type(2) {
+      font-size: 1.8rem;
+      color: grey;
+    }
+    h5 {
+      span {
+        padding: 0 1.4rem 0 0;
+      }
+    }
+    button {
+      border: none;
+      color: $registerGreen;
+      background: $lime;
+      font-size: 1.6rem;
+      font-family: $heading2;
+      font-weight: 600;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+    }
+  }
+}
+.four {
+  margin: 0 auto;
+  background: $registerGreen;
+  padding: 3rem 0;
+  position: relative;
+  .image-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    img:first-child {
+      position: absolute;
+      bottom: 3rem;
+      right: 0;
+    }
+    img:nth-child(2) {
+      position: absolute;
+      bottom: 3rem;
+      left: 0;
+      width: 8%;
+    }
+  }
+  .wrapper {
+    width: 95%;
+    h2 {
+      text-align: center;
+      color: $lightgrey;
+      img {
+        padding: 0 0 3rem 0;
+      }
+    }
+    .flex-container {
+      width: 85%;
+      margin: 0 auto;
+      .content {
+        display: flex;
+        flex-direction: column;
+        .fa-user,
+        .fa-note-sticky,
+        .fa-pen {
+          background: $lime;
+          width: 10%;
+          margin: 0 auto;
+          padding: 2rem 1.6rem;
+          border-radius: 50%;
+          font-size: 2rem;
+          color: $registerGreen;
         }
-        h2 {
-            color: $heading2;
-            margin: 0;
-        }
-        p:nth-of-type(2) {
-            font-size: 1.8rem;
-            color: grey;
-            
+        img {
+          padding: 0 0 22rem 0;
         }
         h5 {
-            span {
-                padding: 0 1.4rem 0 0;
-            }
+          text-align: center;
+          color: $lightgrey;
         }
-        button {
-            border: none;
-            color: $registerGreen;
-            background: $lime;
-            font-size: 1.6rem;
-            font-family: $heading2;
-            font-weight: 600;
-            padding: 1rem 2rem;
-            border-radius: 2rem;
-
+        p {
+          text-align: center;
+          color: $lightgrey;
+          font-size: 1.6rem;
+          padding: 0 0 6rem 0;
         }
+      }
     }
+  }
 }

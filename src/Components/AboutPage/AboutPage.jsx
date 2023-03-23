@@ -3,6 +3,7 @@ import Footer from "../Footer";
 import SectionOne from "./SectionOne";
 import SectionTwo from "./SectionTwo";
 import SectionThree from "./SectionThree";
+import SectionFour from "./SectionFour";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,6 +29,7 @@ const About = () => {
         <SectionOne />
         <SectionTwo />
         <SectionThree />
+        <SectionFour />
         <Footer />
       </div>
     </>

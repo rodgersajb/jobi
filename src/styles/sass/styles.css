@@ -1172,4 +1172,69 @@ footer .footer .socials span {
   font-weight: 600;
   padding: 1rem 2rem;
   border-radius: 2rem;
+}
+
+.four {
+  margin: 0 auto;
+  background: #244034;
+  padding: 3rem 0;
+  position: relative;
+}
+.four .image-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.four .image-container img:first-child {
+  position: absolute;
+  bottom: 3rem;
+  right: 0;
+}
+.four .image-container img:nth-child(2) {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  width: 8%;
+}
+.four .wrapper {
+  width: 95%;
+}
+.four .wrapper h2 {
+  text-align: center;
+  color: #f5f5f5;
+}
+.four .wrapper h2 img {
+  padding: 0 0 3rem 0;
+}
+.four .wrapper .flex-container {
+  width: 85%;
+  margin: 0 auto;
+}
+.four .wrapper .flex-container .content {
+  display: flex;
+  flex-direction: column;
+}
+.four .wrapper .flex-container .content .fa-user,
+.four .wrapper .flex-container .content .fa-note-sticky,
+.four .wrapper .flex-container .content .fa-pen {
+  background: #D2F34C;
+  width: 10%;
+  margin: 0 auto;
+  padding: 2rem 1.6rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #244034;
+}
+.four .wrapper .flex-container .content img {
+  padding: 0 0 22rem 0;
+}
+.four .wrapper .flex-container .content h5 {
+  text-align: center;
+  color: #f5f5f5;
+}
+.four .wrapper .flex-container .content p {
+  text-align: center;
+  color: #f5f5f5;
+  font-size: 1.6rem;
+  padding: 0 0 6rem 0;
 }/*# sourceMappingURL=styles.css.map */
