@@ -1,67 +1,61 @@
+.pages {
+  width: 100%;
+  max-width: 2080px;
 
-  
-  .pages {
-    width: 100%;
-    max-width: 2080px;
+  background: $registerGreen;
+  .flex-container {
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2rem;
+    width: 95%;
 
-    background: $registerGreen;
-    .flex-container  {
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-top: 2rem;
-      width: 95%;
-      
-
-      
-      li:first-child {
-        color: $lime;
-        background: $lightgrey;
-        border-radius: 4rem;
-        border: 2px solid #fff;
-        padding: 0.1rem;
-        margin: 0 1rem 0 0;
-      }
-      li {
+    li:first-child {
+      color: $lime;
+      background: $lightgrey;
+      border-radius: 4rem;
+      border: 2px solid #fff;
+      padding: 0.1rem;
+      margin: 0 1rem 0 0;
+    }
+    li {
+      color: #fff;
+      a {
         color: #fff;
-        a {
-          color: #fff;
-        }
-      
-    }
-      .buttons {
-        display: flex;
-        gap: 1rem;
-        font-family: $heading2;
-        button {
-          font-size: 1.4rem;
-          font-weight: 600;
-        }
-        button:nth-child(1) {
-          outline: none;
-          border: none;
-          background: none;
-          color: #fff;
-          border-right: 2px solid $lightgrey;
-          padding: 0 2rem 0 6rem;
-        }
-        button:nth-child(2) {
-          outline: none;
-          border: none;
-          background: none;
-          color: $lightLime;
-        }
-        button:nth-child(3) {
-          outline: none;
-          color: black;
-          border: none;
-          background: $lime;
-          padding: 1rem;
-          border: 1px solid $registerGreen;
-          border-radius: 4rem;
-        }
       }
     }
-  
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      font-family: $heading2;
+      button {
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+      button:nth-child(1) {
+        outline: none;
+        border: none;
+        background: none;
+        color: #fff;
+        border-right: 2px solid $lightgrey;
+        padding: 0 2rem 0 6rem;
+      }
+      button:nth-child(2) {
+        outline: none;
+        border: none;
+        background: none;
+        color: $lightLime;
+      }
+      button:nth-child(3) {
+        outline: none;
+        color: black;
+        border: none;
+        background: $lime;
+        padding: 1rem;
+        border: 1px solid $registerGreen;
+        border-radius: 4rem;
+      }
+    }
+  }
 
   .register-form {
     background: $lightgrey;
@@ -86,7 +80,7 @@
         align-items: center;
         justify-content: center;
         background-color: $lightgrey;
-        width: 90%;
+        width: 75%;
         margin: 0 auto;
 
         border-radius: 4rem;
@@ -125,7 +119,7 @@
           width: 100%;
           label,
           input {
-            width: 125%;
+            width: 75%;
           }
           label {
             font-family: $heading2;
@@ -144,18 +138,38 @@
         button {
           color: #fff;
           background-color: $registerGreen;
-          width: 123%;
+          width: 75%;
           border-radius: 0.4rem;
           padding: 0.8rem;
           margin: 1rem 0 0 0;
           font-size: 1.4rem;
         }
+        span {
+          font-family: $heading2;
+          
+        }
+        .flex-container {
+          .sign-in-buttons {
+            display: flex;
+            border: none;
+            gap: 2rem;
+            button {
+              background: #fff;
+              border: 2px solid $lightgrey;
+              &:hover,
+              &:focus {
+                border: 4px solid $lightgrey;
+                transition: ease 0.3s;
+              }
+            }
+          }
+        }
       }
       p {
         text-align: center;
         .underline {
-          color: $registerGreen;
-          border-bottom: 1px solid $registerGreen;
+          color: $green;
+          border-bottom: 1px solid $green;
         }
       }
     }
@@ -169,7 +183,7 @@
   width: 100%;
   height: 100%;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,7 +193,8 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 50%;
-    margin: 10rem auto;
+    height: 90%;
+    margin: 2rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -196,9 +211,12 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      .inputs {
+        width: 75%;
+      }
       .login-btn {
-        width: 125%;
-        margin: 1rem 0 0 0;
+        width: 95%;
+        margin: 3rem 0;
         color: #fff;
         background: $green;
         font-family: $heading2;
@@ -207,9 +225,29 @@
         border: 1px solid $green;
         border-radius: 0.6rem;
       }
-      
+      span {
+        font-family: $heading2;
+        font-size: 1.8rem;
+      }
+      .flex-container {
+        flex-direction: column;
+        .sign-in-buttons {
+          gap: 2rem;
+          display: flex;
+          padding: 2rem 0;
+
+          button {
+            padding: 1rem 2rem;
+            background: #fff;
+            border: 2px solid $lightgrey;
+            border-radius: 1rem;
+          }
+
+          a {
+            color: pink;
+          }
+        }
+      }
     }
-    
-    
   }
 }

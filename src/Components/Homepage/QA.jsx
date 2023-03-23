@@ -1,6 +1,7 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {JobPortal} from "./JobPortal";
 
 library.add(faPlus);
 
@@ -10,7 +11,6 @@ const QA = () => {
       <section className="questions-answers">
         <h3>Questions & Answers</h3>
         <div className="content">
-          
           <div className="flex-container">
             <h5>How does the free trial work?</h5>
             <FontAwesomeIcon icon="fa-solid fa-plus" />{" "}
@@ -37,18 +37,8 @@ const QA = () => {
           <span className="underline">Click here</span>
         </p>
       </section>
-      <section className="job-portal">
-        <div className="flex-container">
-            <div className="content">
-                <h4>Most complete job portal.</h4>
-                <p>Signup and start finding your job or talents</p>
-            </div>
-            <div className="button-container">
-                <button>Looking for job?</button>
-                <button>Post a job</button>
-            </div>
-        </div>
-      </section>
+     
+        <JobPortal />
     </>
   );
 };

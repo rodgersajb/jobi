@@ -7,15 +7,15 @@ const Register = () => {
     <>
       <div className="pages">
         <Navbar />
-        
+
         <div className="content-container">
           <h2>Register</h2>
           <h5>Create an account & Start posting or hiring talents</h5>
           <img src="src/assets/box-reg.jpg" alt="" />
         </div>
         <RegisterForm />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

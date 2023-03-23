@@ -23,7 +23,7 @@ const LoginModal = () => {
           <h2>Hi, Welcome Back!</h2>
           <h5>
             Still don't have an account?{" "}
-            <span className="inputs">
+            <span>
               <Link to="/register">Sign up</Link>
             </span>
           </h5>
@@ -44,28 +44,25 @@ const LoginModal = () => {
             </span>
             <button className="login-btn">Login</button>
             <span>OR</span>
-            <div className="sign-in-buttons">
-              <button onClick={googleSignUp}>
-                <img
-                  src="src/assets/btn_google_signin_light_pressed_web.png"
-                  alt="google sign in button"
-                />
-              </button>
-              <button onClick={facebookSignUp}>
-                <div
-                  className="fb-login-button"
-                  data-width="191px"
-                  data-size=""
-                  data-button-type=""
-                  data-layout=""
-                  data-auto-logout-link="false"
-                  data-use-continue-as="false"
-                ></div>
-              </button>
-              <p>
-                Don't have an account? <Link to="/register">Sign up</Link>
-              </p>
-              <button onClick={closeModal}>close Modal</button>
+            <div className="flex-container">
+              <div className="sign-in-buttons">
+                <button onClick={googleSignUp}>
+                  <img
+                    src="src/assets/g-login.jpg"
+                    alt="google log in button"
+                  />
+                </button>
+                <button onClick={facebookSignUp}>
+                  <img
+                    src="src/assets/fb-log.jpg"
+                    alt="facebook log in button"
+                  />
+                </button>
+              </div>
+                <p>
+                  Don't have an account? <Link to="/register">Sign up</Link>
+                </p>
+                <button onClick={closeModal}>close Modal</button>
             </div>
           </form>
         </div>

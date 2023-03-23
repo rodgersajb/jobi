@@ -5,11 +5,14 @@ import SectionTwo from "./SectionTwo";
 import SectionThree from "./SectionThree";
 import SectionFour from "./SectionFour";
 import SectionFive from "./SectionFive";
+import { JobPortal } from "../Homepage/JobPortal";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 library.add(faChevronRight);
+
+console.log(JobPortal, "job portal");
 
 const About = () => {
   return (
@@ -32,6 +35,8 @@ const About = () => {
         <SectionThree />
         <SectionFour />
         <SectionFive />
+
+        <JobPortal />
         <Footer />
       </div>
     </>
