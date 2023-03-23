@@ -1135,4 +1135,41 @@ footer .footer .socials span {
 }
 .two .flex-container .flex-container p {
   color: #244034;
+}
+
+.three {
+  width: 95%;
+  margin: 0 auto;
+  padding: 8rem 0;
+}
+.three .content:first-child {
+  width: 55%;
+}
+.three .content:nth-child(2) {
+  width: 35%;
+}
+.three .content:nth-child(2) p:first-child {
+  color: grey;
+  font-size: 1.4rem;
+}
+.three .content:nth-child(2) h2 {
+  color: "Montserrat", sans-serif;
+  margin: 0;
+}
+.three .content:nth-child(2) p:nth-of-type(2) {
+  font-size: 1.8rem;
+  color: grey;
+}
+.three .content:nth-child(2) h5 span {
+  padding: 0 1.4rem 0 0;
+}
+.three .content:nth-child(2) button {
+  border: none;
+  color: #244034;
+  background: #D2F34C;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
 }/*# sourceMappingURL=styles.css.map */
