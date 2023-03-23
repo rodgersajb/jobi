@@ -5,12 +5,12 @@
     max-width: 2080px;
 
     background: $registerGreen;
-    .flex-container .pages {
+    .flex-container  {
       justify-content: space-between;
       align-items: flex-start;
       margin-top: 2rem;
       width: 95%;
-      .pages {
+      
 
       
       li:first-child {
@@ -26,7 +26,7 @@
         a {
           color: #fff;
         }
-      }
+      
     }
       .buttons {
         display: flex;
@@ -62,27 +62,7 @@
       }
     }
   
-  .content-container {
-    padding: 0 0 6rem 0;
-    background: $registerGreen;
-    position: relative;
-    h2 {
-      margin-top: 0;
-      color: #fff;
-      text-align: center;
-      font-size: 5.2rem;
-      font-family: $heading1;
-    }
-    h5 {
-      text-align: center;
-      color: #fff;
-    }
-    img {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
-  }
+
   .register-form {
     background: $lightgrey;
     display: flex;

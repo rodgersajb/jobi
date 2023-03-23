@@ -1,5 +1,6 @@
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import SectionOne from "./SectionOne";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,6 +23,7 @@ const About = () => {
           </h5>
           <img src="src/assets/box-reg.jpg" alt="" />
         </div>
+        <SectionOne />
         <Footer />
       </div>
     </>
