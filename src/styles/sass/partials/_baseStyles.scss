@@ -54,31 +54,97 @@ h2 {
   font-size: 7rem;
 }
 
-
-
-
 .inputs {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   label,
-          input {
-            width: 125%;
-          }
-          label {
-            font-family: $heading2;
-            color: grey;
-            font-size: 1.4rem;
-            padding: 1rem 0 1rem 0;
-          }
-          input {
-            outline: none;
-            border: none;
-            border: 2px solid grey;
-            border-radius: 0.4rem;
-            padding: 0.6rem;
-          }
- 
+  input {
+    width: 125%;
+  }
+  label {
+    font-family: $heading2;
+    color: grey;
+    font-size: 1.4rem;
+    padding: 1rem 0 1rem 0;
+  }
+  input {
+    outline: none;
+    border: none;
+    border: 2px solid grey;
+    border-radius: 0.4rem;
+    padding: 0.6rem;
+  }
 }
 
+.pages {
+  width: 100%;
+  max-width: 2080px;
+
+  background: $registerGreen;
+  .flex-container {
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+
+    width: 95%;
+
+    ul {
+      display: flex;
+      
+      li:first-child {
+        color: $lime;
+        background: $lightgrey;
+        border-radius: 4rem;
+        border: 2px solid #fff;
+        padding: 0.1rem;
+        margin: 0 1rem 0 0;
+      }
+      li {
+        color: #fff;
+        a {
+          color: #fff;
+        }
+      }
+    }
+    img {
+      padding: 0 9rem;
+    }
+  }
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    font-family: $heading2;
+    justify-content: space-between;
+    
+
+    button {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    button:nth-child(1) {
+      outline: none;
+      border: none;
+      background: none;
+      color: #fff;
+      border-right: 2px solid $lightgrey;
+      padding: 0 2rem 0 6rem;
+    }
+    button:nth-child(2) {
+      outline: none;
+      border: none;
+      background: none;
+      color: $lightLime;
+    }
+    button:nth-child(3) {
+      outline: none;
+      color: black;
+      border: none;
+      background: $lime;
+      padding: 1rem;
+      border: 1px solid $registerGreen;
+      border-radius: 4rem;
+    }
+  }
+}

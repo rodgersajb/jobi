@@ -1,14 +1,17 @@
 .register {
   max-width: 2080px;
-  nav {
+  .pages {
     width: 100%;
 
     background: $registerGreen;
-    .flex-container {
+    .flex-container .pages {
       justify-content: space-between;
       align-items: flex-start;
       margin-top: 2rem;
       width: 95%;
+      .pages {
+
+      
       li:first-child {
         color: $lime;
         background: $lightgrey;
@@ -23,7 +26,8 @@
           color: #fff;
         }
       }
-      .buttons {
+    }
+      .buttons pages {
         display: flex;
         gap: 1rem;
         font-family: $heading2;
