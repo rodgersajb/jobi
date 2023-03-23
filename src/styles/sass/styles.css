@@ -1237,4 +1237,62 @@ footer .footer .socials span {
   color: #f5f5f5;
   font-size: 1.6rem;
   padding: 0 0 6rem 0;
+}
+
+.five {
+  width: 95%;
+  margin: 0 auto;
+}
+.five .flex-container:first-of-type {
+  justify-content: space-between;
+}
+.five .flex-container:first-of-type h2 {
+  color: #244034;
+  width: 50%;
+  margin: 0 0 6rem 0;
+}
+.five .flex-container:first-of-type .arrows .fa-arrow-left,
+.five .flex-container:first-of-type .arrows .fa-arrow-right {
+  font-size: 1rem;
+}
+.five .flex-container:first-of-type .arrows .fa-arrow-left:hover, .five .flex-container:first-of-type .arrows .fa-arrow-left:focus,
+.five .flex-container:first-of-type .arrows .fa-arrow-right:hover,
+.five .flex-container:first-of-type .arrows .fa-arrow-right:focus {
+  font-size: 3rem;
+  transition: ease-in-out 0.3s;
+}
+.five .flex-container:first-of-type .arrows span {
+  padding: 0 1rem 0 1rem;
+}
+.five .flex-container:nth-of-type(2) {
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+.five .flex-container:nth-of-type(2) .card {
+  border: 2px solid black;
+  padding: 4rem;
+  width: calc(50% - 6rem);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.five .flex-container:nth-of-type(2) .card h4 {
+  font-size: 3.6rem;
+  font-family: "Montserrat", sans-serif;
+  width: 80%;
+}
+.five .flex-container:nth-of-type(2) .card:first-child {
+  background: #dffa73;
+}
+.five .flex-container:nth-of-type(2) .card:nth-child(2) {
+  background: #f9ffe1;
+}
+.five .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 5rem 0;
 }/*# sourceMappingURL=styles.css.map */

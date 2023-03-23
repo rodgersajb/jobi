@@ -152,3 +152,67 @@
     }
   }
 }
+.five {
+  width: 95%;
+  margin: 0 auto;
+  .flex-container:first-of-type {
+    justify-content: space-between;
+    h2 {
+      color: $registerGreen;
+      width: 50%;
+      margin: 0 0 6rem 0;
+    }
+    .arrows {
+      .fa-arrow-left,
+      .fa-arrow-right {
+        font-size: 1rem;
+
+        &:hover,
+        &:focus {
+          font-size: 3rem;
+          transition: ease-in-out 0.3s;
+        }
+      }
+      span {
+        padding: 0 1rem 0 1rem;
+      }
+    }
+  }
+  .flex-container:nth-of-type(2) {
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    
+    
+    .card {
+        border: 2px solid black;
+        padding: 4rem;
+        width: calc(100% /2 - 6rem);
+        
+      h4 {
+        font-size: 3.6rem;
+        font-family: $heading2;
+        width: 80%;
+      }
+      border-radius: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .card:first-child {
+      background: #dffa73;
+    }
+    .card:nth-child(2) {
+      background: #f9ffe1;
+    }
+    
+}
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 5rem 0;
+}
+
+}

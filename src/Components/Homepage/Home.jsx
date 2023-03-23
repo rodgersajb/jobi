@@ -9,22 +9,20 @@ import Footer from "../Footer";
 import LoginModal from "../LoginModal";
 import { ModalProvider } from "../../Contexts/ModalContext";
 
-
 const Home = () => {
   return (
     <>
-    <ModalProvider>
-
-      <Nav />
-      <Header />
-      <Categories />
-      <JobFind />
-      <Trusted />
-      <FindTalent />
-      <QA />
-      <Footer />
-      <LoginModal />
-    </ModalProvider>
+      <ModalProvider>
+        <Nav />
+        <Header />
+        <Categories />
+        <JobFind />
+        <Trusted />
+        <FindTalent />
+        <QA />
+        <Footer />
+        <LoginModal />
+      </ModalProvider>
     </>
   );
 };
