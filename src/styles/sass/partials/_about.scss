@@ -28,3 +28,26 @@
         
     }
 }
+.two {
+    width: 95%;
+    margin: 0 auto;
+    .flex-container {
+        flex-direction: column;
+        .flex-container {
+            flex-direction: row;
+            gap: 3rem;
+            justify-content: space-between;
+            align-items: center;
+            width: 75%;
+            border-bottom: 3px solid $lightgrey;
+            padding: 0 0 4rem 0;
+            h2 {
+                color: $registerGreen;
+                margin-bottom: 0;
+            }
+            p {
+                color: $registerGreen;
+            }
+        }
+    }
+}

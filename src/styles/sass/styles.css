@@ -1111,4 +1111,28 @@ footer .footer .socials span {
 .one .flex-container .content .flex-container .fa-plus {
   color: #244034;
   font-size: 1.6rem;
+}
+
+.two {
+  width: 95%;
+  margin: 0 auto;
+}
+.two .flex-container {
+  flex-direction: column;
+}
+.two .flex-container .flex-container {
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  border-bottom: 3px solid #f5f5f5;
+  padding: 0 0 4rem 0;
+}
+.two .flex-container .flex-container h2 {
+  color: #244034;
+  margin-bottom: 0;
+}
+.two .flex-container .flex-container p {
+  color: #244034;
 }/*# sourceMappingURL=styles.css.map */
