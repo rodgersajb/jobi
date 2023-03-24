@@ -3,6 +3,7 @@ import Home from "./Components/Homepage/Home";
 import Register from "./Components/Register";
 import AboutPage from "./Components/AboutPage/AboutPage";
 import JobListing from "./Components/JobListing/JobListing";
+import Jobs from "./Components/Jobs";
 import { AuthProvider } from "./Contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/jobs" element={<JobListing />} />
           </Routes>
         </Router>
+        
       </AuthProvider>
     </div>
   );

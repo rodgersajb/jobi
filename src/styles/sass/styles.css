@@ -1340,4 +1340,66 @@ footer .footer .socials span {
 
 .job-portals button:nth-child(2) {
   color: #dffa73;
+}
+
+.job-search {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  background: #fff;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 0.8rem;
+}
+.job-search .input-search,
+.job-search .input-category {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem 2rem;
+  align-items: flex-start;
+}
+.job-search .input-search label,
+.job-search .input-category label {
+  padding: 0 0 2rem 0;
+}
+.job-search .input-search input,
+.job-search .input-category input {
+  border: none;
+  padding: 1rem 0 0.4rem 0;
+  height: 2rem;
+}
+.job-search .input-search input::-moz-placeholder, .job-search .input-category input::-moz-placeholder {
+  color: black;
+  font-size: 1.8rem;
+}
+.job-search .input-search input::placeholder,
+.job-search .input-search select,
+.job-search .input-category input::placeholder,
+.job-search .input-category select {
+  color: black;
+  font-size: 1.8rem;
+}
+.job-search .input-search select,
+.job-search .input-category select {
+  padding: 0 15rem 0 0;
+  border: none;
+  height: 2.2rem;
+}
+.job-search .input-category .input-category-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.job-search .job-search-btn {
+  height: 8rem;
+  width: 40rem;
+  color: #244034;
+  background: #d2f34c;
+  border: none;
+  border-radius: 0 0.8rem 0.8rem 0;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }/*# sourceMappingURL=styles.css.map */
