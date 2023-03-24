@@ -1,7 +1,6 @@
-import JobListing from "./JobListing/JobListing";
+import JobSearchForm from "./JobListing/JobSearchForm";
 
 const Jobs = () => {
-  
   const jobPostings = [
     {
       logo: "google",
@@ -1012,13 +1011,16 @@ const Jobs = () => {
       field: "Graphics Engineering",
     },
   ];
-  
+
+  const filteredJobPostings = jobPostings.filter(
+    (posting) => Object.keys(posting).length !== 0
+  );
+
   return (
     <>
-    
-        <JobListing jobPostings={jobPostings}/>
+      <JobSearchForm filteredJobPostings={filteredJobPostings} />
     </>
-  ); 
+  );
 };
 
 export default Jobs;

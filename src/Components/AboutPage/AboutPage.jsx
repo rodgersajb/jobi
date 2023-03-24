@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 library.add(faChevronRight);
 
-console.log(JobPortal, "job portal");
+
 
 const About = () => {
   return (

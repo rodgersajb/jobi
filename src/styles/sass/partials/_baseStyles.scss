@@ -78,6 +78,10 @@ h2 {
     padding: 0.6rem;
   }
 }
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
 
 .pages {
   width: 100%;
