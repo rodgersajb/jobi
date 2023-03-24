@@ -1,3 +1,5 @@
+import JobCard from "./JobCard";
+
 const JobSearchForm = ({ filteredJobPostings }) => {
   //
 
@@ -36,24 +38,8 @@ const JobSearchForm = ({ filteredJobPostings }) => {
         {filteredJobPostings &&
           filteredJobPostings.map((jobPosting, index) => {
             return (
-              <div className="results" key={index}>
-                <div className="flex-container">
-                  <div className="logo">{jobPosting.logo}</div>
-                  <h5 className="job">{jobPosting.job}</h5>
-                </div>
-                <div className="flex-column">
-                  <div className="work">{jobPosting.work}</div>
-                  <div className="salary">{jobPosting.salary}</div>
-                </div>
-                <div className="flex-column">
-                  <div className="location">{jobPosting.location}</div>
-                  <div className="field">{jobPosting.field}</div>
-                </div>
-                <div className="buttons">
-                  <button>Add</button>
-                  <button>Apply</button>
-                </div>
-              </div>
+              <JobCard jobPosting={jobPosting} index={index} key={index} />
+              
             );
           })}
       </section>

@@ -1465,12 +1465,18 @@ footer .footer .socials span {
 .job-search-results .results .logo {
   width: 4rem;
 }
-.job-search-results .results .work {
-  color: #31795A;
+.job-search-results .results .fulltime,
+.job-search-results .results .parttime {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
   text-transform: capitalize;
+}
+.job-search-results .results .parttime {
+  color: red;
+}
+.job-search-results .results .fulltime {
+  color: #31795A;
 }
 .job-search-results .results .salary,
 .job-search-results .results .field {
