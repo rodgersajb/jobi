@@ -6,14 +6,18 @@ import { AuthContext } from "../../Contexts/AuthContext";
 const JobCard = (props) => {
   const { jobPosting, index } = props;
 
-  console.log(JobCard);
+//   console.log(JobCard);
 
   const { currentUser, setCurrentUser } = useContext(AuthContext);
 
   const [jobs, setJobs] = useState([]);
 
+  const uid = currentUser ? currentUser.uid : null;
+
+  console.log(currentUser, 'CURRENT USER')
+
   useEffect(() => {
-    const jobsRef = ref(db, `users/${currentUser.uid}/jobs`);
+    const jobsRef = ref(db, `users/${uid}/jobs`);
     onValue(jobsRef, (snapshot) => {
       const data = snapshot.val();
       const jobs = data
