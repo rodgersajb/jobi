@@ -1,20 +1,25 @@
 import { useEffect, useState, useContext } from "react";
-import { update, ref, remove, onValue, set, push } from "firebase/database";
+import { ref, onValue, push } from "firebase/database";
 import { db } from "../firebase";
+import { uuidv4 } from "@firebase/util";
 import { AuthContext } from "../../Contexts/AuthContext";
+import { Link } from "react-router-dom";
+import JobDetails from "../JobDetails";
 
 const JobCard = (props) => {
   const { jobPosting, index } = props;
 
-//   console.log(JobCard);
+  // console.log(props )
 
   const { currentUser, setCurrentUser } = useContext(AuthContext);
 
+  // generate a random id to attach to each posting
+  const jobId = uuidv4();
+
   const [jobs, setJobs] = useState([]);
 
+  // variable that will check if the currentUser has a uid, else null
   const uid = currentUser ? currentUser.uid : null;
-
-  console.log(currentUser, 'CURRENT USER')
 
   useEffect(() => {
     const jobsRef = ref(db, `users/${uid}/jobs`);
@@ -26,6 +31,7 @@ const JobCard = (props) => {
           })
         : [];
       setJobs(jobs);
+      //   console.log(jobs)
     });
   }, []);
 
@@ -39,6 +45,7 @@ const JobCard = (props) => {
       location: jobPosting.location,
       salary: jobPosting.salary,
       field: jobPosting.field,
+      id: jobId,
     });
   };
 
@@ -59,9 +66,12 @@ const JobCard = (props) => {
         </div>
         <div className="buttons">
           <button onClick={handleClick}>Add</button>
-          <button>Apply</button>
+          <Link to={`/job/${jobId}`} state={jobPosting}>
+            View Job
+          </Link>
         </div>
       </div>
+      <JobDetails jobPosting={jobPosting} />
     </>
   );
 };
