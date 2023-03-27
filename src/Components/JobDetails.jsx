@@ -35,19 +35,23 @@ const JobDetails = (props) => {
           <div className="flex-column">
             <div className="content">
               <h4>Job Description</h4>
-              <p>{job.jobDescription}</p>
+              <p>{job?.jobDescription}</p>
             </div>
             <div className="content">
               <h4>Responsibilities</h4>
               <ul>
-                {job.keyResponsibilities.map((responsibility) => {
+                { Array.isArray(job.keyResponsibilities) ? job.keyResponsibilities.map((responsibility) => {
                   return (
                     <div className="flex-container">
                       <FontAwesomeIcon icon="fa-solid fa-check" />
                       <li>{responsibility}</li>;
                     </div>
                   );
-                })}
+                 
+
+                })
+                : <p>{job.keyResponsibilities}</p>
+              }
               </ul>
 
               <p></p>
@@ -55,19 +59,21 @@ const JobDetails = (props) => {
             <div className="content">
               <h4>Required Skills</h4>
               <ul>
-                {job.requiredSkill.map((skill) => {
+                {Array.isArray(job.requiredSkill) ?  job.requiredSkill.map((skill) => {
                   return (
                     <div className="flex-container">
                       <FontAwesomeIcon icon="fa-solid fa-circle" />
                       <li>{skill}</li>
                     </div>
                   );
-                })}
+                })
+                : <p>{job.requiredSkill}</p>
+              }
               </ul>
             </div>
             <div className="content">
               <h4>Benefits</h4>
-              <p>{job.benefits}</p>
+              <p>{job?.benefits}</p>
             </div>
           </div>
         </div>

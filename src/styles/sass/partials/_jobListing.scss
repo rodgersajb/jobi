@@ -54,12 +54,6 @@
   }
 }
 
-.job {
-    h5 {
-        margin: 0;
-        padding: 8rem 0 0 0;
-    }
-
 .job-search-results {
   width: 95%;
   max-width: 2080px;
@@ -147,39 +141,44 @@
   }
 }
 
-.job-details {
-  .flex-column {
-    width: 65%;
-    margin: 0 auto;
-    align-items: flex-start;
-    .content {
-      h4 {
-        font-family: $heading2;
-        font-size: 2.2rem;
-      }
-      p {
-        color: grey;
-      }
-      ul {
-        padding: 0;
-        .flex-container {
-          justify-content: flex-start;
-          .fa-check {
-            background: $green;
-            color: #fff;
-            padding: 0.6rem;
-            border-radius: 50%;
-            margin: 0 2rem 0 0;
-          }
-          .fa-circle {
-            margin: 0 2rem 0 0;
-          }
-          li {
-            color: grey;
+.job {
+  h5 {
+    margin: 0;
+    padding: 8rem 0 0 0;
+  }
+  .job-details {
+    .flex-column {
+      width: 65%;
+      margin: 0 auto;
+      align-items: flex-start;
+      .content {
+        h4 {
+          font-family: $heading2;
+          font-size: 2.2rem;
+        }
+        p {
+          color: grey;
+        }
+        ul {
+          padding: 0;
+          .flex-container {
+            justify-content: flex-start;
+            .fa-check {
+              background: $green;
+              color: #fff;
+              padding: 0.6rem;
+              border-radius: 50%;
+              margin: 0 2rem 0 0;
+            }
+            .fa-circle {
+              margin: 0 2rem 0 0;
+            }
+            li {
+              color: grey;
+            }
           }
         }
       }
     }
   }
-}
 }
