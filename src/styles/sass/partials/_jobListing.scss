@@ -1,174 +1,185 @@
 .job-search {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  background: #fff;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 0.8rem;
+  .input-search,
+  .input-category {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    font-family: $heading2;
+    padding: 1rem 2rem;
+    align-items: flex-start;
+    label {
+      padding: 0 0 2rem 0;
+    }
+    input {
+      border: none;
+      padding: 1rem 0 0.4rem 0;
+      height: 2rem;
+    }
+    input::placeholder,
+    select {
+      color: black;
+      font-size: 1.8rem;
+    }
+    select {
+      padding: 0 15rem 0 0;
+      border: none;
+      height: 2.2rem;
+    }
+  }
+  .input-category {
+    .input-category-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .job-search-btn {
+    height: 8rem;
+    width: 40rem;
+    color: $registerGreen;
+    background: #d2f34c;
+    border: none;
+    border-radius: 0 0.8rem 0.8rem 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
+.job {
+    h5 {
+        margin: 0;
+        padding: 8rem 0 0 0;
+    }
+
+.job-search-results {
+  width: 95%;
+  max-width: 2080px;
+  margin: 0 auto;
+  .filter-search {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: stretch;
-    background: #fff;
-    width: 50%;
-    ;
+    justify-content: space-between;
+    background: $lightgrey;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 6rem 0 0 0;
+    label {
+      font-family: $heading2;
+      color: black;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    select {
+      outline: none;
+      border: none;
+      color: $registerGreen;
+      border-radius: 8rem;
+      font-size: 2rem;
+    }
+  }
+  .results {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2rem auto;
+    border: 2px solid $lightgrey;
+    border-radius: 1rem;
+    padding: 0 2rem;
+
+    .flex-container {
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      h5 {
+        font-size: 1.8rem;
+        width: 24rem;
+      }
+    }
+    .flex-column {
+      gap: 1rem;
+      align-items: flex-start;
+      justify-content: center;
+      width: 40rem;
+    }
+    .logo {
+      width: 4rem;
+    }
+    .fulltime,
+    .parttime,
+    .part-time,
+    .full-time {
+      font-family: $heading2;
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    .parttime,
+    .part-time {
+      color: red;
+    }
+    .fulltime,
+    .full-time {
+      color: $green;
+    }
+    .salary,
+    .field {
+      color: black;
+      font-weight: 600;
+      font-family: $heading2;
+      font-size: 1.4rem;
+    }
+    .location {
+      font-family: $heading2;
+      color: grey;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.job-details {
+  .flex-column {
+    width: 65%;
     margin: 0 auto;
-    border-radius: 0.8rem;
-    .input-search,
-    .input-category {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        
+    align-items: flex-start;
+    .content {
+      h4 {
         font-family: $heading2;
-        padding: 1rem 2rem;
-        align-items: flex-start;
-        label {
-            padding: 0 0 2rem 0;
+        font-size: 2.2rem;
+      }
+      p {
+        color: grey;
+      }
+      ul {
+        padding: 0;
+        .flex-container {
+          justify-content: flex-start;
+          .fa-check {
+            background: $green;
+            color: #fff;
+            padding: 0.6rem;
+            border-radius: 50%;
+            margin: 0 2rem 0 0;
+          }
+          .fa-circle {
+            margin: 0 2rem 0 0;
+          }
+          li {
+            color: grey;
+          }
         }
-        input
-         {
-            border: none;
-            padding: 1rem 0 0.4rem 0;
-            height: 2rem;
-            
-            
-        }
-        input::placeholder,
-        select {
-            color: black;
-            font-size: 1.8rem;           
-        }
-        select {
-            padding: 0 15rem 0 0;
-            border: none;
-            height: 2.2rem;
-        }
+      }
     }
-    .input-category {
-        .input-category-flex {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-    .job-search-btn {
-        height: 8rem;
-        width: 40rem;
-        color: $registerGreen;
-        background: #d2f34c;
-        border: none;
-        border-radius: 0 0.8rem 0.8rem 0;
-        font-size: 1.4rem;
-        text-transform: uppercase;
-        font-weight: 600;
-        
-    }
-    }
-
-    .job-search-results {
-        width: 95%;
-        max-width: 2080px;
-        margin: 0 auto;
-        .filter-search {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: $lightgrey;
-            border-radius: 1rem;
-            padding: 1rem;
-            margin: 6rem 0 0 0;
-            label {
-                font-family: $heading2;
-                color: black;
-                font-size: 2rem;
-                font-weight: 600;
-            }
-            select {
-                outline: none;
-                border: none;
-                color: $registerGreen;
-                border-radius: 8rem;
-                font-size: 2rem;
-                
-            }
-            
-        }
-        .results {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            margin: 2rem auto;
-            border: 2px solid $lightgrey;
-            border-radius: 1rem;
-            padding: 0 2rem;
-            
-
-            
-            .flex-container {
-                gap: 2rem;
-                align-items: center;
-                justify-content: center;
-                h5 {
-                    font-size: 1.8rem;
-                    width: 24rem;
-                }
-            }
-            .flex-column {
-                gap: 1rem;
-                align-items: flex-start;
-                justify-content: center;
-                width: 40rem;
-            }
-            .logo {
-                width: 4rem;
-            }
-            .fulltime,
-            .parttime,
-            .part-time,
-            .full-time {
-                font-family: $heading2;
-                font-size: 1.4rem;
-                font-weight: 600;
-                text-transform: capitalize;
-            }
-            .parttime,
-            .part-time {
-                color: red;
-            }
-            .fulltime,
-            .full-time{
-                color: $green;
-                
-                
-            }
-            .salary,
-            .field {
-                color: black;
-                font-weight: 600;
-                font-family: $heading2;
-                font-size: 1.4rem;
-            }
-            .location {
-                font-family: $heading2;
-                color: grey;
-                font-size: 1.2rem;
-                
-            }
-        }
-        
-    }
-
-    .job-details {
-
-        .flex-column {
-            width: 65%;
-            margin: 0 auto;
-            .content {
-                h4 {
-                    font-family: $heading2;
-                    font-size: 2.2rem;
-                }
-                p {
-                    color: grey;
-                }
-            }
-
-
-        }
-    }
+  }
+}
+}

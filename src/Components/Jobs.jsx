@@ -230,6 +230,60 @@ const Jobs = () => {
       benefits:
         "Competitive salary, health and retirement benefits, opportunities for advancement",
     },
+    {
+      logo: "https://www.apple.com/ac/structured-data/images/open_graph_logo.png?201809211233",
+      work: "Full-time",
+      job: "Software Engineer",
+      location: "Cupertino, CA",
+      datePosted: "2022-03-25",
+      salary: "$120,000 - $150,000",
+      field: "Technology",
+      keyResponsibilites: [
+        "Design and develop software solutions",
+        "Collaborate with cross-functional teams to identify areas for software improvement",
+        "Write and maintain technical documentation",
+        "Troubleshoot and debug software issues",
+        "Stay up-to-date with emerging trends and technologies",
+      ],
+      jobDescription:
+        "We are seeking an experienced software engineer to join our team. The ideal candidate will have a passion for software development and a desire to work on innovative projects.",
+      requiredSkill: [
+        "Proficiency in Java, C++, and/or Python",
+        "Experience with software development methodologies such as Agile and Scrum",
+        "Strong problem-solving skills",
+        "Excellent communication and interpersonal skills",
+        "Bachelor's or Master's degree in Computer Science or related field",
+      ],
+      benefits:
+        "Comprehensive health and wellness benefits, 401(k) with matching, generous paid time off, employee discounts",
+    },
+    {
+      logo: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png",
+      work: "Full-time",
+      job: "Product Manager",
+      location: "Mountain View, CA",
+      datePosted: "2022-03-28",
+      salary: "$150,000 - $200,000",
+      field: "Technology",
+      keyResponsibilites: [
+        "Define and prioritize product requirements",
+        "Collaborate with cross-functional teams to bring new products and features to market",
+        "Develop and maintain product roadmaps",
+        "Conduct market research and analysis",
+        "Monitor and analyze key performance metrics",
+      ],
+      jobDescription:
+        "We are seeking a highly motivated product manager to join our team. The ideal candidate will have a proven track record of managing successful products and a passion for creating innovative solutions to meet customer needs.",
+      requiredSkill: [
+        "Strong analytical and problem-solving skills",
+        "Excellent communication and interpersonal skills",
+        "Experience with product management methodologies such as Agile and Scrum",
+        "Bachelor's or Master's degree in Business, Engineering, or related field",
+        "Experience with software development is a plus",
+      ],
+      benefits:
+        "Comprehensive health and wellness benefits, 401(k) with matching, generous paid time off, employee discounts",
+    },
   ];
 
   const filteredJobPostings = jobPostings.filter(
