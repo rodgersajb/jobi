@@ -123,11 +123,14 @@ h2 {
     font-family: $heading2;
     justify-content: space-between;
     
-
+    .current-user {
+      color: $lime
+    }
     button {
       font-size: 1.4rem;
       font-weight: 600;
     }
+    
     button:nth-child(1) {
       outline: none;
       border: none;

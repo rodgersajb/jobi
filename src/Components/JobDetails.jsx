@@ -40,18 +40,18 @@ const JobDetails = (props) => {
             <div className="content">
               <h4>Responsibilities</h4>
               <ul>
-                { Array.isArray(job.keyResponsibilities) ? job.keyResponsibilities.map((responsibility) => {
-                  return (
-                    <div className="flex-container">
-                      <FontAwesomeIcon icon="fa-solid fa-check" />
-                      <li>{responsibility}</li>;
-                    </div>
-                  );
-                 
-
-                })
-                : <p>{job.keyResponsibilities}</p>
-              }
+                {Array.isArray(job.keyResponsibilities) ? (
+                  job.keyResponsibilities.map((responsibility) => {
+                    return (
+                      <div className="flex-container">
+                        <FontAwesomeIcon icon="fa-solid fa-check" />
+                        <li>{responsibility}</li>;
+                      </div>
+                    );
+                  })
+                ) : (
+                  <p>{job.keyResponsibilities}</p>
+                )}
               </ul>
 
               <p></p>
@@ -59,16 +59,18 @@ const JobDetails = (props) => {
             <div className="content">
               <h4>Required Skills</h4>
               <ul>
-                {Array.isArray(job.requiredSkill) ?  job.requiredSkill.map((skill) => {
-                  return (
-                    <div className="flex-container">
-                      <FontAwesomeIcon icon="fa-solid fa-circle" />
-                      <li>{skill}</li>
-                    </div>
-                  );
-                })
-                : <p>{job.requiredSkill}</p>
-              }
+                {Array.isArray(job.requiredSkill) ? (
+                  job.requiredSkill.map((skill) => {
+                    return (
+                      <div className="flex-container">
+                        <FontAwesomeIcon icon="fa-solid fa-circle" />
+                        <li>{skill}</li>
+                      </div>
+                    );
+                  })
+                ) : (
+                  <p>{job.requiredSkill}</p>
+                )}
               </ul>
             </div>
             <div className="content">

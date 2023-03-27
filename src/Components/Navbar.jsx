@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Contexts/AuthContext";
 
 const Navbar = () => {
+
+  const { currentUser, setCurrentUser} = useContext(AuthContext)
+  console.log(currentUser)
   return (
     <>
       <nav className="pages">
@@ -21,7 +26,11 @@ const Navbar = () => {
           <img src="src/assets/register-squiggle.jpg" alt="a swirly design" />
           <div className="buttons pages">
             <button>Post Job</button>
+            {
+              currentUser ? <p className="current-user">{currentUser.displayName || currentUser.email}</p> :
+
             <button>Login</button>
+            }
             <button>Hire Top Talents</button>
           </div>
         </div>

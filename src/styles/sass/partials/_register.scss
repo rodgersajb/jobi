@@ -146,6 +146,8 @@
         }
         span {
           font-family: $heading2;
+          font-size: 2rem;
+          padding: 2rem 0 0 0;
           
         }
         .flex-container {
@@ -156,9 +158,10 @@
             button {
               background: #fff;
               border: 2px solid $lightgrey;
+              
               &:hover,
               &:focus {
-                border: 4px solid $lightgrey;
+                border: 2px solid $registerGreen;
                 transition: ease 0.3s;
               }
             }
@@ -199,11 +202,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
     h2 {
       color: $registerGreen;
       margin-bottom: 0;
       a {
         color: $green;
+        
       }
     }
     form {
@@ -242,10 +247,25 @@
             border: 2px solid $lightgrey;
             border-radius: 1rem;
           }
+          
+        }
+        a {
+          color:$registerGreen;
+          border-bottom: 1px solid $registerGreen;
+        }
+        .close-modal {
+          position: absolute;
+          top: -14px;
+          right: -14px;
+          font-family: $heading2;
+          color: #fff;
+          background: $registerGreen;
+          border: 2px solid $registerGreen;
+          border-radius: 50%;
+          height: 3rem;
+          width: 3rem;
+          font-size: 1.6rem;
 
-          a {
-            color: pink;
-          }
         }
       }
     }

@@ -55,7 +55,7 @@ const LoginModal = () => {
 
   return (
     <>
-      <div className="modal" style={{ display: showModal ? "block" : "none" }}>
+      <div className="modal" style={{ display: showModal ? "block" : "none" }} onClick={closeModal}>
         <div className="content">
           <h2>Hi, Welcome Back!</h2>
           <h5>
@@ -101,7 +101,7 @@ const LoginModal = () => {
               <p>
                 Don't have an account? <Link to="/register">Sign up</Link>
               </p>
-              <button onClick={closeModal}>close Modal</button>
+              <button className="close-modal" onClick={closeModal}>x</button>
             </div>
           </form>
         </div>
