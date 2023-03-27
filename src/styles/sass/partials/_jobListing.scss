@@ -119,16 +119,20 @@
                 width: 4rem;
             }
             .fulltime,
-            .parttime {
+            .parttime,
+            .part-time,
+            .full-time {
                 font-family: $heading2;
                 font-size: 1.4rem;
                 font-weight: 600;
                 text-transform: capitalize;
             }
-            .parttime {
+            .parttime,
+            .part-time {
                 color: red;
             }
-            .fulltime{
+            .fulltime,
+            .full-time{
                 color: $green;
                 
                 
@@ -148,4 +152,23 @@
             }
         }
         
+    }
+
+    .job-details {
+
+        .flex-column {
+            width: 65%;
+            margin: 0 auto;
+            .content {
+                h4 {
+                    font-family: $heading2;
+                    font-size: 2.2rem;
+                }
+                p {
+                    color: grey;
+                }
+            }
+
+
+        }
     }

@@ -1,6 +1,7 @@
 import JobCard from "./JobCard";
 
 const JobSearchForm = ({ filteredJobPostings }) => {
+  console.log(filteredJobPostings, "FILTERED");
   //
 
   return (
@@ -39,7 +40,6 @@ const JobSearchForm = ({ filteredJobPostings }) => {
           filteredJobPostings.map((jobPosting, index) => {
             return (
               <JobCard jobPosting={jobPosting} index={index} key={index} />
-              
             );
           })}
       </section>

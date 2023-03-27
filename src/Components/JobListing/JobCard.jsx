@@ -71,7 +71,7 @@ const JobCard = (props) => {
           </Link>
         </div>
       </div>
-      <JobDetails jobPosting={jobPosting} />
+      {/* <JobDetails jobPosting={jobPosting} /> */}
     </>
   );
 };
