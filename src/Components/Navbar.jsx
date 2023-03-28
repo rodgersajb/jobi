@@ -14,11 +14,11 @@ library.add(faUser, faRightFromBracket);
 const Navbar = () => {
   const { currentUser, setCurrentUser } = useContext(AuthContext);
 
+  console.log(currentUser);
   const signOut = () => {
     setCurrentUser(null);
   };
 
-  console.log(currentUser);
   return (
     <>
       <nav className="pages">
@@ -29,13 +29,11 @@ const Navbar = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <div className="dropdown">
-              <li>
-                <Link to="/jobs">Jobs</Link>
-                <div className="triangle"></div>
-                <div className="dropdown-menu">Drop Content</div>
-              </li>
-            </div>
+
+            <li>
+              <Link to="/jobs">Jobs</Link>
+            </li>
+
             <li>Explore</li>
             <li>Contact</li>
             <li>Pages</li>
