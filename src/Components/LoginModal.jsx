@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { firebase, db } from "./firebase";
-import { googleSignUp, facebookSignUp } from "./SignUps";
+import { googleSignIn, facebookSignIn } from "./SignUps";
 import { ModalContext } from "../Contexts/ModalContext";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../Contexts/AuthContext";
@@ -85,13 +85,13 @@ const LoginModal = () => {
             <span>OR</span>
             <div className="flex-container">
               <div className="sign-in-buttons">
-                <button onClick={googleSignUp}>
+                <button onClick={googleSignIn}>
                   <img
                     src="src/assets/g-login.jpg"
                     alt="google log in button"
                   />
                 </button>
-                <button onClick={facebookSignUp}>
+                <button onClick={facebookSignIn}>
                   <img
                     src="src/assets/fb-log.jpg"
                     alt="facebook log in button"

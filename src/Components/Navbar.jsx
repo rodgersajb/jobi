@@ -2,10 +2,20 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthContext";
 
-const Navbar = () => {
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faUser, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-  const { currentUser, setCurrentUser} = useContext(AuthContext)
-  console.log(currentUser)
+library.add(faUser, faRightFromBracket);
+
+const Navbar = () => {
+  const { currentUser, setCurrentUser } = useContext(AuthContext);
+
+  const signOut = () => {
+    setCurrentUser(null);
+  };
+
+  console.log(currentUser);
   return (
     <>
       <nav className="pages">
@@ -16,9 +26,13 @@ const Navbar = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
-              <Link to="/jobs">Jobs</Link>
-            </li>
+            <div className="dropdown">
+              <li>
+                <Link to="/jobs">Jobs</Link>
+                <div className="triangle"></div>
+                <div className="dropdown-menu">Drop Content</div>
+              </li>
+            </div>
             <li>Explore</li>
             <li>Contact</li>
             <li>Pages</li>
@@ -26,11 +40,24 @@ const Navbar = () => {
           <img src="src/assets/register-squiggle.jpg" alt="a swirly design" />
           <div className="buttons pages">
             <button>Post Job</button>
-            {
-              currentUser ? <p className="current-user">{currentUser.displayName || currentUser.email}</p> :
-
-            <button>Login</button>
-            }
+            {currentUser ? (
+              <>
+                <div className="dropdown">
+                  <FontAwesomeIcon icon="fa-solid fa-user" />
+                  <div className="dropdown-menu">
+                    <p className="current-user">
+                      {currentUser.displayName || currentUser.email}
+                    </p>
+                    <button onClick={signOut}>
+                      Logout
+                      <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" />
+                    </button>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <button>Login</button>
+            )}
             <button>Hire Top Talents</button>
           </div>
         </div>
