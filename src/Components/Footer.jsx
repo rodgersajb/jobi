@@ -1,5 +1,11 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {} from "@fortawesome/free-solid-svg-icons";
+
+import jobiLogo from "../assets/jobiLogo.png";
+import jobiLogoDark from "../assets/jobiLogoDark.png";
+import registerSquiggle from "../assets/register-squiggle.jpg";
+import box from "../assets/box.jpg";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 library.add();
@@ -10,12 +16,12 @@ const Footer = () => {
       <footer>
         <div className="flex-container">
           <div className="content">
-            <img src="src/assets/jobiLogo.png" alt="jobi logo" />
+            <img src={jobiLogo} alt="jobi logo" />
             <p>jobisupport@company.com</p>
             <div className="socials">
               {/* <FontAwesomeIcon icon="fa-brands fa-facebook" /> */}
             </div>
-            <img src="src/assets/box.jpg" alt="styling box" />
+            <img src={box} alt="styling box" />
           </div>
 
           <ul>

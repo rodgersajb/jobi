@@ -3,22 +3,28 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCheck, faCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheck,
+  faCircle,
+  faDollarSign,
+  faLocationDot,
+  faSuitcase,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-library.add(faCheck, faCircle);
+library.add(faCheck, faCircle, faDollarSign, faLocationDot, faSuitcase);
 
 const JobDetails = (props) => {
   const { jobPosting } = props;
-  console.log(jobPosting, "job posting");
+  
 
   const { id } = useParams();
 
   const location = useLocation();
-  console.log(location, "location");
+  
 
   const locationArray = Object.values(location);
-  console.log(locationArray, "location array");
+  
   const job = locationArray[3];
 
   return (
@@ -32,6 +38,23 @@ const JobDetails = (props) => {
           <h2>{job?.job}</h2>
         </div>
         <div className="job-details">
+          <div className="container">
+            <div className="content-card">
+              <FontAwesomeIcon icon="fa-solid fa-dollar-sign" />
+              <p>Salary</p>
+              <p>${job.salary} per year</p>
+            </div>
+            <div className="content-card">
+              <FontAwesomeIcon icon="fa-solid fa-location-dot" />
+              <p>Location</p>
+              <p>{job.location}</p>
+            </div>
+            <div className="content-card">
+              <FontAwesomeIcon icon="fa-solid fa-suitcase" />
+              <p>Job Type</p>
+              <p>{job.work}</p>
+            </div>
+          </div>
           <div className="flex-column">
             <div className="content">
               <h4>Job Description</h4>

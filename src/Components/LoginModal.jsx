@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { firebase, db } from "./firebase";
-import { googleSignIn, facebookSignIn } from "./SignUps";
+import { googleSignIn, facebookSignIn } from "./SignIns";
 import { ModalContext } from "../Contexts/ModalContext";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../Contexts/AuthContext";
