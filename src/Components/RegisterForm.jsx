@@ -15,7 +15,7 @@ const RegisterForm = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((response) => {
         const user = response.user;
-
+        
         alert("Successfully signed up!");
         set(ref(db, "users/" + user.uid), {
           email: email,

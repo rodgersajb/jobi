@@ -339,7 +339,7 @@ const Jobs = () => {
         "We offer competitive salaries, comprehensive health and wellness benefits, and opportunities for professional development and growth.",
     },
     {
-      company: "Nike",
+      logo: "Nike",
       work: "fulltime",
       job: "Data Scientist",
       location: "Beaverton, OR",
@@ -356,7 +356,7 @@ const Jobs = () => {
         "- Competitive salary and benefits package\n- Opportunity to work with a world-class team of data scientists and engineers\n- Access to Nike's state-of-the-art facilities and resources\n- Discount on Nike products",
     },
     {
-      company: "Amazon",
+      logo: "Amazon",
       work: "fulltime",
       job: "Software Development Engineer",
       location: "Seattle, WA",

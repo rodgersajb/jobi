@@ -4,6 +4,7 @@ import Register from "./Components/Register";
 import AboutPage from "./Components/AboutPage/AboutPage";
 import JobListings from "./Components/JobListing/JobListing";
 import JobDetails from "./Components/JobDetails";
+import ErrorPage from "./Components/ErrorPage";
 
 import { AuthProvider } from "./Contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -16,7 +17,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<AboutPage />} />
-
+            <Route path ="/404" element={<ErrorPage /> } />
             <Route path="/register" element={<Register />} />
             <Route path="/jobs" element={<JobListings />} />
             <Route path ="/job/:id" element={<JobDetails />} />
