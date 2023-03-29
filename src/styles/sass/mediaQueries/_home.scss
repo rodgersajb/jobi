@@ -3,34 +3,33 @@
     display: none;
   }
   .wrapper {
-    width: 95%;
-  header {
-    h1 {
-      font-size: 4rem;
-      width: 95%;
-    }
-    p {
-      font-size: 1.4rem;
-      text-align: center;
-      width: 85%;
-    }
-    form {
-      flex-direction: column;
-      align-items: center;
-      width: 95%;
-      div {
+    header {
+      h1 {
+        font-size: 4rem;
         width: 95%;
       }
-      button {
+      p {
+        font-size: 1.4rem;
+        text-align: center;
+        width: 85%;
+      }
+      form {
+        flex-direction: column;
+        align-items: center;
         width: 95%;
+        div {
+          width: 95%;
+        }
+        button {
+          width: 95%;
+        }
+      }
+      h5 {
+        width: 75%;
+        text-align: center;
       }
     }
-    h5 {
-      width: 75%;
-      text-align: center;
-    }
-  }
-  .wrapper {
+
     .categories {
       flex-direction: column;
       h3 {
@@ -50,64 +49,64 @@
         }
       }
     }
-  }
-  .find-job {
-    width: 95%;
-    margin: 0 auto;
-    flex-direction: column;
-    img,
-    .job-quick {
+
+    .find-job {
       width: 95%;
-    }
-    img {
-      border-radius: 4rem 4rem 0 0;
-      height: 100%;
-    }
-    .job-quick {
-      border-radius: 0 0 4rem 4rem;
-      height: 100%;
-      h2 {
-        font-size: 4rem;
-        margin-bottom: 0;
-        width: 100%;
-        text-align: center;
+      margin: 0 auto;
+      flex-direction: column;
+      padding: 4rem 0 0 0;
+      img,
+      .job-quick {
+        width: 95%;
       }
-      p {
-        font-size: 1.4rem;
-        text-align: center;
+      img {
+        border-radius: 4rem 4rem 0 0;
+        height: 100%;
       }
-      .find-your-job {
-        width: 90%;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem 0;
-        margin: 0 0 2rem 0;
+      .job-quick {
+        border-radius: 0 0 4rem 4rem;
+        height: 100%;
+        h2 {
+          font-size: 4rem;
+          margin-bottom: 0;
+          width: 100%;
+          text-align: center;
+        }
         p {
-          margin: 0;
+          font-size: 1.4rem;
+          text-align: center;
+        }
+        .find-your-job {
+          width: 90%;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem 0;
+          margin: 0 0 2rem 0;
+          p {
+            margin: 0;
+          }
         }
       }
     }
-  }
-  .flex-container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .stats {
-      width: 100%;
-      h3 {
-        text-align: center;
-        margin-bottom: 0;
-      }
-      p {
-        margin-bottom: 0;
+    .flex-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .stats {
+        width: 100%;
+        h3 {
+          text-align: center;
+          margin-bottom: 0;
+        }
+        p {
+          margin-bottom: 0;
+        }
       }
     }
-  }
-  .trusted {
-    margin: 0 auto;
-    
+    .trusted {
+      margin: 0 auto;
 
       h3 {
         text-align: center;
@@ -129,11 +128,8 @@
           }
         }
       }
-    
-  }
-  .find-talent {
-    
-    
+    }
+    .find-talent {
       .flex-container {
         width: 100%;
         margin: 0 auto;
@@ -167,64 +163,202 @@
             width: 100%;
             text-align: center;
             font-size: 1.8rem;
-            
           }
           button {
             width: 90%;
             margin: 0 0 0 1.2rem;
           }
         }
-      
-    }
-  }
-  .questions-answers {
-    
-    
-    h3 {
-      font-size: 5rem;
-    }
-    .content {
-      width: 100%;
-      .flex-container {
-        flex-direction: row;
-        margin: 0.6rem;
-        h5 {
-          font-size: 1.4rem;
-          width: 90%;
-        }
       }
     }
-    p {
-      text-align: center;
-      width: 95%;
-      margin-top: 4rem;
-      padding: 1rem 0;
-    }
-  }
-  .job-portal {
-    .flex-container {
-      width: 90%;
-
+    .questions-answers {
+      h3 {
+        font-size: 5rem;
+      }
       .content {
-        h4,
-        p {
-          text-align: center;
+        width: 100%;
+        .flex-container {
+          flex-direction: row;
+          margin: 0.6rem;
+          h5 {
+            font-size: 1.4rem;
+            width: 90%;
+          }
         }
       }
-      .button-container {
+      p {
+        text-align: center;
+        width: 95%;
+        margin-top: 4rem;
+        padding: 1rem 0;
+      }
+    }
+    .job-portal {
+      .flex-container {
+        width: 90%;
+
+        .content {
+          h4,
+          p {
+            text-align: center;
+          }
+        }
+        .button-container {
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .wrapper {
+    header {
+      height: 100%;
+      h1 {
+        font-size: 5rem;
+        width: 75%;
+        margin: 0;
+        padding: 8rem 0 0 0;
+      }
+      p {
+        text-align: center;
+      }
+      form {
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        div {
+          width: 100%;
+        }
         button {
           width: 100%;
         }
       }
     }
+    .categories {
+      flex-direction: column;
+      h3 {
+        text-align: center;
+      }
+    }
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .find-job {
+      width: 100%;
+      flex-direction: column;
+      img {
+        width: 100%;
+        border-radius: 4rem 4rem 0 0;
+        height: 100%;
+      }
+      .job-quick {
+        height: 100%;
+        width: 100%;
+        border-radius: 0 0 4rem 4rem;
+        padding: 2rem 0;
+        h2 {
+          font-size: 4.2rem;
+          text-align: center;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+    .flex-container {
+      flex-direction: column;
+      .stats {
+        h3,
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .trusted {
+      width: 100%;
+      h3 {
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .find-talent {
+      .flex-container {
+        .image-container {
+          img {
+            display: none;
+          }
+        }
+        .content {
+          width: 100%;
+          p {
+            color: gray;
+            text-align: center;
+          }
+          h3 {
+            width: 100%;
+            font-size: 5rem;
+            text-align: center;
+            margin: 0;
+          }
+          .flex-container {
+            flex-direction: row;
+          }
+          button {
+            width: 95%;
+          }
+        }
+      }
+    }
+    .questions-answers {
+      h3 {
+        font-size: 5rem;
+      }
+      .content {
+        width: 100%;
+        .flex-container {
+          flex-direction: row;
+          h5 {
+            width: 90%;
+          }
+        }
+        
+      }
+      p {
+        width: 90%;
+      }
+    }
+    .job-portal {
+      .flex-container {
+        width: 100%;
+        .content {
+          h4,
+          p {
+            text-align: center;
+          }
+        }
+        .button-container {
+          width: 100%;
+          padding: 0 0 4rem 0;
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
-}
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    display: none;
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {

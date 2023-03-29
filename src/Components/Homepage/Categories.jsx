@@ -23,7 +23,7 @@ library.add(
 const Categories = () => {
   return (
     <>
-      <div className="wrapper">
+      
         <div className="categories">
           <h3>Most Demanding Categories.</h3>
           <p>
@@ -63,7 +63,7 @@ const Categories = () => {
             <p>17k! Jobs</p>
           </div>
         </div>
-      </div>
+      
     </>
   );
 };

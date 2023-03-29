@@ -49,14 +49,14 @@ const LoginModal = () => {
     setShowModal(false);
   };
 
-  useEffect(() => {
-    document.body.classList.toggle("modal-open", showModal);
-  }, [showModal]);
+  // useEffect(() => {
+  //   document.body.classList.toggle("modal-open", showModal);
+  // }, [showModal]);
 
   return (
     <>
       <div className="modal" style={{ display: showModal ? "block" : "none" }} onClick={closeModal}>
-        <div className="content">
+        <div className="content" onClick={(e) => e.stopPropagation()}>
           <h2>Hi, Welcome Back!</h2>
           <h5>
             Still don't have an account?{" "}
