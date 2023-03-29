@@ -359,6 +359,126 @@
   nav {
     display: none;
   }
+  .wrapper {
+    header {
+      height: 100%;
+      h1 {
+      width: 75%;
+      margin-bottom: 0;
+      font-size: 6rem;
+    }
+    }
+    .categories {
+      width: 95%;
+      p {
+        width: 25%;
+      }
+    }
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .find-job {
+      width: 100%;
+      flex-direction: column;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4rem 4rem 0 0;
+      }
+      .job-quick {
+        padding: 2rem 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0 0 4rem 4rem;
+        h2 {
+          font-size: 6rem;
+        }
+        .find-your-job {
+          width: 50%;
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .trusted {
+      margin: 0 auto;
+      h3 {
+        text-align: center;
+        width: 100%
+      }
+      .flex-container {
+        flex-direction: column;
+        .card {
+          .flex-container {
+            .rating {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+    .find-talent {
+      
+      .flex-container {
+        flex-direction: column;
+        gap: 0rem;
+        .image-container {
+          img {
+            display: none;
+          }
+
+        }
+        .content {
+          width: 100%;
+          p {
+            color: gray;
+            text-align: center;
+            padding: 2rem 0 0 0;
+            font-size: 1.8rem;
+          }
+          h3 {
+            text-align: center;
+            margin: 0;
+          }
+          .flex-container {
+            flex-direction: row;
+          }
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .questions-answers {
+      .content {
+        width: 100%;
+      }
+      p {
+        width: 75%;
+        padding: 1rem 0;
+      }
+    }
+    .job-portal {
+      .flex-container {
+        flex-direction: column;
+        width: 100%;
+        .content {
+        width: 100%;
+        h4, p {
+          text-align: center;
+        }
+      }
+      .button-container {
+        width: 90%;
+        button {
+          width: 100%;
+        }
+      }
+      }
+    }
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
