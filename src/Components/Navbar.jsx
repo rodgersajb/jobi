@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthContext";
 
@@ -13,6 +13,11 @@ library.add(faUser, faRightFromBracket);
 
 const Navbar = () => {
   const { currentUser, setCurrentUser } = useContext(AuthContext);
+  const [isDropDown, setIsDropDown] = useState(false);
+
+  const toggleDropDown = () => {
+    setIsDropDown(!isDropDown);
+  };
 
   console.log(currentUser);
   const signOut = () => {
@@ -30,9 +35,16 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
 
-            <li>
-              <Link to="/jobs">Jobs</Link>
-            </li>
+            <li onClick={isDropDown}> Jobs </li>
+            {/* {!isDropDown && (
+              <ul className="job-dropdown">
+                <li>
+                  <Link to="/jobs">Jobs</Link>
+                  <li>Saved jobs</li>
+                  <li>Other things</li>
+                </li>
+              </ul>
+            )} */}
 
             <li>Explore</li>
             <li>Contact</li>

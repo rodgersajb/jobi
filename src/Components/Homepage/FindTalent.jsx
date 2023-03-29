@@ -12,7 +12,7 @@ const FindTalent = () => {
   return (
     <>
       <section className="find-talent">
-        <div className="wrapper">
+        
 
         <div className="flex-container">
           <div className="image-container">
@@ -51,7 +51,7 @@ const FindTalent = () => {
             <button>Find Talents</button>
           </div>
         </div>
-        </div>
+        
       </section>
     </>
   );

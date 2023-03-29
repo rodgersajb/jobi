@@ -2,7 +2,7 @@ const Trusted = () => {
   return (
     <>
       <section className="trusted">
-        <div className="wrapper">
+        
           <h3>Trusted by leading startups</h3>
           <div className="flex-container">
             <div className="card">
@@ -36,7 +36,7 @@ const Trusted = () => {
               </div>
             </div>
           </div>
-        </div>
+        
       </section>
     </>
   );

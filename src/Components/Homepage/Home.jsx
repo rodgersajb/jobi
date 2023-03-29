@@ -14,12 +14,14 @@ const Home = () => {
     <>
       <ModalProvider>
         <Nav />
-        <Header />
-        <Categories />
-        <JobFind />
-        <Trusted />
-        <FindTalent />
-        <QA />
+        <div className="wrapper">
+          <Header />
+          <Categories />
+          <JobFind />
+          <Trusted />
+          <FindTalent />
+          <QA />
+        </div>
         <Footer />
         <LoginModal />
       </ModalProvider>

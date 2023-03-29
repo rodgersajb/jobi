@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:css": "node-sass --output-style compressed --source-map false src/styles/main.scss dist/main.css"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
