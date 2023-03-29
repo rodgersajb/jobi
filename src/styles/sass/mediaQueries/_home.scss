@@ -482,6 +482,99 @@
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+  .wrapper {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .find-job {
+      width: 100%;
+      flex-direction: column;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4rem 4rem 0 0;
+      }
+      .job-quick {
+        padding: 2rem 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0 0 4rem 4rem;
+        h2, p {
+          text-align: center;
+        }
+        .find-your-job {
+          width: 50%;
+        }
+      }
+    }
+    .trusted {
+      width: 100%;
+      .flex-container {
+        height: 100%;
+        .card:nth-child(2) {
+          img:first-child {
+            height: 5.3rem;
+          }
+        }
+        .card {
+          width: 100%;
+          .flex-container {
+            .rating {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+    .find-talent {
+      .flex-container {
+        gap: 0rem;
+        .image-container {
+          width: 0%;
+          img {
+            display: none;
+          }
+        }
+        .content {
+          width: 100%;
+          h3 {
+
+            font-size: 6rem;
+          }
+        }
+
+      }
+    }
+    .questions-answers {
+      .content {
+        width: 100%;
+        margin: 0 0 2rem 0;
+      }
+      p {
+        padding: 1rem 0;
+        
+        
+      }
+    }
+    .job-portal {
+      .flex-container {
+        flex-direction: column;
+        .content {
+          h4, p {
+            text-align: center;
+          }
+        }
+        .button-container {
+          width: 65%;
+          padding: 0 0 3rem 0;
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1281px) {
