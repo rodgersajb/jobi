@@ -4,7 +4,12 @@ import { db } from "../firebase";
 import { uuidv4 } from "@firebase/util";
 import { AuthContext } from "../../Contexts/AuthContext";
 import { Link } from "react-router-dom";
-import JobDetails from "../JobDetails";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {faBookmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+library.add(faBookmark);
 
 const JobCard = (props) => {
   const { jobPosting, index } = props;

@@ -1,6 +1,9 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthContext";
+import { ModalContext } from "../Contexts/ModalContext";
+
+import LoginModal from "./LoginModal";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faUser, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
@@ -13,6 +16,10 @@ library.add(faUser, faRightFromBracket);
 
 const Navbar = () => {
   const { currentUser, setCurrentUser } = useContext(AuthContext);
+  const { showModal, setShowModal } = useContext(ModalContext);
+  const handleClick = () => {
+    setShowModal(true);
+  };
   const [isDropDown, setIsDropDown] = useState(false);
 
   const toggleDropDown = () => {
@@ -26,6 +33,8 @@ const Navbar = () => {
 
   return (
     <>
+    
+
       <nav className="pages">
         <div className="flex-container pages">
           <img src={jobiLogoDark} alt="jobi logo" />
@@ -71,12 +80,13 @@ const Navbar = () => {
                 </div>
               </>
             ) : (
-              <button>Login</button>
+              <button onClick={handleClick}>Login</button>
             )}
             <button>Hire Top Talents</button>
           </div>
         </div>
       </nav>
+    
     </>
   );
 };

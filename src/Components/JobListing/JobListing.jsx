@@ -4,13 +4,18 @@ import Footer from "../Footer";
 import Jobs from "../Jobs";
 import { useContext } from "react";
 import { AuthContext } from "../../Contexts/AuthContext";
+import LoginModal from "../LoginModal";
 
+import { ModalProvider } from "../../Contexts/ModalContext";
 
 const JobListings = () => {
-  
   return (
     <>
-      <Navbar />
+      <ModalProvider>
+        <Navbar />
+
+        <LoginModal />
+      </ModalProvider>
 
       <Jobs />
 

@@ -6,6 +6,7 @@ import JobListings from "./Components/JobListing/JobListing";
 import JobDetails from "./Components/JobDetails";
 import ErrorPage from "./Components/ErrorPage";
 
+
 import { AuthProvider } from "./Contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 

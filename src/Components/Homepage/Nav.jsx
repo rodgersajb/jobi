@@ -27,7 +27,7 @@ const Nav = () => {
         </ul>
         <div className="login-buttons">
           <button
-            center
+            
             styles={{ background: "#FFFF00" }}
             onClick={handleClick}
           >

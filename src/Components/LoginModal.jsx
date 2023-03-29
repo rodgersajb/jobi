@@ -49,9 +49,9 @@ const LoginModal = () => {
     setShowModal(false);
   };
 
-  // useEffect(() => {
-  //   document.body.classList.toggle("modal-open", showModal);
-  // }, [showModal]);
+  useEffect(() => {
+    document.body.classList.toggle("modal-open", showModal);
+  }, [showModal]);
 
   return (
     <>
