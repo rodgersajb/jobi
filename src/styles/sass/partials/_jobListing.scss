@@ -112,7 +112,8 @@
     .fulltime,
     .parttime,
     .part-time,
-    .full-time {
+    .full-time,
+    .Full-time {
       font-family: $heading2;
       font-size: 1.4rem;
       font-weight: 600;
@@ -123,7 +124,8 @@
       color: red;
     }
     .fulltime,
-    .full-time {
+    .full-time,
+    .Full-time {
       color: $green;
     }
     .salary,

@@ -1,88 +1,119 @@
-@media (min-width:320px) {
-    .modal {
-        .content {
-            margin: 2rem auto;
-            width: 90%;
-            height: 70%;
-            h2 {
-                font-size: 3rem;
-                margin: 0;
-            }
-            h5 {
-                text-align: center;
-                margin: 0;
-                padding: 2rem 0 0 0;
-            }
-            form {
-                width: 100%;
-                .login-btn {
-                    margin: 0;
-                    margin: 1rem 0;
-                }
-                .flex-container {
-                    .sign-in-buttons {
-                        padding: 0;
-                        width: 100%;
-                        flex-direction: column;
-                        button {
-                            img {
-                                padding: 0;
-                            }
-                        }
-                    }
-                    p {
-                        text-align: center;
-                        width: 100%;
-                    }
-                }
-            }
+@media (min-width: 320px) {
+  .modal {
+    .content {
+      margin: 2rem auto;
+      width: 90%;
+      height: 70%;
+      h2 {
+        font-size: 3rem;
+        margin: 0;
+      }
+      h5 {
+        text-align: center;
+        margin: 0;
+        padding: 2rem 0 0 0;
+      }
+      form {
+        width: 100%;
+        .login-btn {
+          margin: 0;
+          margin: 1rem 0;
         }
+        .flex-container {
+          .sign-in-buttons {
+            padding: 0;
+            width: 100%;
+            flex-direction: column;
+            button {
+              img {
+                padding: 0;
+              }
+            }
+          }
+          p {
+            text-align: center;
+            width: 100%;
+          }
+        }
+      }
     }
-
+  }
 }
 
-@media (min-width:481px)  and (max-width: 768px) {
-    .modal {
-        .content {
-            height: 60%;
-        }
+@media (min-width: 481px) and (max-width: 768px) {
+  .modal {
+    .content {
+      height: 60%;
     }
-
+  }
 }
 
-@media (min-width:769px) and (max-width:1024px) {
-     .modal {
-        .content {
-            height: 60%;
-        }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .modal {
+    .content {
+      height: 60%;
     }
-
-
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-    .modal {
-        .content {
-            width: 60%;
-            height: 50%;
-            form {
-                width: 70%;
-                .login-btn {
-                    margin: 2rem 0;
-                }
-                .flex-container {
-                    .sign-in-buttons {
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: center;
+  .modal {
+    .content {
+      width: 60%;
+      height: 90%;
+      form {
+        width: 70%;
+        .login-btn {
+          margin: 2rem 0;
+        }
+        .flex-container {
+          .sign-in-buttons {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1281px) {
+  .pages {
+    .register-form {
+        .form-container {
+          height: 80%;
+          width: 40%;
+
+        h2 {
+          padding: 4rem 0 0 0;
+        }
+        form {
+            .flex-container {
+                width: 75%;
+                .sign-in-buttons {
+                    flex-direction: row;
+                    width: 100%;
+                    
+                    button {
+                        width: 100%;
+                        padding: 0;
+                        img {
+                            width: 100%;
+                            padding: 0;
+                        }
                     }
                 }
             }
         }
+      }
     }
-
-}
-
-@media (min-width: 1281px) {
-    
+  }
+  .modal {
+    .content {
+      height: 85%;
+      width: 50%;
+      margin: 6rem auto;
+    }
+  }
 }
