@@ -3,12 +3,16 @@ import { set, ref } from "firebase/database";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { googleSignUp, facebookSignUp } from "./SignUps";
 import { ModalContext } from "../Contexts/ModalContext";
+import { AuthContext } from "../Contexts/AuthContext";
 import LoginModal from "./LoginModal";
 
 import { useState, useContext } from "react";
 
 const RegisterForm = () => {
+  const { currentUser, setCurrentUser} = useContext(AuthContext)
   const { showModal, setShowModal } = useContext(ModalContext);
+
+  console.log(currentUser, 'CURRENT USER')
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

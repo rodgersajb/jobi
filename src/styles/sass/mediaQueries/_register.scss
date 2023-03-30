@@ -78,6 +78,9 @@
 
 @media (min-width: 1025px) and (max-width: 1280px) {
     .pages {
+        nav {
+            display: block;
+        }
         .register-form {
             .form-container {
                 width: 75%;
@@ -107,5 +110,10 @@
 }
 
 @media (min-width: 1281px) {
+    .pages {
+        nav {
+            display: block;
+        }
+    }
     
 }

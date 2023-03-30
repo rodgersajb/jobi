@@ -4,16 +4,20 @@ import {
   GoogleAuthProvider,
   FacebookAuthProvider,
 } from "firebase/auth";
+import { useContext } from "react";
+import { AuthContext } from "../Contexts/AuthContext";
 
 export const googleSignIn = () => {
+  const {currentUser, setCurrentUser} = useContext(AuthContext)
   const auth = getAuth();
-  signInWithPopup(auth, provider)
+  signInWithPopup(auth, GoogleAuthProvider)
     .then((result) => {
+      console.log(result)
       // This gives you a Google Access Token. You can use it to access the Google API.
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       // The signed-in user info.
-      const user = result.user;
+      const currentUser = result.user;
       // IdP data available using getAdditionalUserInfo(result)
       // ...
     })
@@ -31,10 +35,10 @@ export const googleSignIn = () => {
 
 export const facebookSignIn = () => {
   const auth = getAuth();
-  signInWithPopup(auth, provider)
+  signInWithPopup(auth, FacebookAuthProvider)
     .then((result) => {
       // The signed-in user info.
-      const user = result.user;
+      const currentUser = result.user;
 
       // This gives you a Facebook Access Token. You can use it to access the Facebook API.
       const credential = FacebookAuthProvider.credentialFromResult(result);

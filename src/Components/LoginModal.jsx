@@ -1,8 +1,16 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import {
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  FacebookAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import { firebase, db } from "./firebase";
-import { googleSignIn, facebookSignIn } from "./SignIns";
+
 import { ModalContext } from "../Contexts/ModalContext";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../Contexts/AuthContext";
@@ -12,11 +20,75 @@ const LoginModal = () => {
   const { currentUser, setCurrentUser } = useContext(AuthContext);
   const [loggedIn, setLoggedIn] = useState(false);
 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+
+  const googleSignIn = () => {
+    const auth = getAuth(firebase);
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        setCurrentUser(user);
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
+  };
+
+  const facebookSignIn = () => {
+    const auth = getAuth(firebase);
+    const provider = new FacebookAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // The signed-in user info.
+        console.log(result, "FACEBOOK RESULT");
+        const user = result.user;
+        setCurrentUser(user);
+
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        const credential = FacebookAuthProvider.credentialFromResult(result);
+        const accessToken = credential.accessToken;
+
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = FacebookAuthProvider.credentialFromError(error);
+
+        // ...
+      });
+  };
+
   const handleSignIn = (event) => {
     const auth = getAuth(firebase);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        setCurrentUser(userCredential.user);
+        console.log(userCredential, "CRED");
+        const user = userCredential.user;
+        setCurrentUser(user);
+        // setCurrentUser(userCredential.user);
         alert("successfully signed in!");
       })
       .catch((error) => {
@@ -26,11 +98,11 @@ const LoginModal = () => {
   };
 
   const authenticateUser = () => {
-    // determine if user is logged in
     const auth = getAuth(firebase);
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        <Navigate to="/" />;
+        const navigate = useNavigate();
+        navigate("/");
         setLoggedIn(true);
         const uid = currentUser.uid;
       } else {
@@ -49,13 +121,21 @@ const LoginModal = () => {
     setShowModal(false);
   };
 
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+  };
+
   useEffect(() => {
     document.body.classList.toggle("modal-open", showModal);
   }, [showModal]);
 
   return (
     <>
-      <div className="modal" style={{ display: showModal ? "block" : "none" }} onClick={closeModal}>
+      <div
+        className="modal"
+        style={{ display: showModal ? "block" : "none" }}
+        onClick={closeModal}
+      >
         <div className="content" onClick={(e) => e.stopPropagation()}>
           <h2>Hi, Welcome Back!</h2>
           <h5>
@@ -64,12 +144,19 @@ const LoginModal = () => {
               <Link to="/register">Sign up</Link>
             </span>
           </h5>
-          <form action="">
+          <form action="" onSubmit={handleOnSubmit}>
             <span className="inputs">
               <label htmlFor="name">Name*</label>
               <input
                 type="text"
                 onChange={(event) => setName(event.target.value)}
+              />
+            </span>
+            <span className="inputs">
+              <label htmlFor="email">Email*</label>
+              <input
+                type="text"
+                onChange={(event) => setEmail(event.target.value)}
               />
             </span>
             <span className="inputs">
@@ -101,7 +188,9 @@ const LoginModal = () => {
               <p>
                 Don't have an account? <Link to="/register">Sign up</Link>
               </p>
-              <button className="close-modal" onClick={closeModal}>x</button>
+              <button className="close-modal" onClick={closeModal}>
+                x
+              </button>
             </div>
           </form>
         </div>
