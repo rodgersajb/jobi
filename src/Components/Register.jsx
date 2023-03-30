@@ -1,21 +1,24 @@
 import Footer from "./Footer";
 import RegisterForm from "./RegisterForm";
 import Navbar from "./Navbar";
+import { ModalContext, ModalProvider } from "../Contexts/ModalContext";
 
 const Register = () => {
   return (
     <>
-      <div className="pages">
-        <Navbar />
+      <ModalProvider>
+        <div className="pages">
+          <Navbar />
 
-        <div className="content-container">
-          <h2>Register</h2>
-          <h5>Create an account & Start posting or hiring talents</h5>
-          <img src="src/assets/box-reg.jpg" alt="" />
+          <div className="content-container">
+            <h2>Register</h2>
+            <h5>Create an account & Start posting or hiring talents</h5>
+            <img src="src/assets/box-reg.jpg" alt="" />
+          </div>
+          <RegisterForm />
         </div>
-        <RegisterForm />
-      </div>
-      <Footer />
+        <Footer />
+      </ModalProvider>
     </>
   );
 };

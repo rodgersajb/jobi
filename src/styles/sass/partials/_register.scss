@@ -171,6 +171,7 @@
       p {
         text-align: center;
         .underline {
+          cursor: pointer;
           color: $green;
           border-bottom: 1px solid $green;
         }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthContext";
 import { ModalContext } from "../Contexts/ModalContext";
 
-import LoginModal from "./LoginModal";
+
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faUser, faRightFromBracket } from "@fortawesome/free-solid-svg-icons";

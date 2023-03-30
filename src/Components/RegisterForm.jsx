@@ -2,13 +2,21 @@ import { firebase, db } from "./firebase";
 import { set, ref } from "firebase/database";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { googleSignUp, facebookSignUp } from "./SignUps";
+import { ModalContext } from "../Contexts/ModalContext";
+import LoginModal from "./LoginModal";
 
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 const RegisterForm = () => {
+  const { showModal, setShowModal } = useContext(ModalContext);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+
+   const handleClick = () => {
+     setShowModal(true);
+   };
 
   const handleSignUp = () => {
     const auth = getAuth(firebase);
@@ -91,10 +99,11 @@ const RegisterForm = () => {
             </div>
           </form>
           <p>
-            Have an account? <span className="underline">Sign In</span>
+            Have an account? <span className="underline" onClick={handleClick}>Sign In</span>
           </p>
         </div>
       </section>
+      <LoginModal/>
     </>
   );
 };
