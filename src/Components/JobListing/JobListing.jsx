@@ -1,5 +1,6 @@
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import SlideOutNav from "../slideOutNav";
 
 import Jobs from "../Jobs";
 import { useContext } from "react";
@@ -13,6 +14,7 @@ const JobListings = () => {
     <>
       <ModalProvider>
         <Navbar />
+        
 
         <LoginModal />
 

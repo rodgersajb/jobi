@@ -1,4 +1,6 @@
 import JobCard from "./JobCard";
+import SlideOutNav from "../slideOutNav";
+
 
 const JobSearchForm = ({ filteredJobPostings }) => {
   console.log(filteredJobPostings, "FILTERED");
@@ -6,7 +8,10 @@ const JobSearchForm = ({ filteredJobPostings }) => {
 
   return (
     <>
+        <SlideOutNav />
       <div className="content-container">
+      
+
         <h2>Job Listing</h2>
         <h5>We delivered blazing fast & striking work solution</h5>
         <img src="src/assets/box-reg.jpg" alt="" />

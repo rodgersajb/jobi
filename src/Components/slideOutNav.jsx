@@ -1,24 +1,46 @@
 import { useState } from "react";
 
-const slideOutNav = () => {
-    const [isOpen, setIsOpen] = useState(false);
+const SlideOutNav = () => {
+ 
+    const [burger, setBurger] = useState("burger unclicked");
+    const [menu, setMenu] = useState("menu hidden");
+    const [isMenuClicked, setIsMenuClicked] = useState(false);
 
-    const toggleNav = () => {
-        setIsOpen(!isOpen);
+    const update = () => {
+        if (!isMenuClicked) {
+            setBurger("burger clicked")
+            setMenu("menu visible")
+        }
+        else {
+            setBurger("burger unclicked")
+            setMenu("menu hidden")
+        }
     }
 
-    return (
-        <>
-        <nav className={`slideNav ${isOpen ? 'open' : ""}` }>
-            <div className="hamburger">
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
-            </div>
+  return (
+    <>
 
-        </nav>
-        </>
-    )
-}
+    <div className="flex-container">
+      <div className="burger-nav">
 
-export default slideOutNav;
+      <div className="hamburger">
+        <div className="bar" onClick={update}></div>
+        <div className="bar" onClick={update}></div>
+        <div className="bar" onClick={update}></div>
+      </div>
+        <ul className="slide-out">
+          <li>Category</li>
+          <li>Home</li>
+          <li>Explore</li>
+          <li>Contact</li>
+          <li>Pages</li>
+        </ul>
+      </div>
+
+    </div>
+      <div className="slide-out"></div>
+    </>
+  );
+};
+
+export default SlideOutNav;

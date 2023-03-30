@@ -1,0 +1,21 @@
+.flex-container {
+   
+  .burger-nav {
+    background: pink;
+    .hamburger {
+      position: fixed;
+      display: block;
+      top: 0;
+      right: 0;
+      height: 300px;
+      width: 100%;
+      z-index: 999;
+      .bar {
+        height: 30px;
+        width: 50px;
+        color: $lime;
+        z-index: 999;
+      }
+    }
+  }
+}
