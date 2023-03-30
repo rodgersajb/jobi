@@ -3,13 +3,13 @@ import SlideOutNav from "../slideOutNav";
 
 
 const JobSearchForm = ({ filteredJobPostings }) => {
-  console.log(filteredJobPostings, "FILTERED");
+  
   //
 
   return (
     <>
-        <SlideOutNav />
       <div className="content-container">
+        
       
 
         <h2>Job Listing</h2>

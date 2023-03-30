@@ -19,6 +19,7 @@ ul {
   margin: 0 auto;
   max-width: 1880px;
   width: 95%;
+  min-width: 320px;
 }
 
 p {
@@ -107,6 +108,18 @@ h2 {
 }
 .pages .flex-container ul li {
   color: #fff;
+  position: relative;
+}
+.pages .flex-container ul li .job-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+.pages .flex-container ul li .job-dropdown li {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
 }
 .pages .flex-container ul li a {
   color: #fff;
@@ -116,9 +129,25 @@ h2 {
 }
 .pages .buttons {
   display: flex;
+  align-items: center;
   gap: 1rem;
   font-family: "Montserrat", sans-serif;
-  justify-content: space-between;
+}
+.pages .buttons .fa-user {
+  color: #D2F34C;
+  font-size: 2rem;
+}
+.pages .buttons .current-user {
+  color: #D2F34C;
+  padding: 0 6rem 0 0;
+  margin: 0;
+}
+.pages .buttons .sign-out {
+  height: 10rem;
+  color: #D2F34C;
+}
+.pages .buttons .sign-out:hover .dropdown-menu, .pages .buttons .sign-out:focus .dropdown-menu {
+  opacity: 1;
 }
 .pages .buttons button {
   font-size: 1.4rem;
@@ -427,6 +456,7 @@ html {
 .App {
   max-width: 2080px;
   position: relative;
+  overflow-x: hidden;
 }
 
 nav {
@@ -549,6 +579,9 @@ header h5 {
   line-height: normal;
   color: green;
   font-family: "EB Garamond", serif;
+}
+.wrapper .categories p .fa-chevron-right {
+  padding: 0 0 0 1.4rem;
 }
 .wrapper .grid-container {
   margin: 4rem 0 0 0;
@@ -1000,23 +1033,23 @@ footer .footer .socials span {
   justify-content: center;
   padding: 4rem;
 }
-.pages .register-form .form-container form span {
+.pages .register-form .form-container form .label {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-.pages .register-form .form-container form span label,
-.pages .register-form .form-container form span input {
+.pages .register-form .form-container form .label label,
+.pages .register-form .form-container form .label input {
   width: 75%;
 }
-.pages .register-form .form-container form span label {
+.pages .register-form .form-container form .label label {
   font-family: "Montserrat", sans-serif;
   color: grey;
   font-size: 1.4rem;
   padding: 1rem 0 1rem 0;
 }
-.pages .register-form .form-container form span input {
+.pages .register-form .form-container form .label input {
   outline: none;
   border: none;
   border: 2px solid grey;
@@ -1034,6 +1067,8 @@ footer .footer .socials span {
 }
 .pages .register-form .form-container form span {
   font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  padding: 2rem 0 0 0;
 }
 .pages .register-form .form-container form .flex-container .sign-in-buttons {
   display: flex;
@@ -1045,13 +1080,14 @@ footer .footer .socials span {
   border: 2px solid #f5f5f5;
 }
 .pages .register-form .form-container form .flex-container .sign-in-buttons button:hover, .pages .register-form .form-container form .flex-container .sign-in-buttons button:focus {
-  border: 4px solid #f5f5f5;
+  border: 2px solid #244034;
   transition: ease 0.3s;
 }
 .pages .register-form .form-container p {
   text-align: center;
 }
 .pages .register-form .form-container p .underline {
+  cursor: pointer;
   color: #31795A;
   border-bottom: 1px solid #31795A;
 }
@@ -1063,7 +1099,7 @@ footer .footer .socials span {
   width: 100%;
   height: 100%;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1080,6 +1116,7 @@ footer .footer .socials span {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 .modal .content h2 {
   color: #244034;
@@ -1126,8 +1163,22 @@ footer .footer .socials span {
   border: 2px solid #f5f5f5;
   border-radius: 1rem;
 }
-.modal .content form .flex-container .sign-in-buttons a {
-  color: pink;
+.modal .content form .flex-container a {
+  color: #244034;
+  border-bottom: 1px solid #244034;
+}
+.modal .content form .flex-container .close-modal {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  background: #244034;
+  border: 2px solid #244034;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.6rem;
 }
 
 .one {
@@ -1466,16 +1517,22 @@ footer .footer .socials span {
   width: 4rem;
 }
 .job-search-results .results .fulltime,
-.job-search-results .results .parttime {
+.job-search-results .results .parttime,
+.job-search-results .results .part-time,
+.job-search-results .results .full-time,
+.job-search-results .results .Full-time {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
   text-transform: capitalize;
 }
-.job-search-results .results .parttime {
+.job-search-results .results .parttime,
+.job-search-results .results .part-time {
   color: red;
 }
-.job-search-results .results .fulltime {
+.job-search-results .results .fulltime,
+.job-search-results .results .full-time,
+.job-search-results .results .Full-time {
   color: #31795A;
 }
 .job-search-results .results .salary,
@@ -1489,4 +1546,1030 @@ footer .footer .socials span {
   font-family: "Montserrat", sans-serif;
   color: grey;
   font-size: 1.2rem;
+}
+.job-search-results .results .buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 14%;
+}
+.job-search-results .results .buttons button, .job-search-results .results .buttons a {
+  background: #D2F34C;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #244034;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #244034;
+  width: 100%;
+  text-align: center;
+}
+
+.job h5 {
+  margin: 0;
+  padding: 8rem 0 0 0;
+}
+.job .job-details .container {
+  width: 65%;
+  margin: 0 auto;
+  padding: 8rem 0 0 0;
+  gap: 4rem;
+  display: flex;
+}
+.job .job-details .container .content-card {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.job .job-details .container .content-card .fa-dollar-sign,
+.job .job-details .container .content-card .fa-location-dot,
+.job .job-details .container .content-card .fa-suitcase {
+  color: #31795A;
+  font-size: 2rem;
+  padding: 0 0 4rem 0;
+}
+.job .job-details .container .content-card p:nth-child(2) {
+  margin-bottom: 1rem;
+  color: grey;
+}
+.job .job-details .container .content-card p:nth-child(3) {
+  margin: 0;
+}
+.job .job-details .flex-column {
+  width: 65%;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+.job .job-details .flex-column .content h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+}
+.job .job-details .flex-column .content p {
+  color: grey;
+}
+.job .job-details .flex-column .content ul {
+  padding: 0;
+}
+.job .job-details .flex-column .content ul .flex-container {
+  justify-content: flex-start;
+}
+.job .job-details .flex-column .content ul .flex-container .fa-check {
+  background: #31795A;
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 50%;
+  margin: 0 2rem 0 0;
+}
+.job .job-details .flex-column .content ul .flex-container .fa-circle {
+  margin: 0 2rem 0 0;
+}
+.job .job-details .flex-column .content ul .flex-container li {
+  color: grey;
+}
+
+.error-page {
+  width: 85%;
+  margin: 0 auto;
+}
+.error-page .flex-container {
+  gap: 10rem;
+  align-items: center;
+}
+.error-page .flex-container .image-container {
+  padding: 16rem 0 0 0;
+}
+.error-page .flex-container .image-container img {
+  height: 50%;
+}
+.error-page .flex-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.error-page .flex-container .content .error {
+  color: #31795A;
+  margin: 0;
+  padding: 10rem 0 0 0;
+}
+.error-page .flex-container .content h2:nth-of-type(2) {
+  margin: 0;
+}
+.error-page .flex-container .content p {
+  font-weight: 600;
+  width: 70%;
+}
+.error-page .flex-container .content a {
+  display: flex;
+  background: #D2F34C;
+  width: 70%;
+  border-radius: 4rem;
+  align-items: center;
+  padding: 0 1rem 0 3rem;
+  justify-content: space-between;
+  margin: 6rem 0 0 0;
+}
+.error-page .flex-container .content a img {
+  width: 15%;
+  height: 20%;
+}
+.error-page .flex-container .content a p {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  nav {
+    display: none;
+  }
+  .wrapper header h1 {
+    font-size: 4rem;
+    width: 95%;
+  }
+  .wrapper header p {
+    font-size: 1.4rem;
+    text-align: center;
+    width: 85%;
+  }
+  .wrapper header form {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
+  .wrapper header form div {
+    width: 95%;
+  }
+  .wrapper header form button {
+    width: 95%;
+  }
+  .wrapper header h5 {
+    width: 75%;
+    text-align: center;
+  }
+  .wrapper .categories {
+    flex-direction: column;
+  }
+  .wrapper .categories h3 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .wrapper .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wrapper .grid-container div {
+    padding: 1.4rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper .grid-container div h5 {
+    font-size: 1.4rem;
+    padding: 2.4rem 0;
+  }
+  .wrapper .find-job {
+    width: 95%;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 4rem 0 0 0;
+  }
+  .wrapper .find-job img,
+  .wrapper .find-job .job-quick {
+    width: 95%;
+  }
+  .wrapper .find-job img {
+    border-radius: 4rem 4rem 0 0;
+    height: 100%;
+  }
+  .wrapper .find-job .job-quick {
+    border-radius: 0 0 4rem 4rem;
+    height: 100%;
+  }
+  .wrapper .find-job .job-quick h2 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .wrapper .find-job .job-quick p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .wrapper .find-job .job-quick .find-your-job {
+    width: 90%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    margin: 0 0 2rem 0;
+  }
+  .wrapper .find-job .job-quick .find-your-job p {
+    margin: 0;
+  }
+  .wrapper .flex-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper .flex-container .stats {
+    width: 100%;
+  }
+  .wrapper .flex-container .stats h3 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .wrapper .flex-container .stats p {
+    margin-bottom: 0;
+  }
+  .wrapper .trusted {
+    margin: 0 auto;
+  }
+  .wrapper .trusted h3 {
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
+    color: #244034;
+  }
+  .wrapper .trusted .flex-container .card {
+    width: 100%;
+  }
+  .wrapper .trusted .flex-container .card p {
+    text-align: center;
+  }
+  .wrapper .trusted .flex-container .card .flex-container .rating {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper .find-talent .flex-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .wrapper .find-talent .flex-container .image-container img {
+    display: none;
+  }
+  .wrapper .find-talent .flex-container .content {
+    width: 100%;
+  }
+  .wrapper .find-talent .flex-container .content p {
+    color: grey;
+    text-align: center;
+  }
+  .wrapper .find-talent .flex-container .content h3 {
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    margin: 0.2rem;
+  }
+  .wrapper .find-talent .flex-container .content .flex-container {
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+  .wrapper .find-talent .flex-container .content p:nth-of-type(2) {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .wrapper .find-talent .flex-container .content button {
+    width: 90%;
+    margin: 0 0 0 1.2rem;
+  }
+  .wrapper .questions-answers h3 {
+    font-size: 5rem;
+  }
+  .wrapper .questions-answers .content {
+    width: 100%;
+  }
+  .wrapper .questions-answers .content .flex-container {
+    flex-direction: row;
+    margin: 0.6rem;
+  }
+  .wrapper .questions-answers .content .flex-container h5 {
+    font-size: 1.4rem;
+    width: 90%;
+  }
+  .wrapper .questions-answers p {
+    text-align: center;
+    width: 95%;
+    margin-top: 4rem;
+    padding: 1rem 0;
+  }
+  .wrapper .job-portal .flex-container {
+    width: 90%;
+  }
+  .wrapper .job-portal .flex-container .content h4,
+  .wrapper .job-portal .flex-container .content p {
+    text-align: center;
+  }
+  .wrapper .job-portal .flex-container .button-container button {
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .wrapper header {
+    height: 100%;
+  }
+  .wrapper header h1 {
+    font-size: 5rem;
+    width: 75%;
+    margin: 0;
+    padding: 8rem 0 0 0;
+  }
+  .wrapper header p {
+    text-align: center;
+  }
+  .wrapper header form {
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+  }
+  .wrapper header form div {
+    width: 100%;
+  }
+  .wrapper header form button {
+    width: 100%;
+  }
+  .wrapper .categories {
+    flex-direction: column;
+  }
+  .wrapper .categories h3 {
+    text-align: center;
+  }
+  .wrapper .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wrapper .find-job {
+    width: 100%;
+    flex-direction: column;
+  }
+  .wrapper .find-job img {
+    width: 100%;
+    border-radius: 4rem 4rem 0 0;
+    height: 100%;
+  }
+  .wrapper .find-job .job-quick {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0 4rem 4rem;
+    padding: 2rem 0;
+  }
+  .wrapper .find-job .job-quick h2 {
+    font-size: 4.2rem;
+    text-align: center;
+  }
+  .wrapper .find-job .job-quick p {
+    text-align: center;
+  }
+  .wrapper .flex-container {
+    flex-direction: column;
+  }
+  .wrapper .flex-container .stats h3,
+  .wrapper .flex-container .stats p {
+    margin-bottom: 0;
+  }
+  .wrapper .trusted {
+    width: 100%;
+  }
+  .wrapper .trusted h3 {
+    text-align: center;
+    width: 100%;
+  }
+  .wrapper .find-talent .flex-container .image-container img {
+    display: none;
+  }
+  .wrapper .find-talent .flex-container .content {
+    width: 100%;
+  }
+  .wrapper .find-talent .flex-container .content p {
+    color: gray;
+    text-align: center;
+  }
+  .wrapper .find-talent .flex-container .content h3 {
+    width: 100%;
+    font-size: 5rem;
+    text-align: center;
+    margin: 0;
+  }
+  .wrapper .find-talent .flex-container .content .flex-container {
+    flex-direction: row;
+  }
+  .wrapper .find-talent .flex-container .content button {
+    width: 95%;
+  }
+  .wrapper .questions-answers h3 {
+    font-size: 5rem;
+  }
+  .wrapper .questions-answers .content {
+    width: 100%;
+  }
+  .wrapper .questions-answers .content .flex-container {
+    flex-direction: row;
+  }
+  .wrapper .questions-answers .content .flex-container h5 {
+    width: 90%;
+  }
+  .wrapper .questions-answers p {
+    width: 90%;
+  }
+  .wrapper .job-portal .flex-container {
+    width: 100%;
+  }
+  .wrapper .job-portal .flex-container .content h4,
+  .wrapper .job-portal .flex-container .content p {
+    text-align: center;
+  }
+  .wrapper .job-portal .flex-container .button-container {
+    width: 100%;
+    padding: 0 0 4rem 0;
+  }
+  .wrapper .job-portal .flex-container .button-container button {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    display: none;
+  }
+  .wrapper header {
+    height: 100%;
+  }
+  .wrapper header h1 {
+    width: 75%;
+    margin-bottom: 0;
+    font-size: 6rem;
+  }
+  .wrapper .categories {
+    width: 95%;
+  }
+  .wrapper .categories p {
+    width: 25%;
+  }
+  .wrapper .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .wrapper .find-job {
+    width: 100%;
+    flex-direction: column;
+  }
+  .wrapper .find-job img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4rem 4rem 0 0;
+  }
+  .wrapper .find-job .job-quick {
+    padding: 2rem 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0 4rem 4rem;
+  }
+  .wrapper .find-job .job-quick h2 {
+    font-size: 6rem;
+  }
+  .wrapper .find-job .job-quick .find-your-job {
+    width: 50%;
+  }
+  .wrapper .find-job .job-quick .find-your-job p {
+    text-align: center;
+  }
+  .wrapper .trusted {
+    margin: 0 auto;
+  }
+  .wrapper .trusted h3 {
+    text-align: center;
+    width: 100%;
+  }
+  .wrapper .trusted .flex-container {
+    flex-direction: column;
+  }
+  .wrapper .trusted .flex-container .card .flex-container .rating {
+    padding: 0;
+  }
+  .wrapper .find-talent .flex-container {
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .wrapper .find-talent .flex-container .image-container img {
+    display: none;
+  }
+  .wrapper .find-talent .flex-container .content {
+    width: 100%;
+  }
+  .wrapper .find-talent .flex-container .content p {
+    color: gray;
+    text-align: center;
+    padding: 2rem 0 0 0;
+    font-size: 1.8rem;
+  }
+  .wrapper .find-talent .flex-container .content h3 {
+    text-align: center;
+    margin: 0;
+  }
+  .wrapper .find-talent .flex-container .content .flex-container {
+    flex-direction: row;
+  }
+  .wrapper .find-talent .flex-container .content button {
+    width: 100%;
+  }
+  .wrapper .questions-answers .content {
+    width: 100%;
+  }
+  .wrapper .questions-answers p {
+    width: 75%;
+    padding: 1rem 0;
+  }
+  .wrapper .job-portal .flex-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .wrapper .job-portal .flex-container .content {
+    width: 100%;
+  }
+  .wrapper .job-portal .flex-container .content h4, .wrapper .job-portal .flex-container .content p {
+    text-align: center;
+  }
+  .wrapper .job-portal .flex-container .button-container {
+    width: 90%;
+  }
+  .wrapper .job-portal .flex-container .button-container button {
+    width: 100%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .wrapper .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .wrapper .find-job {
+    width: 100%;
+    flex-direction: column;
+  }
+  .wrapper .find-job img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4rem 4rem 0 0;
+  }
+  .wrapper .find-job .job-quick {
+    padding: 2rem 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0 4rem 4rem;
+  }
+  .wrapper .find-job .job-quick h2, .wrapper .find-job .job-quick p {
+    text-align: center;
+  }
+  .wrapper .find-job .job-quick .find-your-job {
+    width: 50%;
+  }
+  .wrapper .trusted {
+    width: 100%;
+  }
+  .wrapper .trusted .flex-container {
+    height: 100%;
+  }
+  .wrapper .trusted .flex-container .card:nth-child(2) img:first-child {
+    height: 5.3rem;
+  }
+  .wrapper .trusted .flex-container .card {
+    width: 100%;
+  }
+  .wrapper .trusted .flex-container .card .flex-container .rating {
+    padding: 0;
+  }
+  .wrapper .find-talent .flex-container {
+    gap: 0rem;
+  }
+  .wrapper .find-talent .flex-container .image-container {
+    width: 0%;
+  }
+  .wrapper .find-talent .flex-container .image-container img {
+    display: none;
+  }
+  .wrapper .find-talent .flex-container .content {
+    width: 100%;
+  }
+  .wrapper .find-talent .flex-container .content h3 {
+    font-size: 6rem;
+  }
+  .wrapper .questions-answers .content {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+  .wrapper .questions-answers p {
+    padding: 1rem 0;
+  }
+  .wrapper .job-portal .flex-container {
+    flex-direction: column;
+  }
+  .wrapper .job-portal .flex-container .content h4, .wrapper .job-portal .flex-container .content p {
+    text-align: center;
+  }
+  .wrapper .job-portal .flex-container .button-container {
+    width: 65%;
+    padding: 0 0 3rem 0;
+  }
+  .wrapper .job-portal .flex-container .button-container button {
+    width: 100%;
+  }
+}
+@media (min-width: 320px) {
+  .pages nav {
+    display: none;
+  }
+  .content-container {
+    padding: 4rem 0;
+  }
+  .content-container img {
+    display: none;
+  }
+  .content-container .job-search {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 95%;
+    padding: 2rem 0 0 0;
+  }
+  .content-container .job-search .job-search-btn {
+    width: 100%;
+    margin: 1rem 0 0 0;
+    border-radius: 0 0 1rem 1rem;
+  }
+  .job-search-results .results {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+  .job-search-results .results .flex-column {
+    width: 100%;
+    align-items: center;
+  }
+  .job-search-results .results .flex-column .fulltime,
+  .job-search-results .results .flex-column .full-time,
+  .job-search-results .results .flex-column .parttime,
+  .job-search-results .results .flex-column .part-time {
+    font-size: 2rem;
+  }
+  .job-search-results .results .flex-column .location {
+    padding: 1rem 0;
+  }
+  .job-search-results .results .flex-container {
+    flex-direction: column;
+  }
+  .job-search-results .results .flex-container .logo {
+    padding: 1rem 0 0 0;
+  }
+  .job-search-results .results .flex-container h5 {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .job-search-results .results .buttons {
+    width: 85%;
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  .job-search-results .results .buttons button,
+  .job-search-results .results .buttons a {
+    border-radius: 1rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pages nav {
+    display: none;
+  }
+  .content-container .job-search {
+    width: 75%;
+  }
+  .content-container .job-search .input-category select {
+    padding: 0 27rem 0 0;
+  }
+  .content-container .job-search .job-search-btn {
+    height: 6rem;
+  }
+  .job-search-results .results .buttons {
+    width: 65%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .pages {
+    display: block;
+  }
+  .pages .flex-container {
+    display: flex;
+    width: 100%;
+  }
+  .pages .flex-container img {
+    padding: 0;
+    margin-left: 1rem;
+  }
+  .pages .flex-container .buttons {
+    width: 60%;
+  }
+  .pages .flex-container .buttons button:nth-child(1) {
+    padding: 0 2rem 0 2rem;
+  }
+  .content-container .job-search {
+    flex-direction: row;
+    padding: 0;
+  }
+  .content-container .job-search .job-search-btn {
+    margin: 0;
+    border-radius: 0 1rem 1rem 0;
+  }
+  .content-container .job-search .job-search-btn button {
+    height: 9rem;
+  }
+  .job-search-results {
+    padding: 2rem 0;
+  }
+  .job-search-results .filter-search {
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+  }
+  .job-search-results .results {
+    flex-direction: row;
+    margin: 0 0 1rem 0;
+  }
+  .job-search-results .results .buttons {
+    align-items: flex-end;
+    width: 28%;
+  }
+}
+@media (min-width: 1281px) {
+  .pages .flex-container img {
+    padding: 0;
+  }
+  .pages .flex-container .buttons {
+    width: 75%;
+    justify-content: flex-end;
+  }
+  .content-container .job-search {
+    flex-direction: row;
+    padding: 0;
+  }
+  .content-container .job-search .job-search-btn {
+    margin: 0;
+    border-radius: 0 1rem 1rem 0;
+    width: 75%;
+  }
+  .job-search-results .results {
+    flex-direction: row;
+  }
+  .job-search-results .results .flex-container {
+    flex-direction: row;
+  }
+  .job-search-results .results .buttons {
+    flex-direction: row;
+    width: 50%;
+  }
+  .job-search-results .results .buttons button,
+  .job-search-results .results .buttons a {
+    font-size: 1.2rem;
+  }
+  .job-search-results .results .flex-column .fulltime,
+  .job-search-results .results .flex-column .parttime,
+  .job-search-results .results .flex-column .part-time,
+  .job-search-results .results .flex-column .full-time,
+  .job-search-results .results .flex-column .Full-time {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}
+@media (min-width: 320px) {
+  .job .content-container h5 {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.8rem;
+  }
+  .job .content-container h2 {
+    font-size: 4rem;
+  }
+  .job .job-details {
+    padding: 0 0 4rem 0;
+  }
+  .job .job-details .container {
+    width: 100%;
+    gap: 0;
+  }
+  .job .job-details .container .content-card {
+    padding: 0;
+  }
+  .job .job-details .container .content-card p:nth-of-type(1) {
+    font-size: 1.8rem;
+  }
+  .job .job-details .container .content-card p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .job .job-details .flex-column {
+    width: 95%;
+  }
+  .job .job-details .flex-column h4 {
+    text-align: center;
+  }
+  .job .job-details .flex-column p {
+    width: 82%;
+    margin: 0 auto;
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .job .job-details .container {
+    width: 75%;
+    padding: 8rem 0 4rem 0;
+  }
+  .job .job-details .flex-column .content {
+    margin: 0 auto;
+    width: 85%;
+  }
+  .job .job-details .flex-column .content p {
+    width: 90%;
+  }
+  .job .job-details .flex-column .content h4 {
+    text-align: center;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .job .content-container h5 {
+    padding: 0;
+  }
+  .job .content-container h2 {
+    padding: 1rem 0 4rem 0;
+  }
+  .job .job-details .container {
+    width: 55%;
+  }
+  .job .job-details .flex-column p {
+    width: 90%;
+  }
+  .job .job-details .flex-column .content {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+@media (min-width: 320px) {
+  .pages .register-form .form-container {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .pages .register-form .form-container h2 {
+    padding: 2rem 0 0 0;
+    font-size: 4rem;
+  }
+  .pages .register-form .form-container .button-select {
+    width: 80%;
+  }
+  .pages .register-form .form-container form {
+    width: 100%;
+    padding: 0;
+  }
+  .pages .register-form .form-container form span {
+    width: 100%;
+    text-align: center;
+  }
+  .pages .register-form .flex-container .sign-in-buttons {
+    flex-direction: column;
+  }
+  .pages .register-form .flex-container .sign-in-buttons button {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .pages .register-form .flex-container .sign-in-buttons button img {
+    padding: 0 8rem 0 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .pages .register-form .form-container form .flex-container .sign-in-buttons {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pages .register-form .form-container form .flex-container .sign-in-buttons {
+    flex-direction: row;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .pages nav {
+    display: block;
+  }
+  .pages .register-form .form-container {
+    width: 75%;
+  }
+  .pages .register-form .form-container .button-select {
+    width: 55%;
+  }
+  .pages .register-form .form-container form .label {
+    width: 70%;
+  }
+  .pages .register-form .form-container form button {
+    width: 53%;
+    margin: 2rem 0 0 0;
+  }
+  .pages .register-form .form-container form .flex-container .sign-in-buttons {
+    flex-direction: row;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1281px) {
+  .pages nav {
+    display: block;
+  }
+}
+@media (min-width: 320px) {
+  .modal .content {
+    margin: 2rem auto;
+    width: 90%;
+    height: 70%;
+  }
+  .modal .content h2 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  .modal .content h5 {
+    text-align: center;
+    margin: 0;
+    padding: 2rem 0 0 0;
+  }
+  .modal .content form {
+    width: 100%;
+  }
+  .modal .content form .login-btn {
+    margin: 0;
+    margin: 1rem 0;
+  }
+  .modal .content form .flex-container .sign-in-buttons {
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+  .modal .content form .flex-container .sign-in-buttons button img {
+    padding: 0;
+  }
+  .modal .content form .flex-container p {
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .modal .content {
+    height: 60%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .modal .content {
+    height: 60%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .modal .content {
+    width: 60%;
+    height: 90%;
+  }
+  .modal .content form {
+    width: 70%;
+  }
+  .modal .content form .login-btn {
+    margin: 2rem 0;
+  }
+  .modal .content form .flex-container .sign-in-buttons {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 1281px) {
+  .pages .register-form .form-container {
+    height: 80%;
+    width: 40%;
+  }
+  .pages .register-form .form-container h2 {
+    padding: 4rem 0 0 0;
+  }
+  .pages .register-form .form-container form .flex-container {
+    width: 75%;
+  }
+  .pages .register-form .form-container form .flex-container .sign-in-buttons {
+    flex-direction: row;
+    width: 100%;
+  }
+  .pages .register-form .form-container form .flex-container .sign-in-buttons button {
+    width: 100%;
+    padding: 0;
+  }
+  .pages .register-form .form-container form .flex-container .sign-in-buttons button img {
+    width: 100%;
+    padding: 0;
+  }
+  .modal .content {
+    height: 85%;
+    width: 50%;
+    margin: 6rem auto;
+  }
 }/*# sourceMappingURL=styles.css.map */

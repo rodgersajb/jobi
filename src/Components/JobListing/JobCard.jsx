@@ -4,6 +4,7 @@ import { db } from "../firebase";
 import { uuidv4 } from "@firebase/util";
 import { AuthContext } from "../../Contexts/AuthContext";
 import { Link } from "react-router-dom";
+import SavedJobs from "../SavedJobs";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {faBookmark } from "@fortawesome/free-solid-svg-icons";
@@ -36,7 +37,7 @@ const JobCard = (props) => {
           })
         : [];
       setJobs(jobs);
-      //   console.log(jobs)
+        
     });
   }, []);
 
@@ -51,7 +52,9 @@ const JobCard = (props) => {
       salary: jobPosting.salary,
       field: jobPosting.field,
       id: jobId,
+      
     });
+    
   };
 
   return (
@@ -76,7 +79,7 @@ const JobCard = (props) => {
           </Link>
         </div>
       </div>
-      {/* <JobDetails jobPosting={jobPosting} /> */}
+      <SavedJobs jobs={jobs} />
     </>
   );
 };

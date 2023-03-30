@@ -1,44 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const SlideOutNav = () => {
- 
-    const [burger, setBurger] = useState("burger unclicked");
-    const [menu, setMenu] = useState("menu hidden");
-    const [isMenuClicked, setIsMenuClicked] = useState(false);
-
-    const update = () => {
-        if (!isMenuClicked) {
-            setBurger("burger clicked")
-            setMenu("menu visible")
-        }
-        else {
-            setBurger("burger unclicked")
-            setMenu("menu hidden")
-        }
-    }
-
   return (
     <>
+    <div className="slide-out-nav">
+      <input type="checkbox" className="nav-toggle"/>
 
-    <div className="flex-container">
-      <div className="burger-nav">
-
-      <div className="hamburger">
-        <div className="bar" onClick={update}></div>
-        <div className="bar" onClick={update}></div>
-        <div className="bar" onClick={update}></div>
-      </div>
-        <ul className="slide-out">
+      <nav className="burger">
+        <ul>
           <li>Category</li>
           <li>Home</li>
           <li>Explore</li>
           <li>Contact</li>
           <li>Pages</li>
         </ul>
-      </div>
-
+      </nav>
     </div>
-      <div className="slide-out"></div>
+
+      <div className="slide-out">ANYTHING?</div>
     </>
   );
 };
