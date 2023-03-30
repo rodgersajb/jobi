@@ -1,0 +1,99 @@
+@media (min-width: 320px) {
+  .job {
+    .content-container {
+      h5 {
+        width: 50%;
+        margin: 0 auto;
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 4rem;
+      }
+    }
+    .job-details {
+      padding: 0 0 4rem 0;
+      .container {
+        width: 100%;
+        gap: 0;
+        .content-card {
+          padding: 0;
+          p:nth-of-type(1) {
+            font-size: 1.8rem;
+          }
+          p {
+            font-size: 1.4rem;
+            text-align: center;
+          }
+        }
+      }
+      .flex-column {
+        width: 95%;
+        h4 {
+          text-align: center;
+        }
+        p {
+          width: 82%;
+          margin: 0 auto;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .job {
+    .job-details {
+      .container {
+        width: 75%;
+        padding: 8rem 0 4rem 0;
+      }
+      .flex-column {
+        .content {
+            margin: 0 auto;
+            width: 85%;
+          p {
+            width: 90%;
+          }
+          h4 {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .job {
+        .content-container {
+            h5 {
+
+                padding: 0;
+            }
+            h2 {
+                padding: 1rem 0 4rem 0;
+            }
+        }
+        .job-details {
+            .container {
+                width: 55%;
+            }
+            .flex-column {
+                p {
+                    width: 90%;
+                }
+                .content {
+                    margin: 0 auto;
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1281px) {
+}
