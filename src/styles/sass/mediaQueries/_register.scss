@@ -1,0 +1,111 @@
+@media (min-width:320px) {
+    .pages {
+
+        .register-form {
+            .form-container {
+                padding: 0;
+                width: 100%;
+                margin: 0;
+                h2 {
+                    padding: 2rem 0 0 0;
+                    font-size: 4rem;
+                }
+                .button-select {
+                    width: 80%;
+                }
+                form {
+                    width: 100%;
+                    padding: 0;
+                    span {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+            .flex-container {
+                .sign-in-buttons {
+                    flex-direction: column;
+                    button {
+                        margin: 0 auto;
+                        width: 80%;
+                        img {
+                            padding: 0 8rem 0 0;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width:481px)  and (max-width: 768px) {
+    .pages {
+        .register-form {
+            .form-container {
+                form {
+                    .flex-container {
+                        .sign-in-buttons {                            
+                            width: 100%;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+    .pages {
+        .register-form {
+            .form-container {
+                form {
+                    .flex-container {
+                        .sign-in-buttons {                            
+                            flex-direction: row;
+                            margin: 0 auto;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .pages {
+        .register-form {
+            .form-container {
+                width: 75%;
+                .button-select {
+                    width: 55%;
+                }
+                form {
+                    .label {
+                        width: 70%;
+                    }
+                    button {
+                        width: 53%;
+                        margin: 2rem 0 0 0;
+                    }
+                    .flex-container {
+                        .sign-in-buttons {
+                            flex-direction: row;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+}
+
+@media (min-width: 1281px) {
+    
+}

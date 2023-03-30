@@ -58,27 +58,27 @@ const RegisterForm = () => {
             action="
                 "
           >
-            <span>
+            <div className="label">
               <label htmlFor="name">Name*</label>
               <input
                 type="text"
                 onChange={(event) => setName(event.target.value)}
               />
-            </span>
-            <span>
+            </div>
+            <div className="label">
               <label htmlFor="email">Email*</label>
               <input
                 type="text"
                 onChange={(event) => setEmail(event.target.value)}
               />
-            </span>
-            <span>
+            </div>
+            <div className="label">
               <label htmlFor="password">Password*</label>
               <input
                 type="password"
                 onChange={(event) => setPassword(event.target.value)}
               />
-            </span>
+            </div>
             <button onClick={handleSignUp}>REGISTER</button>
             <span>OR</span>
             <div className="flex-container">

@@ -1,157 +1,151 @@
-@media (min-width:320px) {
-    .pages {
-        display: none;
-
+@media (min-width: 320px) {
+  .pages {
+    nav {
+      display: none;
     }
-    .content-container {
-        padding: 4rem 0;
-        img {
-            display: none;
-        }
-        .job-search {
-            flex-direction: column;
-            margin: 0 auto;
-            width: 95%;
-            padding: 2rem 0 0 0;
-            .job-search-btn {
-                width: 100%;
-                margin: 1rem 0 0 0;
-                border-radius: 0 0 1rem 1rem;
-            }
-        }
+  }
+  .content-container {
+    padding: 4rem 0;
+    img {
+      display: none;
     }
-    .job-search-results {
-        
-        
-        .results {
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            margin: 0 auto;
-            width: 100%;
-            padding: 0;
-            .flex-column {
-                width: 100%;
-                align-items: center;
-                .fulltime,
-                .full-time,
-                .parttime,
-                .part-time {
-                    font-size: 2rem;
-                }
-                .location {
-                    padding: 1rem 0;
-                }
-            }
-            .flex-container {
-                flex-direction: column;
-                .logo {
-                    padding: 1rem 0 0 0;
-                }
-                h5 {
-                    text-align: center;
-                    margin: 1rem 0;
-                }
-            }
-            .buttons {
-                width: 85%;
-                flex-direction: column;
-                padding: 2rem 0;
-                button,
-                a {
-                    border-radius: 1rem;
-                }
-            }
-        }
+    .job-search {
+      flex-direction: column;
+      margin: 0 auto;
+      width: 95%;
+      padding: 2rem 0 0 0;
+      .job-search-btn {
+        width: 100%;
+        margin: 1rem 0 0 0;
+        border-radius: 0 0 1rem 1rem;
+      }
     }
-
+  }
+  .job-search-results {
+    .results {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0;
+      .flex-column {
+        width: 100%;
+        align-items: center;
+        .fulltime,
+        .full-time,
+        .parttime,
+        .part-time {
+          font-size: 2rem;
+        }
+        .location {
+          padding: 1rem 0;
+        }
+      }
+      .flex-container {
+        flex-direction: column;
+        .logo {
+          padding: 1rem 0 0 0;
+        }
+        h5 {
+          text-align: center;
+          margin: 1rem 0;
+        }
+      }
+      .buttons {
+        width: 85%;
+        flex-direction: column;
+        padding: 2rem 0;
+        button,
+        a {
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
 }
 
-@media (min-width:481px)  and (max-width: 768px) {
-
-
+@media (min-width: 481px) and (max-width: 768px) {
 }
 
-@media (min-width:769px) and (max-width:1024px) {
-    .pages {
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pages {
+    nav {
+
         display: none;
     }
-    .content-container {
-        .job-search {
-            width: 75%;
-            .input-category {
-            select {
-                padding: 0 27rem 0 0;
-            }
-            }
-            .job-search-btn {
-                height: 6rem;
-            }
+  }
+  .content-container {
+    .job-search {
+      width: 75%;
+      .input-category {
+        select {
+          padding: 0 27rem 0 0;
         }
+      }
+      .job-search-btn {
+        height: 6rem;
+      }
     }
-    .job-search-results {
-        .results {
-            .buttons {
-                
-                width: 65%;
-            }
-        }
+  }
+  .job-search-results {
+    .results {
+      .buttons {
+        width: 65%;
+      }
     }
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-    .pages {
-        display: block;
-        .flex-container {
-            display: flex;
-            width: 100%;
-            img {
-                padding: 0;
-                margin-left: 1rem;
-            }
-            .buttons {
-                width: 60%;
-                button:nth-child(1) {
-                    padding: 0 2rem 0 2rem;
-                }
-            }
+  .pages {
+    display: block;
+    .flex-container {
+      display: flex;
+      width: 100%;
+      img {
+        padding: 0;
+        margin-left: 1rem;
+      }
+      .buttons {
+        width: 60%;
+        button:nth-child(1) {
+          padding: 0 2rem 0 2rem;
         }
+      }
     }
-    .content-container {
-        .job-search {
-            flex-direction: row;
-            padding: 0;
-            .job-search-btn {
-                margin: 0;
-                border-radius: 0 1rem 1rem 0;
-                button {
-                    height: 9rem;
-                }
-            }
+  }
+  .content-container {
+    .job-search {
+      flex-direction: row;
+      padding: 0;
+      .job-search-btn {
+        margin: 0;
+        border-radius: 0 1rem 1rem 0;
+        button {
+          height: 9rem;
         }
+      }
     }
-    .job-search-results {
-        padding: 2rem 0;
-        .filter-search {
-            padding: 2rem 0;
-            margin-bottom: 1rem;
-        }
-        .results {
-            flex-direction: row;
-            margin: 0 0 1rem 0;
-            .flex-container {
-                
-            }
-            .buttons {
-                align-items: flex-end;
-                width: 28%;
-
-            }
-        }
+  }
+  .job-search-results {
+    padding: 2rem 0;
+    .filter-search {
+      padding: 2rem 0;
+      margin-bottom: 1rem;
     }
-
+    .results {
+      flex-direction: row;
+      margin: 0 0 1rem 0;
+      .flex-container {
+      }
+      .buttons {
+        align-items: flex-end;
+        width: 28%;
+      }
+    }
+  }
 }
 
 @media (min-width: 1281px) {
-    
 }
