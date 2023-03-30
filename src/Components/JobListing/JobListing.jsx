@@ -15,9 +15,9 @@ const JobListings = () => {
         <Navbar />
 
         <LoginModal />
-      </ModalProvider>
 
-      <Jobs />
+        <Jobs />
+      </ModalProvider>
 
       <Footer />
     </>
