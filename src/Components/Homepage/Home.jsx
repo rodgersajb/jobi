@@ -8,13 +8,9 @@ import QA from "./QA";
 import Footer from "../Footer";
 import LoginModal from "../LoginModal";
 import { ModalProvider } from "../../Contexts/ModalContext";
-import { AuthContext } from "../../Contexts/AuthContext";
-import { useContext } from "react";
+
 
 const Home = () => {
-  const {currentUser, setCurrentUser} = useContext(AuthContext);
-
-  console.log(currentUser, 'HEY')
   return (
     <>
       <ModalProvider>

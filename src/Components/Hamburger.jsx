@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../Contexts/AuthContext";
+import { Link } from "react-router-dom";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -43,7 +44,12 @@ const Hamburger = () => {
               <FontAwesomeIcon icon="fa-solid fa-user" />
               <p>{currentUser.displayName || currentUser.email}</p>
             </li>
-          ) : null}
+          ) : (
+            <li>
+              <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" />
+              <p>Login</p>
+            </li>
+          )}
 
           <li>
             <FontAwesomeIcon icon="fa-solid fa-house" />
@@ -68,10 +74,13 @@ const Hamburger = () => {
             <p>Pages</p>
             <FontAwesomeIcon icon="fa-solid fa-caret-down" />
           </li>
-          <li>
+          {currentUser ?  <li>
             <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" />
             <p>Logout</p>
           </li>
+          :
+          null}
+         
         </ul>
       </div>
     </div>
