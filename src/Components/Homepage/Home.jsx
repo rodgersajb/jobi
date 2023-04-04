@@ -8,7 +8,7 @@ import QA from "./QA";
 import Footer from "../Footer";
 import LoginModal from "../LoginModal";
 import { ModalProvider } from "../../Contexts/ModalContext";
-
+import Hamburger from "../Hamburger";
 
 const Home = () => {
   return (
@@ -16,6 +16,8 @@ const Home = () => {
       <ModalProvider>
         <Nav />
         <div className="wrapper">
+          <Hamburger />
+
           <Header />
           <Categories />
           <JobFind />

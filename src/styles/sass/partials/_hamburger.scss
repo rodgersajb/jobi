@@ -113,6 +113,13 @@
             .fa-caret-down {
                 padding: 0 0 0 11rem;
             }
+            a {
+              
+              &:hover,
+              &:focus {
+                cursor: pointer;
+              }
+            }
             
             
         }

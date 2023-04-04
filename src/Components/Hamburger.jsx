@@ -47,7 +47,7 @@ const Hamburger = () => {
           ) : (
             <li>
               <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" />
-              <p>Login</p>
+              <Link to="/">Home</Link>
             </li>
           )}
 
@@ -74,13 +74,12 @@ const Hamburger = () => {
             <p>Pages</p>
             <FontAwesomeIcon icon="fa-solid fa-caret-down" />
           </li>
-          {currentUser ?  <li>
-            <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" />
-            <p>Logout</p>
-          </li>
-          :
-          null}
-         
+          {currentUser ? (
+            <li>
+              <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" />
+              <p>Logout</p>
+            </li>
+          ) : null}
         </ul>
       </div>
     </div>
