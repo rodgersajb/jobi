@@ -1,4 +1,22 @@
 @media (min-width: 320px) {
+  .hamburger-menu {
+    display: inline-block;
+    background: $registerGreen;
+    .hamburger-content {
+      width: 75%;
+      ul {
+        li {
+          font-size: 1.2rem;
+          .fa-caret-down {
+            padding: 0 0 0 9rem;
+          }
+          p {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
   .pages {
     nav {
       display: none;
@@ -66,9 +84,20 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+  .hamburger-menu {
+    display: inline-block;
+    background: $registerGreen;
+    .hamburger-content {
+      width: 50%;
+    }
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+  .hamburger-menu {
+    display: inline-block;
+    background: $registerGreen;
+  }
   .pages {
     nav {
       display: none;

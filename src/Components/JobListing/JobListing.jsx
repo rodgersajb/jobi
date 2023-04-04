@@ -8,12 +8,14 @@ import { AuthContext } from "../../Contexts/AuthContext";
 import LoginModal from "../LoginModal";
 
 import { ModalProvider } from "../../Contexts/ModalContext";
+import Hamburger from "../Hamburger";
 
 const JobListings = () => {
   return (
     <>
       <ModalProvider>
         <Navbar />
+        <Hamburger />
         
 
         <LoginModal />
