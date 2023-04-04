@@ -15,6 +15,7 @@ const Home = () => {
     <>
       <ModalProvider>
         <Nav />
+        
         <div className="wrapper">
           <Hamburger />
 

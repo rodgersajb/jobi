@@ -2,12 +2,14 @@ import Footer from "./Footer";
 import RegisterForm from "./RegisterForm";
 import Navbar from "./Navbar";
 import { ModalContext, ModalProvider } from "../Contexts/ModalContext";
+import Hamburger from "./Hamburger";
 
 const Register = () => {
   return (
     <>
       <ModalProvider>
         <div className="pages">
+          <Hamburger />
           <Navbar />
 
           <div className="content-container">

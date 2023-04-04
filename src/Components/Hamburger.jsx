@@ -11,11 +11,12 @@ import {
   faUser,
   faRightFromBracket,
   faFile,
-  faCaretDown
+  faCaretDown,
+  faUserPlus
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-library.add(faHome, faAddressBook, faAddressCard, faSuitcase, faUser, faRightFromBracket, faFile, faCaretDown);
+library.add(faHome, faAddressBook, faAddressCard, faSuitcase, faUser, faRightFromBracket, faFile, faCaretDown, faUserPlus);
 
 const Hamburger = () => {
   const { currentUser, setCurrentUser } = useContext(AuthContext);
@@ -47,13 +48,13 @@ const Hamburger = () => {
           ) : (
             <li>
               <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" />
-              <Link to="/">Home</Link>
+              <p>Login</p>
             </li>
           )}
 
           <li>
             <FontAwesomeIcon icon="fa-solid fa-house" />
-            <p>Home</p>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <FontAwesomeIcon icon="fa-solid fa-address-card" />
@@ -67,12 +68,16 @@ const Hamburger = () => {
           </li>
           <li>
             <FontAwesomeIcon icon="fa-solid fa-suitcase" />
-            <p>Jobs</p>
+            <Link to="/jobs">Jobs</Link>
           </li>
           <li>
             <FontAwesomeIcon icon="fa-solid fa-file" />
             <p>Pages</p>
             <FontAwesomeIcon icon="fa-solid fa-caret-down" />
+          </li>
+          <li>
+            <FontAwesomeIcon icon="fa-solid fa-user-plus" />
+            <Link to="/register">Register</Link>
           </li>
           {currentUser ? (
             <li>

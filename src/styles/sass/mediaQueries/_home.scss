@@ -27,6 +27,9 @@
             &:focus {
               background: $lightgrey;
             }
+            a {
+              color: $green;
+            }
             .fa-caret-down {
               padding: 0 0 0 9rem;
             }
@@ -34,6 +37,7 @@
               font-size: 1.6rem;
             }
           }
+          
           li:nth-of-type(1) {
             background: $lightgrey;
             border-radius: 1rem;
@@ -285,6 +289,9 @@
             &:focus {
               background: $lightgrey;
             }
+             a {
+              color: $green;
+            }
             .fa-caret-down {
               padding: 0 0 0 9rem;
             }
@@ -468,6 +475,9 @@
             &:hover,
             &:focus {
               background: $lightgrey;
+            }
+             a {
+              color: $green;
             }
             .fa-caret-down {
               padding: 0 0 0 9rem;
