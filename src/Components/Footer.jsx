@@ -57,9 +57,7 @@ const Footer = () => {
               <button>Send</button>
             </div>
 
-            <p>
-              We only send interesting and relevant emails.
-            </p>
+            <p>We only send interesting and relevant emails.</p>
           </ul>
         </div>
         <div className="footer">
@@ -68,11 +66,6 @@ const Footer = () => {
             <p>Contact Us</p>
           </div>
           <p>Copyright @2022 jobi inc.</p>
-          <div className="socials">
-            <span>f</span>
-            <span>@</span>
-            <span>P</span>
-          </div>
         </div>
       </footer>
     </>
