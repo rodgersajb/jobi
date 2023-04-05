@@ -1,5 +1,5 @@
 const SavedJobs = ({ jobs }) => {
-  console.log(jobs, "JOBS");
+  // console.log(jobs, "JOBS");
   return <></>;
 };
 

@@ -1,7 +1,14 @@
+import { useEffect, useState } from "react";
 import JobSearchForm from "./JobListing/JobSearchForm";
 
+import { db } from "./firebase";
+import { ref, onValue, push, set } from "firebase/database";
+
 const Jobs = () => {
+
+  
   const jobPostings = [
+
     {
       logo: "Google",
       work: "fulltime",
@@ -372,7 +379,61 @@ const Jobs = () => {
       benefits:
         "- Competitive salary and benefits package\n- Opportunity to work with a world-class team of software engineers\n- Access to Amazon's state-of-the-art facilities and resources\n- Discount on Amazon products",
     },
-  ];
+
+  ]
+
+  
+  const jobsRef = ref(db, "jobs");
+
+   jobPostings.map((job) => {
+    const newJobRef = push(jobsRef);
+    return set(newJobRef, job);
+  });
+
+  // Promise.all(jobPromises)
+  //   .then(() => {
+  //     console.log("All jobs added to Firebase");
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error adding jobs to Firebase:", error);
+  //   });
+
+  // for (const job of jobPostings) {
+  //   console.log(job, 'JOB')
+    
+    
+  //   set(jobsRef, {
+  //     job
+  //   })
+  //   return
+  // }
+  // onValue(jobsRef, (snapshot) => {
+  //   console.log(snapshot)
+  //   const updatedJobPostings = [];
+  //   const data = snapshot.val();
+  //   set(ref())
+  // })
+  
+  // jobPostings.map((jobPosting) => {
+  //   jobsRef.push(jobPosting)
+  // })
+// useEffect(() => {
+//   const jobRef = ref(db, "/jobs");
+//   onValue(jobRef, (snapshot) => {
+//     const data = snapshot.val();
+//     const jobs = data
+//       ? Object.keys(data).map((key) => {
+//           return { id: key, ...data[key] };
+//         })
+//       : [];
+//     setJobs(jobs);
+//     console.log(jobs, "jobs");
+//   });
+
+//   // return a cleanup function to unsubscribe from the database reference when the component unmounts
+//   return () => off(jobRef);
+// }, []);
+
 
   const filteredJobPostings = jobPostings.filter(
     (posting) => Object.keys(posting).length !== 0

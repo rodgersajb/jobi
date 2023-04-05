@@ -12,8 +12,7 @@ const RegisterForm = () => {
   const { currentUser, setCurrentUser} = useContext(AuthContext)
   const { showModal, setShowModal } = useContext(ModalContext);
 
-  console.log(currentUser, 'CURRENT USER')
-
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");

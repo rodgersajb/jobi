@@ -26,7 +26,7 @@ const Navbar = () => {
     setIsDropDown(!isDropDown);
   };
 
-  console.log(currentUser);
+  
   const signOut = () => {
     setCurrentUser(null);
   };
