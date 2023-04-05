@@ -45,15 +45,7 @@ const Navbar = () => {
             </li>
 
             <li onClick={isDropDown}> Jobs </li>
-            {/* {!isDropDown && (
-              <ul className="job-dropdown">
-                <li>
-                  <Link to="/jobs">Jobs</Link>
-                  <li>Saved jobs</li>
-                  <li>Other things</li>
-                </li>
-              </ul>
-            )} */}
+          
 
             <li>Explore</li>
             <li>Contact</li>

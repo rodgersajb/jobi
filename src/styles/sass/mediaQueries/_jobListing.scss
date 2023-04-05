@@ -1,4 +1,22 @@
 @media (min-width: 320px) {
+  .hamburger-menu {
+    display: flex;
+    background: $registerGreen;
+    .hamburger-content {
+      width: 75%;
+      ul {
+        li {
+          font-size: 1.2rem;
+          .fa-caret-down {
+            padding: 0 0 0 9rem;
+          }
+          p {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
   .pages {
     nav {
       display: none;
@@ -66,9 +84,20 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+    background: $registerGreen;
+    .hamburger-content {
+      width: 50%;
+    }
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+  .hamburger-menu {
+    display: flex;
+    background: $registerGreen;
+  }
   .pages {
     nav {
       display: none;
@@ -97,6 +126,9 @@
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+  .hamburger-menu {
+    display: none;
+  }
   .pages {
     display: block;
     .flex-container {
@@ -147,6 +179,9 @@
 }
 
 @media (min-width: 1281px) {
+   .hamburger-menu {
+    display: none;
+  }
   .pages {
     .flex-container {
       img {

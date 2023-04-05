@@ -3,6 +3,53 @@
     display: none;
   }
   .wrapper {
+    .hamburger-menu {
+      display: flex;
+      background: #fff;
+      .hamburger-label {
+        .hamburger-icon {
+          background-color: $green;
+          &:before,
+          &:after {
+            background: $green;
+          }
+        }
+      }
+
+      .hamburger-content {
+        background: #fff;
+        width: 75%;
+        ul {
+          li {
+            font-size: 1.2rem;
+            color: $green;
+            &:hover,
+            &:focus {
+              background: $lightgrey;
+            }
+            a {
+              color: $green;
+            }
+            .fa-caret-down {
+              padding: 0 0 0 9rem;
+            }
+            p {
+              font-size: 1.6rem;
+            }
+          }
+          
+          li:nth-of-type(1) {
+            background: $lightgrey;
+            border-radius: 1rem;
+          }
+          li:nth-of-type(6) {
+            border-bottom: 1px solid $green;
+            width: 100%;
+            padding: 0 0 1rem 2rem;
+          }
+        }
+      }
+    }
     header {
       h1 {
         font-size: 4rem;
@@ -218,6 +265,52 @@
     display: none;
   }
   .wrapper {
+    .hamburger-menu {
+      display: flex;
+      background: #fff;
+      .hamburger-label {
+        .hamburger-icon {
+          background-color: $green;
+          &:before,
+          &:after {
+            background: $green;
+          }
+        }
+      }
+
+      .hamburger-content {
+        background: #fff;
+        width: 50%;
+        ul {
+          li {
+            font-size: 1.2rem;
+            color: $green;
+            &:hover,
+            &:focus {
+              background: $lightgrey;
+            }
+             a {
+              color: $green;
+            }
+            .fa-caret-down {
+              padding: 0 0 0 9rem;
+            }
+            p {
+              font-size: 1.6rem;
+            }
+          }
+          li:nth-of-type(1) {
+            background: $lightgrey;
+            border-radius: 1rem;
+          }
+          li:nth-of-type(6) {
+            border-bottom: 1px solid $green;
+            width: 100%;
+            padding: 0 0 1rem 2rem;
+          }
+        }
+      }
+    }
     header {
       height: 100%;
       h1 {
@@ -328,7 +421,6 @@
             width: 90%;
           }
         }
-        
       }
       p {
         width: 90%;
@@ -360,13 +452,60 @@
     display: none;
   }
   .wrapper {
+      .hamburger-menu {
+      display: flex;
+      background: #fff;
+      .hamburger-label {
+        .hamburger-icon {
+          background-color: $green;
+          &:before,
+          &:after {
+            background: $green;
+          }
+        }
+      }
+
+      .hamburger-content {
+        background: #fff;
+        width: 40%;
+        ul {
+          li {
+            font-size: 1.2rem;
+            color: $green;
+            &:hover,
+            &:focus {
+              background: $lightgrey;
+            }
+             a {
+              color: $green;
+            }
+            .fa-caret-down {
+              padding: 0 0 0 9rem;
+            }
+            p {
+              font-size: 1.6rem;
+            }
+          }
+          li:nth-of-type(1) {
+            background: $lightgrey;
+            border-radius: 1rem;
+          }
+          li:nth-of-type(6) {
+            border-bottom: 1px solid $green;
+            width: 100%;
+            padding: 0 0 1rem 2rem;
+          }
+        }
+      }
+    }
+
     header {
       height: 100%;
       h1 {
-      width: 75%;
-      margin-bottom: 0;
-      font-size: 6rem;
-    }
+        width: 75%;
+        margin-bottom: 0;
+        font-size: 6rem;
+      }
     }
     .categories {
       width: 95%;
@@ -380,7 +519,7 @@
     .find-job {
       width: 100%;
       flex-direction: column;
-      
+
       img {
         width: 100%;
         height: 100%;
@@ -406,7 +545,7 @@
       margin: 0 auto;
       h3 {
         text-align: center;
-        width: 100%
+        width: 100%;
       }
       .flex-container {
         flex-direction: column;
@@ -420,7 +559,6 @@
       }
     }
     .find-talent {
-      
       .flex-container {
         flex-direction: column;
         gap: 0rem;
@@ -428,7 +566,6 @@
           img {
             display: none;
           }
-
         }
         .content {
           width: 100%;
@@ -465,23 +602,27 @@
         flex-direction: column;
         width: 100%;
         .content {
-        width: 100%;
-        h4, p {
-          text-align: center;
-        }
-      }
-      .button-container {
-        width: 90%;
-        button {
           width: 100%;
+          h4,
+          p {
+            text-align: center;
+          }
         }
-      }
+        .button-container {
+          width: 90%;
+          button {
+            width: 100%;
+          }
+        }
       }
     }
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+  .hamburger-menu {
+    display: none;
+  }
   .wrapper {
     .grid-container {
       grid-template-columns: repeat(3, 1fr);
@@ -489,7 +630,7 @@
     .find-job {
       width: 100%;
       flex-direction: column;
-      
+
       img {
         width: 100%;
         height: 100%;
@@ -500,7 +641,8 @@
         height: 100%;
         width: 100%;
         border-radius: 0 0 4rem 4rem;
-        h2, p {
+        h2,
+        p {
           text-align: center;
         }
         .find-your-job {
@@ -539,11 +681,9 @@
         .content {
           width: 100%;
           h3 {
-
             font-size: 6rem;
           }
         }
-
       }
     }
     .questions-answers {
@@ -553,15 +693,14 @@
       }
       p {
         padding: 1rem 0;
-        
-        
       }
     }
     .job-portal {
       .flex-container {
         flex-direction: column;
         .content {
-          h4, p {
+          h4,
+          p {
             text-align: center;
           }
         }
@@ -578,4 +717,7 @@
 }
 
 @media (min-width: 1281px) {
+  .hamburger-menu {
+    display: none;
+  }
 }

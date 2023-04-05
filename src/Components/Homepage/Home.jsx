@@ -8,18 +8,17 @@ import QA from "./QA";
 import Footer from "../Footer";
 import LoginModal from "../LoginModal";
 import { ModalProvider } from "../../Contexts/ModalContext";
-import { AuthContext } from "../../Contexts/AuthContext";
-import { useContext } from "react";
+import Hamburger from "../Hamburger";
 
 const Home = () => {
-  const {currentUser, setCurrentUser} = useContext(AuthContext);
-
-  console.log(currentUser, 'HEY')
   return (
     <>
       <ModalProvider>
         <Nav />
+        
         <div className="wrapper">
+          <Hamburger />
+
           <Header />
           <Categories />
           <JobFind />
