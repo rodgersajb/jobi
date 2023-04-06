@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import JobSearchForm from "./JobListing/JobSearchForm";
+import Header from "./Homepage/Header";
 
 import { db } from "./firebase";
 import { ref, onValue, push, set } from "firebase/database";
 
 const Jobs = () => {
 
+  const [job, setJob] = useState([])
+
   
   const jobPostings = [
-
     {
       logo: "Google",
       work: "fulltime",
@@ -379,69 +381,89 @@ const Jobs = () => {
       benefits:
         "- Competitive salary and benefits package\n- Opportunity to work with a world-class team of software engineers\n- Access to Amazon's state-of-the-art facilities and resources\n- Discount on Amazon products",
     },
-
-  ]
+    {
+      logo: "Tesla",
+      work: "contract",
+      job: "Electrical Engineer",
+      location: "Fremont, CA",
+      datePosted: "2023-03-15",
+      salary: "$80 - $100 per hour",
+      field: "Electrical Engineering",
+      keyResponsibilities: [
+        "Design and develop electrical systems for Tesla's vehicles and products",
+        "Collaborate with cross-functional teams to identify and solve technical issues",
+        "Perform simulations and testing to validate designs and ensure safety and reliability",
+        "Prepare technical reports and documentation",
+        "Stay up-to-date with the latest technologies and standards in electrical engineering",
+      ],
+      jobDescription:
+        "We are seeking a skilled electrical engineer to join our team in Fremont, CA on a contract basis. In this role, you will design and develop electrical systems for Tesla's vehicles and products, collaborate with other teams to identify and solve technical issues, and ensure safety and reliability through testing and validation.",
+      requiredSkills: [
+        "Bachelor's or Master's degree in Electrical Engineering or related field",
+        "At least 5 years of experience in designing and developing electrical systems for automotive or industrial applications",
+        "Proficiency in simulation and analysis tools such as LTSpice, PSpice, or Simulink",
+        "Strong knowledge of electrical standards and regulations such as NEC, UL, and ISO",
+        "Excellent communication and collaboration skills",
+      ],
+      benefits:
+        "We offer competitive hourly rates, opportunities for professional growth, and the chance to work on cutting-edge technology that will change the world.",
+    },
+    {
+      logo: "Google",
+      work: "internship",
+      job: "Software Engineer",
+      location: "Mountain View, CA",
+      datePosted: "2023-04-01",
+      salary: "$7,000 - $10,000 per month",
+      field: "Computer Science",
+      keyResponsibilities: [
+        "Develop and maintain software applications",
+        "Collaborate with team members to identify and solve technical problems",
+        "Write clean, efficient, and well-documented code",
+        "Participate in code reviews and provide feedback to other engineers",
+        "Stay up-to-date with the latest technologies and programming languages",
+      ],
+      jobDescription:
+        "We are looking for a motivated and skilled software engineer to join our team as an intern in Mountain View, CA. In this role, you will work on developing and maintaining software applications and collaborate with other engineers to solve technical problems.",
+      requiredSkills: [
+        "Currently pursuing a Bachelor's or Master's degree in Computer Science or related field",
+        "Strong programming skills in at least one of the following languages: Java, Python, or C++",
+        "Familiarity with software development tools such as Git, JIRA, and Jenkins",
+        "Excellent problem-solving and analytical skills",
+        "Strong communication and teamwork skills",
+      ],
+      benefits:
+        "We provide competitive compensation, flexible work arrangements, and opportunities for networking and professional development.",
+    },
+  ];
 
   
   const jobsRef = ref(db, "jobs");
 
-   jobPostings.map((job) => {
-    const newJobRef = push(jobsRef);
-    return set(newJobRef, job);
-  });
+  useEffect(() => {
 
-  // Promise.all(jobPromises)
-  //   .then(() => {
-  //     console.log("All jobs added to Firebase");
-  //   })
-  //   .catch((error) => {
-  //     console.error("Error adding jobs to Firebase:", error);
-  //   });
+    jobPostings.map((job) => {
+     const newJobRef = push(jobsRef);
+     
+     return set(newJobRef, job);
+   });
+  },[])
 
-  // for (const job of jobPostings) {
-  //   console.log(job, 'JOB')
-    
-    
-  //   set(jobsRef, {
-  //     job
-  //   })
-  //   return
-  // }
-  // onValue(jobsRef, (snapshot) => {
-  //   console.log(snapshot)
-  //   const updatedJobPostings = [];
-  //   const data = snapshot.val();
-  //   set(ref())
-  // })
-  
-  // jobPostings.map((jobPosting) => {
-  //   jobsRef.push(jobPosting)
-  // })
-// useEffect(() => {
-//   const jobRef = ref(db, "/jobs");
-//   onValue(jobRef, (snapshot) => {
-//     const data = snapshot.val();
-//     const jobs = data
-//       ? Object.keys(data).map((key) => {
-//           return { id: key, ...data[key] };
-//         })
-//       : [];
-//     setJobs(jobs);
-//     console.log(jobs, "jobs");
-//   });
+ 
 
-//   // return a cleanup function to unsubscribe from the database reference when the component unmounts
-//   return () => off(jobRef);
-// }, []);
+ 
 
 
   const filteredJobPostings = jobPostings.filter(
     (posting) => Object.keys(posting).length !== 0
   );
 
+  console.log(filteredJobPostings)
+
   return (
     <>
       <JobSearchForm filteredJobPostings={filteredJobPostings} />
+      <Header filteredJobPostings={filteredJobPostings} />
     </>
   );
 };

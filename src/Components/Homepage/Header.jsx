@@ -1,6 +1,8 @@
 import upload from "../../../public/assets/assets/upload.png";
 
-const Header = () => {
+const Header = ({ filteredJobPostings }) => {
+  console.log({filteredJobPostings});
+
   return (
     <>
       <header>
@@ -32,8 +34,7 @@ const Header = () => {
           <button>Search</button>
         </form>
         <h5>
-          Upload your cv{" "}
-          <img src={upload} alt="upload file" />
+          Upload your cv <img src={upload} alt="upload file" />
         </h5>
       </header>
     </>
