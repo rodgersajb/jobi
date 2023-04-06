@@ -1,6 +1,7 @@
 import { useLocation, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Hamburger from "./Hamburger";
 
 import { ModalProvider } from "../Contexts/ModalContext";
 
@@ -33,6 +34,7 @@ const JobDetails = (props) => {
     <>
       <ModalProvider>
         <Navbar />
+        <Hamburger />
         <section className="job">
           <div className="content-container">
             <h5>
@@ -45,7 +47,7 @@ const JobDetails = (props) => {
               <div className="content-card">
                 <FontAwesomeIcon icon="fa-solid fa-dollar-sign" />
                 <p>Salary</p>
-                <p>${job.salary} per year</p>
+                <p>{job.salary} per year</p>
               </div>
               <div className="content-card">
                 <FontAwesomeIcon icon="fa-solid fa-location-dot" />
