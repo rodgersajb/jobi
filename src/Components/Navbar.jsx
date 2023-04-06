@@ -44,7 +44,8 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
 
-            <li onClick={isDropDown}> Jobs </li>
+            <li onClick={isDropDown}> 
+            <Link to ='/jobs'>Jobs</Link> </li>
           
 
             <li>Explore</li>

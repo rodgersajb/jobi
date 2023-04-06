@@ -1,35 +1,28 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
-import {faChevronUp, faChevronDown
-  
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-library.add(
-  faChevronUp, faChevronDown
-);
+library.add(faChevronUp, faChevronDown);
+
+import squiggly from "../../../src/assets/line-design.jpg";
+import smallGirl from "../../../src/assets/girl-small.jpg";
+import mediumGirl from "../../../src/assets/girl-medium.jpg";
+import largeGuy from "../../../src/assets/guy-large.jpg";
 
 const FindTalent = () => {
   return (
     <>
       <section className="find-talent">
-        
-
         <div className="flex-container">
           <div className="image-container">
+            <img src={squiggly} alt="two squiggly line design" />
+            <img src={smallGirl} alt="A female employee smiling at her desk" />
             <img
-              src="src/assets/line-design.jpg"
-              alt="two squiggly line design"
-            />
-            <img
-              src="src/assets/girl-small.jpg"
-              alt="A female employee smiling at her desk"
-            />
-            <img
-              src="src/assets/girl-medium.jpg"
+              src={mediumGirl}
               alt="A female with glasses smiling and shaking hands with another person"
             />
             <img
-              src="src/assets/guy-large.jpg"
+              src={largeGuy}
               alt="A male employee looking down at his work"
             />
           </div>
@@ -51,7 +44,6 @@ const FindTalent = () => {
             <button>Find Talents</button>
           </div>
         </div>
-        
       </section>
     </>
   );

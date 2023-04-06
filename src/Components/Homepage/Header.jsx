@@ -1,3 +1,5 @@
+import upload from "../../../public/assets/assets/upload.png";
+
 const Header = () => {
   return (
     <>
@@ -31,7 +33,7 @@ const Header = () => {
         </form>
         <h5>
           Upload your cv{" "}
-          <img src="public/assets/assets/upload.png" alt="upload file" />
+          <img src={upload} alt="upload file" />
         </h5>
       </header>
     </>
