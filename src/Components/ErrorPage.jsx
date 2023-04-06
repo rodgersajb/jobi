@@ -1,16 +1,13 @@
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
-import error from '../assets/404.jpg';
+import error from "../assets/404.jpg";
+import arrow from "../assets/404-arrow.jpg";
 
 import { ModalProvider } from "../Contexts/ModalContext";
 import LoginModal from "./LoginModal";
 
-
 const ErrorPage = () => {
-    
-    
-
   return (
     <>
       <ModalProvider>
@@ -32,7 +29,7 @@ const ErrorPage = () => {
               <Link to={"/"}>
                 <p>Go Back</p>
                 <img
-                  src="src/assets/404-arrow.jpg"
+                  src={arrow}
                   alt="black arrow point to the right indicating to go back to home page"
                 />
               </Link>
