@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import jobiLogoDark from "../assets/jobiLogoDark.png";
 import registerSquiggle from "../assets/register-squiggle.jpg";
 
+
 library.add(faUser, faRightFromBracket);
 
 const Navbar = () => {
@@ -34,7 +35,7 @@ const Navbar = () => {
   return (
     <>
     
-
+      
       <nav className="pages">
         <div className="flex-container pages">
           <img src={jobiLogoDark} alt="jobi logo" />

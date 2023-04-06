@@ -1,7 +1,7 @@
 import upload from "../../../public/assets/assets/upload.png";
 
 const Header = ({ filteredJobPostings }) => {
-  console.log({filteredJobPostings});
+  console.log(filteredJobPostings);
 
   return (
     <>
