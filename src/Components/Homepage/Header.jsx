@@ -1,7 +1,7 @@
 import upload from "../../../public/assets/assets/upload.png";
 
-const Header = ({filteredJobPostings}) => {
-  console.log(filteredJobPostings)
+const Header = () => {
+ 
 
   return (
     <>
@@ -11,12 +11,12 @@ const Header = ({filteredJobPostings}) => {
         <form action="">
           <div>
             <label htmlFor="jobs">Job Categories</label>
-            <select name="jobs" id="jobs">
+            {/* <select name="jobs" id="jobs">
               {filteredJobPostings &&
                 filteredJobPostings.map((jobPosting, index) => {
                   return <option key={index}>{jobPosting.job}</option>;
                 })}
-            </select>
+            </select> */}
           </div>
           <div>
             <label htmlFor="location">Location</label>

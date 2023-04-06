@@ -459,7 +459,7 @@ const Jobs = () => {
   return (
     <>
       <JobSearchForm filteredJobPostings={filteredJobPostings} />
-      <Home filteredJobPostings={filteredJobPostings} />
+      {/* <Home filteredJobPostings={filteredJobPostings} /> */}
     </>
   );
 };
