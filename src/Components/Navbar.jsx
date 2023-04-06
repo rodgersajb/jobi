@@ -18,16 +18,13 @@ library.add(faUser, faRightFromBracket);
 const Navbar = () => {
   const { currentUser, setCurrentUser } = useContext(AuthContext);
   const { showModal, setShowModal } = useContext(ModalContext);
+
   const handleClick = () => {
     setShowModal(true);
   };
-  const [isDropDown, setIsDropDown] = useState(false);
-
-  const toggleDropDown = () => {
-    setIsDropDown(!isDropDown);
-  };
-
   
+
+ 
   const signOut = () => {
     setCurrentUser(null);
   };
@@ -35,8 +32,8 @@ const Navbar = () => {
   return (
     <>
     
-      
-      <nav className="pages">
+
+      <nav className={"pages"}>
         <div className="flex-container pages">
           <img src={jobiLogoDark} alt="jobi logo" />
           <ul className="pages">
@@ -45,7 +42,7 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
 
-            <li onClick={isDropDown}> 
+            <li> 
             <Link to ='/jobs'>Jobs</Link> </li>
           
 

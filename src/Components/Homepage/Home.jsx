@@ -10,14 +10,14 @@ import LoginModal from "../LoginModal";
 import { ModalProvider } from "../../Contexts/ModalContext";
 import Hamburger from "../Hamburger";
 
-const Home = ({filteredJobPostings}) => {
-   
-   console.log(filteredJobPostings)
+const Home = () => {
+  
+
   return (
     <>
       <ModalProvider>
         <Nav />
-        
+
         <div className="wrapper">
           <Hamburger />
 

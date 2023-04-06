@@ -85,10 +85,10 @@ const LoginModal = () => {
     const auth = getAuth(firebase);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log(userCredential, "CRED");
+        
         const user = userCredential.user;
         setCurrentUser(user);
-        // setCurrentUser(userCredential.user);
+        
         alert("successfully signed in!");
       })
       .catch((error) => {
@@ -101,8 +101,7 @@ const LoginModal = () => {
     const auth = getAuth(firebase);
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        const navigate = useNavigate();
-        navigate("/");
+        
         setLoggedIn(true);
         const uid = currentUser.uid;
       } else {

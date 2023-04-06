@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path ="/*" element={<ErrorPage /> } />
+            <Route path ="/404" element={<ErrorPage /> } />
             <Route path="/register" element={<Register />} />
             <Route path="/jobs" element={<JobListings />} />
             <Route path ="/job/:id" element={<JobDetails />} />

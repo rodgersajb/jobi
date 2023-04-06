@@ -1,9 +1,10 @@
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
-import { ModalContext } from "../Contexts/ModalContext";
-import { useContext } from "react";
+import error from '../assets/404.jpg';
+
 import { ModalProvider } from "../Contexts/ModalContext";
+import LoginModal from "./LoginModal";
 
 
 const ErrorPage = () => {
@@ -14,10 +15,11 @@ const ErrorPage = () => {
     <>
       <ModalProvider>
         <Navbar />
+        <LoginModal />
         <section className="error-page">
           <div className="flex-container">
             <image className="image-container">
-              <img src="src/assets/404.jpg" alt="404 error message" />
+              <img src={error} alt="404 error message" />
             </image>
             <div className="content">
               <h2 className="error">404</h2>
