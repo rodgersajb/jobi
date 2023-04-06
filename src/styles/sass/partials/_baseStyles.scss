@@ -19,7 +19,7 @@ ul {
   margin: 0 auto;
   max-width: 1880px;
   width: 95%;
-  min-width: 320px
+  min-width: 320px;
 }
 
 p {
@@ -55,6 +55,11 @@ h2 {
   font-size: 7rem;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
 .inputs {
   display: flex;
   flex-direction: column;
@@ -106,9 +111,6 @@ h2 {
         padding: 0.1rem;
         margin: 0 1rem 0 0;
       }
-     
-      
-      
 
       li {
         color: #fff;
@@ -142,23 +144,20 @@ h2 {
       cursor: pointer;
     }
 
-    
-      .fa-user {
-        color: $lime;
-        font-size: 2rem;
-      }
-      
+    .fa-user {
+      color: $lime;
+      font-size: 2rem;
+    }
 
-        .current-user {
-          color: $lime;
-          padding: 0 6rem 0 0;
-          margin: 0;
-        }
-        .sign-out {
-          height: 10rem;
-          color: $lime;
-        
-      
+    .current-user {
+      color: $lime;
+      padding: 0 6rem 0 0;
+      margin: 0;
+    }
+    .sign-out {
+      height: 10rem;
+      color: $lime;
+
       &:hover .dropdown-menu,
       &:focus .dropdown-menu {
         opacity: 1;

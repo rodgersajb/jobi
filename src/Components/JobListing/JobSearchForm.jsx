@@ -1,11 +1,22 @@
+import { useState } from "react";
 import JobCard from "./JobCard";
-import SlideOutNav from "../slideOutNav";
+
 
 
 const JobSearchForm = ({ filteredJobPostings }) => {
-  
-  //
+  console.log(filteredJobPostings)
+  const [userInput, setUserInput] = useState('')
+  console.log(userInput)
 
+  const handleChange = (event) => {
+    setUserInput(event.target.value)
+  }
+  
+  const filteredJobs = filteredJobPostings.filter(post => {
+    post.job.includes(userInput.toLowerCase())
+  })
+
+  console.log(filteredJobs, 'filtered jobs')
   return (
     <>
       <div className="content-container">
@@ -18,7 +29,7 @@ const JobSearchForm = ({ filteredJobPostings }) => {
         <form action="" className="job-search">
           <div className="input-search">
             <label htmlFor="user-search">What are you looking for?</label>
-            <input type="text" id="user-search" placeholder="UI Designer" />
+            <input type="text" id="user-search" placeholder="UI Designer" onChange={handleChange} value={userInput} />
           </div>
           <div className="input-category">
             <label htmlFor="category">Category</label>
@@ -42,7 +53,10 @@ const JobSearchForm = ({ filteredJobPostings }) => {
           <select name="filter" id="filter"></select>
         </div>
         {filteredJobPostings &&
-          filteredJobPostings.map((jobPosting, index) => {
+          filteredJobPostings.filter((item) => {
+            console.log(item.job, 'ITEM')
+            return userInput.toLowerCase() === '' ? item : item.job.toLowerCase().includes(userInput);
+          }).map((jobPosting, index) => {
             return (
               <JobCard jobPosting={jobPosting} index={index} key={index} />
             );

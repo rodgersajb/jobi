@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import JobSearchForm from "./JobListing/JobSearchForm";
 import Home from "./Homepage/Home";
-
 import { db } from "./firebase";
 import { ref, onValue, push, set } from "firebase/database";
 
@@ -433,6 +432,8 @@ const jobPostings = [
 ];
 
 const Jobs = () => {
+  
+  
   const jobsRef = ref(db, "jobs");
 
   // useEffect(() => {
@@ -453,12 +454,12 @@ const Jobs = () => {
     return <div>Loading...</div>;
   }
 
-  console.log(filteredJobPostings);
+  
 
   return (
     <>
       <JobSearchForm filteredJobPostings={filteredJobPostings} />
-      <Header filteredJobPostings={filteredJobPostings} />
+      <Home filteredJobPostings={filteredJobPostings} />
     </>
   );
 };

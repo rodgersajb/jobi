@@ -9,15 +9,18 @@ import Footer from "../Footer";
 import LoginModal from "../LoginModal";
 import { ModalProvider } from "../../Contexts/ModalContext";
 import Hamburger from "../Hamburger";
+import Jobs from "../Jobs";
 
 const Home = () => {
-  
+ 
 
   return (
     <>
+      
       <ModalProvider>
         <Nav />
-
+        {/* <Jobs /> */}
+      
         <div className="wrapper">
           <Hamburger />
 
