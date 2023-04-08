@@ -1,22 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import JobCard from "./JobCard";
 
 
 
 const JobSearchForm = ({ filteredJobPostings }) => {
   console.log(filteredJobPostings)
-  const [userInput, setUserInput] = useState('')
-  console.log(userInput)
+  const [userInput, setUserInput] = useState('');
+  const [userSelect, setUserSelect] = useState('');
+  const [canSubmit, setCanSubmit] = useState(false);
+  console.log(userInput, 'user input')
 
   const handleChange = (event) => {
     setUserInput(event.target.value)
   }
-  
-  const filteredJobs = filteredJobPostings.filter(post => {
-    post.job.includes(userInput.toLowerCase())
-  })
 
-  console.log(filteredJobs, 'filtered jobs')
+  const handleSelect = (event) => {
+    setUserSelect(event.target.value);
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  }
+ 
+  // useEffect for canSubmit status, must be a userInput AND/OR userSelect to perform Search 
+  useEffect(() => {
+    setCanSubmit(userInput || userSelect)
+  }, [userInput || userSelect])
+  
+  
+
+ 
   return (
     <>
       <div className="content-container">
@@ -34,7 +47,8 @@ const JobSearchForm = ({ filteredJobPostings }) => {
           <div className="input-category">
             <label htmlFor="category">Category</label>
             <div className="input-category-flex">
-              <select name="category" id="category">
+              <select name="category" id="category" onChange={handleSelect}>
+                {console.log(userSelect, 'USER SELECT')}
                 <option value="Web Design">Web Design</option>
                 {filteredJobPostings &&
                   filteredJobPostings.map((jobPosting, index) => {
@@ -43,7 +57,7 @@ const JobSearchForm = ({ filteredJobPostings }) => {
               </select>
             </div>
           </div>
-          <button className="job-search-btn">Search</button>
+          <button disabled={!canSubmit} onSubmit={handleSubmit} className="job-search-btn">Search</button>
         </form>
       </div>
       <section className="job-search-results">
@@ -54,7 +68,7 @@ const JobSearchForm = ({ filteredJobPostings }) => {
         </div>
         {filteredJobPostings &&
           filteredJobPostings.filter((item) => {
-            console.log(item.job, 'ITEM')
+            // console.log(item.job, 'ITEM')
             return userInput.toLowerCase() === '' ? item : item.job.toLowerCase().includes(userInput);
           }).map((jobPosting, index) => {
             return (

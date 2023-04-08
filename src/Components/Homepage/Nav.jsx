@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import LoginModal from "../LoginModal";
 import { ModalContext } from "../../Contexts/ModalContext";
 import { useContext } from "react";
+import jobiLogo from "../../assets/jobiLogo.png";
 
 const Nav = () => {
   const { showModal, setShowModal } = useContext(ModalContext);
@@ -13,7 +14,7 @@ const Nav = () => {
   return (
     <>
       <nav className={showModal ? "modal-open" : null}>
-        <img src="public/assets/assets/jobiLogo.png" alt="jobi logo" />
+        <img src={jobiLogo} alt="jobi logo" />
         <ul>
           <li>
             <Link to="/">Home</Link>
