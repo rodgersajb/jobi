@@ -6,6 +6,7 @@ import JobListings from "./Components/JobListing/JobListing";
 import JobDetails from "./Components/JobDetails";
 import ErrorPage from "./Components/ErrorPage";
 import SavedJobs from "./Components/SavedJobs";
+import Jobs from "./Components/Jobs";
 
 
 import { AuthProvider } from "./Contexts/AuthContext";
@@ -20,13 +21,14 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path ="*" element={<ErrorPage /> } />
             <Route path="/register" element={<Register />} />
             <Route path="/jobs" element={<JobListings />} />
             <Route path ="/job/:id" element={<JobDetails />} />
             <Route path ="/saved" element={<SavedJobs />} />
+            <Route path ="*" element={<ErrorPage /> } />
           </Routes>
         </Router>
+
       </AuthProvider>
     </div>
   );
