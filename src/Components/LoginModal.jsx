@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+
+
+import googleLogIn from "../assets/google-login.jpg";
+import fbLogin from "../assets/fb-login.jpg";
+
 import {
   getAuth,
   onAuthStateChanged,
@@ -173,11 +177,11 @@ const LoginModal = () => {
               <div className="sign-in-buttons">
                 <button onClick={googleSignIn}>
                   <img
-                    src="src/assets/g-login.jpg"
+                    src={googleLogIn}
                     alt="google log in button"
                   />
                 </button>
-                <button onClick={facebookSignIn}>
+                <button onClick={fbLogin}>
                   <img
                     src="src/assets/fb-log.jpg"
                     alt="facebook log in button"

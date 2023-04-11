@@ -377,7 +377,7 @@ const jobPostings = [
   },
   {
     logo: "Tesla",
-    work: "contract",
+    work: "fulltime",
     job: "Electrical Engineer",
     location: "Fremont, CA",
     datePosted: "2023-03-15",
@@ -404,7 +404,7 @@ const jobPostings = [
   },
   {
     logo: "Google",
-    work: "internship",
+    work: "part-time",
     job: "Software Engineer",
     location: "Mountain View, CA",
     datePosted: "2023-04-01",
