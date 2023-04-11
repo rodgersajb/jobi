@@ -16,6 +16,24 @@ nav {
     font-family: $heading2;
     letter-spacing: 1.2px;
     font-size: 2rem;
+    li {
+      cursor: pointer;
+      &:hover,
+      :focus {
+        border-bottom: 2px solid $green;
+        transition: ease-in-out 0.2s;
+        color: $green;
+        padding: 0.5rem 0 0 0;
+        
+        
+      }
+      a {
+        &:hover,
+        &:focus {
+          color: $green;
+        }
+      }
+    }
   }
   .login-buttons {
     button {
@@ -60,16 +78,17 @@ header {
   }
   form {
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: space-evenly;
     gap: 2rem;
     background: #fff;
     div {
       display: flex;
       flex-direction: column;
-      label {
+      label, input {
         font-size: 1.4rem;
         padding: 0 0 1rem 0;
+        font-family: $heading2;
       }
       #jobs,
       #location,

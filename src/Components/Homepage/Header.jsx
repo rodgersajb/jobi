@@ -11,12 +11,7 @@ const Header = () => {
         <form action="">
           <div>
             <label htmlFor="jobs">Job Categories</label>
-            {/* <select name="jobs" id="jobs">
-              {filteredJobPostings &&
-                filteredJobPostings.map((jobPosting, index) => {
-                  return <option key={index}>{jobPosting.job}</option>;
-                })}
-            </select> */}
+            <input type="text" placeholder="UX Desginer" />
           </div>
           <div>
             <label htmlFor="location">Location</label>
