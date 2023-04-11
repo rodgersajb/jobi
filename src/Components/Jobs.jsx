@@ -432,8 +432,6 @@ const jobPostings = [
 ];
 
 const Jobs = () => {
-  
-  
   const jobsRef = ref(db, "jobs");
 
   // useEffect(() => {
@@ -454,12 +452,9 @@ const Jobs = () => {
     return <div>Loading...</div>;
   }
 
-  
-
   return (
     <>
       <JobSearchForm filteredJobPostings={filteredJobPostings} />
-      {/* <Home filteredJobPostings={filteredJobPostings} /> */}
     </>
   );
 };
