@@ -35,7 +35,8 @@ const Nav = () => {
             Login
           </button>
           <button>
-            <Link to="/register">Register</Link>
+            Register
+            <Link to="/register"></Link>
           </button>
         </div>
       </nav>
