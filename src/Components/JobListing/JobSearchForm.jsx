@@ -8,7 +8,7 @@ const JobSearchForm = ({ filteredJobPostings }) => {
   const [userInput, setUserInput] = useState('');
   const [userSelect, setUserSelect] = useState('');
   const [canSubmit, setCanSubmit] = useState(false);
-  console.log(userInput, 'user input')
+  
 
   const handleChange = (event) => {
     setUserInput(event.target.value)
@@ -24,8 +24,8 @@ const JobSearchForm = ({ filteredJobPostings }) => {
  
   // useEffect for canSubmit status, must be a userInput AND/OR userSelect to perform Search 
   useEffect(() => {
-    setCanSubmit(userInput || userSelect)
-  }, [userInput || userSelect])
+    setCanSubmit(userInput && userSelect)
+  }, [userInput, userSelect])
   
   
 
@@ -39,7 +39,7 @@ const JobSearchForm = ({ filteredJobPostings }) => {
         <h2>Job Listing</h2>
         <h5>We delivered blazing fast & striking work solution</h5>
         <img src="src/assets/box-reg.jpg" alt="" />
-        <form action="" className="job-search">
+        <form action="" className="job-search" onSubmit={handleSubmit}>
           <div className="input-search">
             <label htmlFor="user-search">What are you looking for?</label>
             <input type="text" id="user-search" placeholder="UI Designer" onChange={handleChange} value={userInput} />
@@ -57,7 +57,7 @@ const JobSearchForm = ({ filteredJobPostings }) => {
               </select>
             </div>
           </div>
-          <button disabled={!canSubmit} onSubmit={handleSubmit} className="job-search-btn">Search</button>
+          <button disabled={!canSubmit} type="submit" className="job-search-btn">Search</button>
         </form>
       </div>
       <section className="job-search-results">
@@ -68,7 +68,7 @@ const JobSearchForm = ({ filteredJobPostings }) => {
         </div>
         {filteredJobPostings &&
           filteredJobPostings.filter((item) => {
-            // console.log(item.job, 'ITEM')
+            
             return userInput.toLowerCase() === '' ? item : item.job.toLowerCase().includes(userInput);
           }).map((jobPosting, index) => {
             return (
