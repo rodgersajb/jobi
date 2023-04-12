@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react";
 import JobCard from "./JobCard";
+import LocationsFilter from "./LocationsFilter";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faChevronLeft,
   faFilter,
+
   
-  faChevronDown,
+  faChevronDown,  
+  faCircleXmark
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-library.add(faChevronLeft, faFilter, faChevronDown);
+library.add(faChevronLeft, faFilter, faChevronDown, faCircleXmark);
 
 const JobSearchForm = ({ filteredJobPostings }) => {
   console.log(filteredJobPostings, "filtered JOB POSTINGS");
@@ -18,11 +21,20 @@ const JobSearchForm = ({ filteredJobPostings }) => {
   const [userSelect, setUserSelect] = useState("");
   const [canSubmit, setCanSubmit] = useState(false);
 
-  const [formOpen, setFormOpen] = useState(false);
 
-  const handleFormToggle = () => {
-    setFormOpen(!formOpen);
-  };
+  // map through filtered job postings and return the locations
+const locations = filteredJobPostings.map((job) => {
+  
+  return job.location;
+})
+
+// filter through locations and their indexes
+// return the first index of the location with indexOf method
+const uniqueLocations = locations.filter((location, index) => locations.indexOf(location) == index)
+
+
+
+
 
   const handleChange = (event) => {
     setUserInput(event.target.value);
@@ -84,27 +96,7 @@ const JobSearchForm = ({ filteredJobPostings }) => {
         <div className="filter-search">
           <div className="filter">
             <h5>Filter by</h5>
-            <div className="locations">
-              <button onClick={handleFormToggle}>
-                Locations <FontAwesomeIcon icon="fa-solid fa-chevron-down" />
-              </button>
-              <form
-                action=""
-                onSubmit={handleSubmit}
-                className={`form-menu ${formOpen ? "open" : ""}`}
-              >
-                <h5>Locations</h5>
-                {filteredJobPostings.map((job, key) => {
-                  return (
-                    <>
-                      <label key={key}>
-                        <input type="checkbox" /> {job.location}
-                      </label>
-                    </>
-                  );
-                })}
-              </form>
-            </div>
+            <LocationsFilter uniqueLocations={uniqueLocations} />
           </div>
         </div>
         {filteredJobPostings &&

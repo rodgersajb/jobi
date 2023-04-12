@@ -80,6 +80,7 @@
       width: 50%;
       .locations {
         position: relative;
+        width: 100%;
         button {
           font-family: $heading2;
           border: 2px solid $registerGreen;
@@ -91,31 +92,64 @@
           margin: 0 0 0.4rem 0;
         }
         .form-menu {
-          display: none;
           display: flex;
-          flex-direction: column;
-          width: max-content;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 125%;
           padding: 1rem 4rem;
           border: 2px solid $registerGreen;
+          position: relative;
 
-          align-items: flex-start;
-          justify-content: center;
           z-index: 10;
           position: absolute;
           opacity: 0;
           background: $lightgrey;
-          
+          align-items: center;
+          justify-content: flex-start;
+
           border-radius: 1rem;
           transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
           &.open {
             opacity: 1;
           }
+          .location-filter {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.6rem;
+            padding: 2rem 0;
 
-          label {
-            font-family: $heading2;
-            color: black;
-            font-size: 1.4rem;
-            font-weight: 600;
+            label {
+              font-family: $heading2;
+              color: black;
+              font-size: 1.4rem;
+              font-weight: 600;
+            }
+          }
+          button {
+            border-radius: 0.4rem;
+            background: $registerGreen;
+            color: #fff;
+            margin: 2rem 0 0 0;
+            transition: ease 0.3s;
+            &:hover,
+            &:focus {
+              background: $green;
+              border: 2px solid $green;
+            }
+          }
+
+          .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            color: $registerGreen;
+            transition: ease 0.3s;
+            &:hover,
+            &:focus {
+              color: $green;
+              cursor: pointer;
+            }
           }
         }
       }
