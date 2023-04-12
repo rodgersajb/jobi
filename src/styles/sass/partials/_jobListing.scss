@@ -62,6 +62,7 @@
   width: 95%;
   max-width: 2080px;
   margin: 0 auto;
+  position: relative;
   .filter-search {
     width: 100%;
     display: flex;
@@ -71,18 +72,53 @@
     border-radius: 1rem;
     padding: 1rem;
     margin: 6rem 0 0 0;
-    label {
-      font-family: $heading2;
-      color: black;
-      font-size: 2rem;
-      font-weight: 600;
-    }
-    select {
-      outline: none;
-      border: none;
-      color: $registerGreen;
-      border-radius: 8rem;
-      font-size: 2rem;
+
+    .filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
+      .locations {
+        position: relative;
+        button {
+          font-family: $heading2;
+          border: 2px solid $registerGreen;
+          border-radius: 2rem;
+          font-size: 1.6rem;
+          color: $registerGreen;
+          padding: 1rem;
+          font-weight: 600;
+          margin: 0 0 0.4rem 0;
+        }
+        .form-menu {
+          display: none;
+          display: flex;
+          flex-direction: column;
+          width: max-content;
+          padding: 1rem 4rem;
+          border: 2px solid $registerGreen;
+
+          align-items: flex-start;
+          justify-content: center;
+          z-index: 10;
+          position: absolute;
+          opacity: 0;
+          background: $lightgrey;
+          
+          border-radius: 1rem;
+          transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+          &.open {
+            opacity: 1;
+          }
+
+          label {
+            font-family: $heading2;
+            color: black;
+            font-size: 1.4rem;
+            font-weight: 600;
+          }
+        }
+      }
     }
   }
   .results {
@@ -149,7 +185,8 @@
       gap: 1rem;
       align-items: center;
       width: 14%;
-      button, a {
+      button,
+      a {
         background: $lime;
         font-family: $heading2;
         border: 2px solid $registerGreen;
@@ -166,7 +203,6 @@
 }
 
 .job {
-  
   h5 {
     margin: 0;
     padding: 8rem 0 0 0;
@@ -178,11 +214,10 @@
       padding: 8rem 0 0 0;
       gap: 4rem;
       display: flex;
-      
+
       .content-card {
-        
         padding: 2rem;
-        
+
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -194,7 +229,7 @@
           font-size: 2rem;
           padding: 0 0 4rem 0;
         }
-        p:nth-child(2){
+        p:nth-child(2) {
           margin-bottom: 1rem;
           color: grey;
         }
