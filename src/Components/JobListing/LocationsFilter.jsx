@@ -17,6 +17,7 @@ const LocationsFilter = ({ uniqueLocations }) => {
 
 
   const [formOpen, setFormOpen] = useState(false);
+  const [clicked, setClicked] = useState(null)
 
   const handleFormToggle = () => {
     setFormOpen(!formOpen);
@@ -25,6 +26,14 @@ const LocationsFilter = ({ uniqueLocations }) => {
   const closeForm = () => {
     setFormOpen(false);
   };
+
+  // Onchange Listener for radio buttons
+    // checked, setChecked useState
+    // isChecked method with value passed that checked if the value is exactly equal to checked
+    // handleChange function that captures when a radio button is checked
+    const handleChange = (event) => {
+        console.log(event.target.value)
+    }
   return (
     <>
       <div className="locations">
@@ -41,7 +50,7 @@ const LocationsFilter = ({ uniqueLocations }) => {
             {uniqueLocations.map((location, key) => {
               return (
                 <label key={key}>
-                  <input type="checkbox" /> {location}
+                  <input type="checkbox" value={location} onChange={handleChange}/> {location}
                 </label>
               );
             })}
