@@ -49,8 +49,8 @@ const QA = () => {
       setActive(index);
     }
   };
-  console.log(active);
-  // <FontAwesomeIcon icon="fa-solid fa-plus" />{" "}
+  
+  
   return (
     <>
     
