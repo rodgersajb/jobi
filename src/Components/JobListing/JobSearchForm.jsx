@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(faChevronLeft, faFilter, faChevronDown, faCircleXmark);
 
 const JobSearchForm = ({ filteredJobPostings }) => {
-  console.log(filteredJobPostings, "filtered JOB POSTINGS");
+  
   const [userInput, setUserInput] = useState("");
   const [userSelect, setUserSelect] = useState("");
   const [canSubmit, setCanSubmit] = useState(false);
@@ -74,7 +74,7 @@ const uniqueLocations = locations.filter((location, index) => locations.indexOf(
             <label htmlFor="category">Category</label>
             <div className="input-category-flex">
               <select name="category" id="category" onChange={handleSelect}>
-                {console.log(userSelect, "USER SELECT")}
+                
                 <option value="Web Design">Web Design</option>
                 {filteredJobPostings &&
                   filteredJobPostings.map((jobPosting, index) => {

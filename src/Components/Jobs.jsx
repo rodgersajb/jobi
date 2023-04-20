@@ -444,7 +444,15 @@ const Jobs = () => {
   //   });
   // },[])
 
-  // console.log(job, 'job')
+  // jobPostings.map((job) => {
+  //   console.log(job, 'HEY')
+  // })
+
+  // for (const jobs of jobPostings) {
+  //   const newJobRef = push(jobsRef);
+  //   return set(newJobRef, jobs)
+  // }
+  
 
   const filteredJobPostings = jobPostings.filter(
     (posting) => Object.keys(posting).length !== 0

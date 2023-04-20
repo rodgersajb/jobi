@@ -176,12 +176,9 @@ const LoginModal = () => {
             <div className="flex-container">
               <div className="sign-in-buttons">
                 <button onClick={googleSignIn}>
-                  <img
-                    src={googleLogIn}
-                    alt="google log in button"
-                  />
+                  <img src={googleLogIn} alt="google log in button" />
                 </button>
-                <button onClick={fbLogin}>
+                <button onClick={facebookSignIn}>
                   <img
                     src="src/assets/fb-log.jpg"
                     alt="facebook log in button"
