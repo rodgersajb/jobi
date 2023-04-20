@@ -432,10 +432,6 @@ const jobPostings = [
 ];
 
 const Jobs = () => {
-  
-  
-  const jobsRef = ref(db, "jobs");
-
   // useEffect(() => {
 
   //   jobPostings.map((job) => {
@@ -445,6 +441,10 @@ const Jobs = () => {
   // },[])
 
   // console.log(job, 'job')
+  jobPostings.map((job) => {
+    const jobsRef = ref(db, "jobs");
+    push(jobsRef, job)
+  });
 
   const filteredJobPostings = jobPostings.filter(
     (posting) => Object.keys(posting).length !== 0
@@ -454,12 +454,10 @@ const Jobs = () => {
     return <div>Loading...</div>;
   }
 
-  
-
   return (
     <>
       <JobSearchForm filteredJobPostings={filteredJobPostings} />
-      {/* <Home filteredJobPostings={filteredJobPostings} /> */}
+      
     </>
   );
 };
