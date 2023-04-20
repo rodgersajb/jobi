@@ -1,7 +1,8 @@
 import upload from "../../../public/assets/assets/upload.png";
+import { jobPostings } from "../Jobs";
 
 const Header = () => {
- 
+ console.log(jobPostings, 'JOB POSTINGS HEADER')
 
   return (
     <>
@@ -16,10 +17,11 @@ const Header = () => {
           <div>
             <label htmlFor="location">Location</label>
             <select name="location" id="location">
-              <option value="whitby">Whitby, ON</option>
-              <option value="oshawa">Oshawa, ON</option>
-              <option value="bomanville">Bomanville, ON</option>
-              <option value="ajax">Ajax, ON</option>
+              {jobPostings.map((job, index) => {
+                return (
+                  <option value="">{job.location}</option>
+                )
+              })}
             </select>
           </div>
           <div>

@@ -9,7 +9,7 @@ import Footer from "../Footer";
 import LoginModal from "../LoginModal";
 import { ModalProvider } from "../../Contexts/ModalContext";
 import Hamburger from "../Hamburger";
-import Jobs from "../Jobs";
+import { jobPostings } from "../Jobs";
 
 const Home = () => {
  
@@ -19,7 +19,8 @@ const Home = () => {
       
       <ModalProvider>
         <Nav />
-        {/* <Jobs /> */}
+        
+        
       
         <div className="wrapper">
           <Hamburger />
