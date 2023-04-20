@@ -4,7 +4,7 @@ import Home from "./Homepage/Home";
 import { db } from "./firebase";
 import { ref, onValue, push, set } from "firebase/database";
 
-const jobPostings = [
+ const jobPostings = [
   {
     logo: "Google",
     work: "fulltime",
