@@ -23,11 +23,11 @@ const JobSearchForm = ({ filteredJobPostings }) => {
 
 
   // map through filtered job postings and return the locations
-const locations = filteredJobPostings.map((job) => {
+  const locations = filteredJobPostings.map((job) => {
+    
+    return job.location;
+  })
   
-  return job.location;
-})
-
 // filter through locations and their indexes
 // return the first index of the location with indexOf method
 const uniqueLocations = locations.filter((location, index) => locations.indexOf(location) == index)
