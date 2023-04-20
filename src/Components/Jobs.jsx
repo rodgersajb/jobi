@@ -441,22 +441,25 @@ const Jobs = () => {
   // },[])
 
   // console.log(job, 'job')
-  jobPostings.map((job) => {
-    const jobsRef = ref(db, "jobs");
-    push(jobsRef, job)
-  });
+  useEffect(() => {
 
-  const filteredJobPostings = jobPostings.filter(
-    (posting) => Object.keys(posting).length !== 0
-  );
+    jobPostings.map((job) => {
+      const jobsRef = ref(db, "jobs");
+      push(jobsRef, job)
+    });
+  }, [])
 
-  if (filteredJobPostings.length === 0) {
-    return <div>Loading...</div>;
-  }
+  // const filteredJobPostings = jobPostings.filter(
+  //   (posting) => Object.keys(posting).length !== 0
+  // );
+
+  // if (filteredJobPostings.length === 0) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <>
-      <JobSearchForm filteredJobPostings={filteredJobPostings} />
+      {/* <JobSearchForm filteredJobPostings={filteredJobPostings} /> */}
       
     </>
   );

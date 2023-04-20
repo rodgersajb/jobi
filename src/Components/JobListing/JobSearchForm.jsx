@@ -3,6 +3,7 @@ import JobCard from "./JobCard";
 
 
 
+
 const JobSearchForm = ({ filteredJobPostings }) => {
   console.log(filteredJobPostings)
   const [userInput, setUserInput] = useState('');
