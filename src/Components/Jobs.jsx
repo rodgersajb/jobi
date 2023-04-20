@@ -441,10 +441,13 @@ const Jobs = () => {
   // },[])
 
   // console.log(job, 'job')
-  jobPostings.map((job) => {
-    const jobsRef = ref(db, "jobs");
-    push(jobsRef, job)
-  });
+  useEffect(() => {
+
+    jobPostings.map((job) => {
+      const jobsRef = ref(db, "jobs");
+      push(jobsRef, job)
+    });
+  }, [jobPostings])
 
   const filteredJobPostings = jobPostings.filter(
     (posting) => Object.keys(posting).length !== 0

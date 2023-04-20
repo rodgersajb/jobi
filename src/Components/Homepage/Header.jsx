@@ -2,8 +2,20 @@ import upload from "../../../public/assets/assets/upload.png";
 import { jobPostings } from "../Jobs";
 
 const Header = () => {
- console.log(jobPostings, 'JOB POSTINGS HEADER')
+  console.log(jobPostings, "JOB POSTINGS HEADER");
 
+  // map through job postings and return the locations
+
+  const locations = jobPostings.map((job) => {
+    return job.location
+  })
+
+  console.log(locations)
+  // filter through locations and their indexes
+  // return the first index of the location with indexOf method
+
+  const uniqueLocations = locations.filter((location, index) => locations.indexOf(location) == index)
+console.log(uniqueLocations, 'uni')
   return (
     <>
       <header>
@@ -17,10 +29,8 @@ const Header = () => {
           <div>
             <label htmlFor="location">Location</label>
             <select name="location" id="location">
-              {jobPostings.map((job, index) => {
-                return (
-                  <option value="">{job.location}</option>
-                )
+              {uniqueLocations.map((location) => {
+                return <option value="">{location}</option>
               })}
             </select>
           </div>
