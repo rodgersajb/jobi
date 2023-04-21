@@ -443,23 +443,23 @@ const Jobs = () => {
   // console.log(job, 'job')
   useEffect(() => {
 
-    jobPostings.map((job) => {
+    
       const jobsRef = ref(db, "jobs");
-      push(jobsRef, job)
-    });
+      set(jobsRef, jobPostings)
+    
   }, [jobPostings])
 
-  const filteredJobPostings = jobPostings.filter(
-    (posting) => Object.keys(posting).length !== 0
-  );
+  // const filteredJobPostings = jobPostings.filter(
+  //   (posting) => Object.keys(posting).length !== 0
+  // );
 
-  if (filteredJobPostings.length === 0) {
-    return <div>Loading...</div>;
-  }
+  // if (filteredJobPostings.length === 0) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <>
-      <JobSearchForm filteredJobPostings={filteredJobPostings} />
+      <JobSearchForm />
       
     </>
   );
