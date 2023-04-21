@@ -12,6 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 library.add(faBookmark);
 
+export const jobId = uuidv4();
+
 const JobCard = (props) => {
   const { jobPosting, index } = props;
 
@@ -20,7 +22,6 @@ const JobCard = (props) => {
   const { currentUser, setCurrentUser } = useContext(AuthContext);
 
   // generate a random id to attach to each posting
-  const jobId = uuidv4();
 
   const [jobs, setJobs] = useState([]);
 

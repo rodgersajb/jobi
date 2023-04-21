@@ -1,7 +1,8 @@
-import upload from "../../../public/assets/assets/upload.png";
+import arrow from "../../../public/assets/assets/upload.png";
 import { jobPostings } from "../Jobs";
 import { useState } from "react";
-// import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom"; 
+// import { jobId } from "../JobListing/JobCard";
 
 const Header = () => {
   // create states for the two input fields and dropdown menu
@@ -46,12 +47,17 @@ const Header = () => {
         <form action="" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="jobs">Job Categories</label>
-            <input
-              type="text"
-              placeholder="UX Desginer"
-              onChange={(event) => setTitle(event.target.value)}
+            <select
+              name="categories"
               value={title}
-            />
+              id=""
+              onChange={(event) => setTitle(event.target.value)}
+            >
+              {jobPostings.map((job, index) => {
+                console.log(job, "JOB POSTING");
+                return <option>{job.job}</option>;
+              })}
+            </select>
           </div>
           <div>
             <label htmlFor="location">Location</label>
@@ -77,34 +83,34 @@ const Header = () => {
           </div>
           <button>Search</button>
         </form>
-        
-          {Object.values(results).map((result, index) => {
-            return (
-              <div className="results" key={index}>
-                <div className="flex-container">
-                  <div className="logo">{result.logo}</div>
-                  <h5 className="job">{result.job}</h5>
-                </div>
-                <div className="flex-column">
-                  <div className={result.work}>{result.work}</div>
-                  <div className="salary">{result.salary}</div>
-                </div>
-                <div className="flex-column">
-                  <div className="location">{result.location}</div>
-                  <div className="field">{result.field}</div>
-                </div>
-                <div className="buttons">
-                  {/* <button onClick={handleClick}>Add</button> */}
-                  {/* <Link to={`/job/${jobId}`} state={jobPosting}>
+
+        {Object.values(results).map((result, index) => {
+          return (
+            <div className="results" key={index}>
+              <div className="flex-container">
+                <div className="logo">{result.logo}</div>
+                <h5 className="job">{result.job}</h5>
+              </div>
+              <div className="flex-column">
+                <div className={result.work}>{result.work}</div>
+                <div className="salary">{result.salary}</div>
+              </div>
+              <div className="flex-column">
+                <div className="location">{result.location}</div>
+                <div className="field">{result.field}</div>
+              </div>
+              <div className="buttons">
+                {/* <button onClick={handleClick}>Add</button> */}
+                {/* <Link to={`/job/${jobId}`} state={jobPostings}>
                     View Job
                   </Link> */}
-                </div>
               </div>
-            );
-          })}
-        
+            </div>
+          );
+        })}
+
         <h5>
-          Upload your cv <img src={upload} alt="upload file" />
+          Upload your cv <img src={arrow} alt="upload file" />
         </h5>
       </header>
     </>
