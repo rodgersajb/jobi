@@ -9,7 +9,6 @@
     margin-top: 2rem;
     width: 95%;
 
-  
     li {
       color: #fff;
       a {
@@ -55,6 +54,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 4rem 0;
     .form-container {
       background: #fff;
       margin: 10rem 0;
@@ -141,7 +141,6 @@
           font-family: $heading2;
           font-size: 2rem;
           padding: 2rem 0 0 0;
-          
         }
         .flex-container {
           .sign-in-buttons {
@@ -150,13 +149,8 @@
             gap: 2rem;
             button {
               background: #fff;
-              border: 2px solid $lightgrey;
-              
-              &:hover,
-              &:focus {
-                border: 2px solid $registerGreen;
-                transition: ease 0.3s;
-              }
+              border: none;
+              cursor: pointer;
             }
           }
         }
@@ -202,7 +196,6 @@
       margin-bottom: 0;
       a {
         color: $green;
-        
       }
     }
     form {
@@ -240,11 +233,16 @@
             background: #fff;
             border: 2px solid $lightgrey;
             border-radius: 1rem;
+            cursor: pointer;
+            transition: ease-in-out 0.3s;
+            &:hover,
+            &:focus {
+              border: 2px solid $registerGreen;
+            }
           }
-          
         }
         a {
-          color:$registerGreen;
+          color: $registerGreen;
           border-bottom: 1px solid $registerGreen;
         }
         .close-modal {
@@ -259,7 +257,6 @@
           height: 3rem;
           width: 3rem;
           font-size: 1.6rem;
-
         }
       }
     }

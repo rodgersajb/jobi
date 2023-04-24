@@ -6,6 +6,9 @@ import { ModalContext } from "../Contexts/ModalContext";
 import { AuthContext } from "../Contexts/AuthContext";
 import LoginModal from "./LoginModal";
 
+import googleLogo from "../assets/google-sign-up.jpg";
+import facebookLogo from "../assets/fb-sign-up.jpg";
+
 import { useState, useContext } from "react";
 
 const RegisterForm = () => {
@@ -88,13 +91,13 @@ const RegisterForm = () => {
               <div className="sign-in-buttons">
                 <button onClick={googleSignUp}>
                   <img
-                    src="src/assets/g-login.jpg"
+                    src={googleLogo}
                     alt="google log in button"
                   />
                 </button>
                 <button onClick={facebookSignUp}>
                   <img
-                    src="src/assets/fb-log.jpg"
+                    src={facebookLogo}
                     alt="facebook log in button"
                   />
                 </button>
