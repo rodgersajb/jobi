@@ -24,7 +24,7 @@ const Header = () => {
       );
     });
     setResults(filteredJobs);
-    console.log(results, "filtered Jobs");
+    
   };
 
   // map through job postings and return the locations
