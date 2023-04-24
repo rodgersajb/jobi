@@ -74,7 +74,7 @@ const uniqueLocations = locations.filter((location, index) => locations.indexOf(
             <label htmlFor="category">Category</label>
             <div className="input-category-flex">
               <select name="category" id="category" onChange={handleSelect}>
-                
+                {console.log(userSelect)}
                 <option value="Web Design">Web Design</option>
                 {filteredJobPostings &&
                   filteredJobPostings.map((jobPosting, index) => {

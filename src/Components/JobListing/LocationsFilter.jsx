@@ -17,7 +17,7 @@ const LocationsFilter = ({ uniqueLocations }) => {
 
 
   const [formOpen, setFormOpen] = useState(false);
-  const [clicked, setClicked] = useState(null)
+  const [clicked, setClicked] = useState([])
 
   const handleFormToggle = () => {
     setFormOpen(!formOpen);
@@ -32,7 +32,8 @@ const LocationsFilter = ({ uniqueLocations }) => {
     // isChecked method with value passed that checked if the value is exactly equal to checked
     // handleChange function that captures when a radio button is checked
     const handleChange = (event) => {
-        console.log(event.target.value)
+        setClicked(event.target.value)
+        console.log(clicked)
     }
   return (
     <>
