@@ -57,7 +57,7 @@ const Header = () => {
         <p>Jobs & Job search. Find jobs in global. Executive jobs & work.</p>
         <form action="" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="jobs">Job Categories</label>
+            <label htmlFor="jobs" id="jobs">Job Categories</label>
             <select
               name="categories"
               value={title}
@@ -70,7 +70,7 @@ const Header = () => {
             </select>
           </div>
           <div>
-            <label htmlFor="location">Location</label>
+            <label htmlFor="location" id="location">Location</label>
             <select
               name="location"
               id="location"
@@ -119,7 +119,7 @@ const Header = () => {
           );
         })}
       </header>
-      <div className="image-container">
+      <div className="background-container">
         <img src={background} alt="" />
       </div>
     </>

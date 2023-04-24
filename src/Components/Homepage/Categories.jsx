@@ -20,16 +20,18 @@ library.add(
   faChevronRight
 );
 
+import { Link } from "react-router-dom";
+
 const Categories = () => {
   return (
     <>
       
         <div className="categories">
           <h3>Most Demanding Categories.</h3>
-          <p>
+          <Link to={"/jobs"}>
             Explore all fields
             <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
-          </p>
+          </Link>
         </div>
         <div className="grid-container">
           <div>
