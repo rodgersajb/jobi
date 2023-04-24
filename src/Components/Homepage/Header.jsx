@@ -39,6 +39,18 @@ const Header = () => {
     (location, index) => locations.indexOf(location) == index
   );
 
+  //map through job posting and return the job categories
+
+  const categories = jobPostings.map((category, index) => {
+    return category.job;
+
+  })
+
+  const uniqueCategories = categories.filter((category, index) => {
+    return categories.indexOf(category) == index;
+  })
+  
+
   return (
     <>
       <header>
@@ -53,9 +65,10 @@ const Header = () => {
               id=""
               onChange={(event) => setTitle(event.target.value)}
             >
-              {jobPostings.map((job, index) => {
-                console.log(job, "JOB POSTING");
-                return <option>{job.job}</option>;
+              {uniqueCategories.map((category, index) => {
+                return (
+                  <option>{category}</option>
+                )
               })}
             </select>
           </div>
