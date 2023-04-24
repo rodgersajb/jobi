@@ -4,7 +4,7 @@ import Home from "./Homepage/Home";
 import { db } from "./firebase";
 import { ref, onValue, push, set } from "firebase/database";
 
-const jobPostings = [
+ export const jobPostings = [
   {
     logo: "Google",
     work: "fulltime",
@@ -443,11 +443,11 @@ const Jobs = () => {
   // console.log(job, 'job')
   useEffect(() => {
 
-    jobPostings.map((job) => {
+    
       const jobsRef = ref(db, "jobs");
-      push(jobsRef, job)
-    });
-  }, [])
+      set(jobsRef, jobPostings)
+    
+  }, [jobPostings])
 
   // const filteredJobPostings = jobPostings.filter(
   //   (posting) => Object.keys(posting).length !== 0
@@ -459,7 +459,7 @@ const Jobs = () => {
 
   return (
     <>
-      {/* <JobSearchForm filteredJobPostings={filteredJobPostings} /> */}
+      <JobSearchForm />
       
     </>
   );
