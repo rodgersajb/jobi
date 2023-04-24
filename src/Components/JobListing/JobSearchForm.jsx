@@ -66,7 +66,7 @@ const JobSearchForm = () => {
           <option value=""></option>
           <select name="filter" id="filter"></select>
         </div>
-        {jobPostings &&
+        {jobPostings ?
           jobPostings.filter((item) => {
             
             return userInput.toLowerCase() === '' ? item : item.job.toLowerCase().includes(userInput);
@@ -74,7 +74,8 @@ const JobSearchForm = () => {
             return (
               <JobCard jobPosting={jobPosting} index={index} key={index} />
             );
-          })}
+          })
+        : <p>No jobs found</p>}
       </section>
     </>
   );

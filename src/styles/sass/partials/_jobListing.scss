@@ -155,14 +155,14 @@
       align-items: center;
       width: 14%;
       button, a {
-        background: $lime;
+        background: $green;
         font-family: $heading2;
-        border: 2px solid $registerGreen;
+        border: 2px solid $green;
         padding: 1rem;
-        border-radius: 2rem;
+        border-radius: 4rem;
         font-size: 1.4rem;
         font-weight: 600;
-        color: $registerGreen;
+        color: #fff;
         width: 100%;
         text-align: center;
       }
