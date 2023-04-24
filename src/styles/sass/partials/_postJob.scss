@@ -1,0 +1,62 @@
+.post-job {
+    background: $lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $heading2;
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+        
+        margin: 4rem auto;
+        background: #fff;
+        border-radius: 1rem;
+        h4 {
+            font-family: $heading2;
+            color: $green;
+            text-align: left;
+            font-size: 2.2rem;
+        }
+        label {
+            color: black;
+            font-weight: 600;
+            padding: 0 0 1rem 0;
+        }
+        input, select {
+            border: none;
+            border: 2px solid $lightgrey;
+            padding: 1rem;
+            border-radius: 0.4rem;
+        }
+        .job-title {
+            display: flex;
+            flex-direction: column;
+            padding: 0 0 2rem 0;
+        }
+        .flex-container {
+            justify-content: space-between;
+            padding: 2rem 0;
+            flex-wrap: wrap;
+            align-items: center;
+            .category,
+            .job-type,
+            .salary {
+                width: calc(50% - 3rem);
+                display: flex;
+                flex-direction: column;
+                
+                
+            }
+            .salary {
+                display: flex;
+                justify-content: center;
+                
+            }
+
+
+        }
+
+    }
+    
+}

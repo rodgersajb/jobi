@@ -47,94 +47,93 @@ const PostJobForm = () => {
               />
             </div>
             <div className="flex-container">
-                <div className="category">
-                    <label htmlFor="">Job Category</label>
-                    <select name="" id="">
-                        <option value="">Designer</option>
-                    </select>
-                </div>
-                <div className="job-type">
-                    <label htmlFor="">Job Type</label>
-                    <select name="" id="">
-                        <option value="">Full time</option>
-                    </select>
-                </div>
-            </div>
-            <div className="flex-container">
-                <div className="salary">
-                    <label htmlFor="">Salary*</label>
-                    <select name="" id="">
-                        <option value="">Monthly</option>
-                    </select>
-                </div>
-                <div className="min">
-                    <input type="text" placeholder="Min" />
-                    <span>$</span>
-                </div>
-                <div className="max">
-                    <input type="text" placeholder="Max" />
-                    <span>$</span>
-                </div>
+              <div className="category">
+                <label htmlFor="">Job Category</label>
+                <select name="" id="">
+                  <option value="">Designer</option>
+                </select>
+              </div>
+              <div className="job-type">
+                <label htmlFor="">Job Type</label>
+                <select name="" id="">
+                  <option value="">Full time</option>
+                </select>
+              </div>
+
+              <div className="salary">
+                <label htmlFor="">Salary*</label>
+                <select name="" id="">
+                  <option value="">Monthly</option>
+                </select>
+              </div>
+              <div className="min">
+                <input type="text" placeholder="Min" />
+                <span>$</span>
+              </div>
+              <div className="max">
+                <input type="text" placeholder="Max" />
+                <span>$</span>
+              </div>
             </div>
             <h4>Skills & Experience</h4>
             <div className="skills">
-                <label htmlFor="">Skills*</label>
-                <input type="text" placeholder="Add Skills" />
+              <label htmlFor="">Skills*</label>
+              <input type="text" placeholder="Add Skills" />
             </div>
             <div className="grid-container">
-                <div className="experience">
-                    <label htmlFor="">Experience*</label>
-                    <select name="" id="">
-                        <option value="">Experience</option>
-                    </select>
-                </div>
-                <div className="qualification">
-                    <label htmlFor="">Qualifications*</label>
-                    <select name="" id="">
-                        <option value="">Qualifications</option>
-                    </select>
-                </div>
-                <div className="industry">
-                    <label htmlFor="">Industry*</label>
-                    <select name="" id="">
-                        <option value="">Select industry</option>
-                    </select>
-                </div>
-                <div className="career-level">
-                    <label htmlFor="">Career Level</label>
-                    <select name="" id="">
-                        <option value="">Select Career</option>
-                    </select>
-                </div>
+              <div className="experience">
+                <label htmlFor="">Experience*</label>
+                <select name="" id="">
+                  <option value="">Experience</option>
+                </select>
+              </div>
+              <div className="qualification">
+                <label htmlFor="">Qualifications*</label>
+                <select name="" id="">
+                  <option value="">Qualifications</option>
+                </select>
+              </div>
+              <div className="industry">
+                <label htmlFor="">Industry*</label>
+                <select name="" id="">
+                  <option value="">Select industry</option>
+                </select>
+              </div>
+              <div className="career-level">
+                <label htmlFor="">Career Level</label>
+                <select name="" id="">
+                  <option value="">Select Career</option>
+                </select>
+              </div>
             </div>
             <h4>Address & Location</h4>
             <div className="address">
-                <label htmlFor="">Address*</label>
-                <input type="text" placeholder="Add Address"/>
+              <label htmlFor="">Address*</label>
+              <input type="text" placeholder="Add Address" />
             </div>
             <div className="grid-container">
-                <div className="country">
-                    <label htmlFor="">Country*</label>
-                    <select name="" id="">
-                        <option value="">Select Country</option>
-                    </select>
-                </div>
-                <div className="city">
-                    <label htmlFor="">City*</label>
-                    <input type="text" placeholder="Enter City" />
-                </div>
-                <div className="state">
-                    <label htmlFor="">State*</label>
-                    <input type="text" placeholder="Enter State" />
-                </div>
+              <div className="country">
+                <label htmlFor="">Country*</label>
+                <select name="" id="">
+                  <option value="">Select Country</option>
+                </select>
+              </div>
+              <div className="city">
+                <label htmlFor="">City*</label>
+                <input type="text" placeholder="Enter City" />
+              </div>
+              <div className="state">
+                <label htmlFor="">State*</label>
+                <input type="text" placeholder="Enter State" />
+              </div>
             </div>
             <div className="map-location">
-                <label htmlFor="">Map Location</label>
-                <input type="text" placeholder="XC23+6XC, Morian,N105" />
+              <label htmlFor="">Map Location</label>
+              <input type="text" placeholder="XC23+6XC, Morian,N105" />
             </div>
             <div className="button-container">
-                <button>Add</button>
-                <button>Cancel</button>
+              <button>Add</button>
+              <button>Cancel</button>
             </div>
           </form>
         </section>
