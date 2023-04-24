@@ -1,4 +1,5 @@
 import working from "../../assets/working.jpg"
+import { Link } from "react-router-dom";
 
 const JobFind = () => {
   return (
@@ -13,7 +14,7 @@ const JobFind = () => {
           </p>
           <div className="find-your-job"> 
             <p>
-              Find your job. <span className="underline">Explore all</span>
+              Find your job. <Link to={"/jobs"} className="underline">Explore all</Link>
             </p>
           </div>
         </div>

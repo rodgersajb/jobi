@@ -1,7 +1,8 @@
 import arrow from "../../../public/assets/assets/upload.png";
 import { jobPostings } from "../Jobs";
 import { useState } from "react";
-// import { Link } from "react-router-dom"; 
+import background from "../../assets/h-background.jpg";
+// import { Link } from "react-router-dom";
 // import { jobId } from "../JobListing/JobCard";
 
 const Header = () => {
@@ -43,13 +44,11 @@ const Header = () => {
 
   const categories = jobPostings.map((category, index) => {
     return category.job;
-
-  })
+  });
 
   const uniqueCategories = categories.filter((category, index) => {
     return categories.indexOf(category) == index;
-  })
-  
+  });
 
   return (
     <>
@@ -66,9 +65,7 @@ const Header = () => {
               onChange={(event) => setTitle(event.target.value)}
             >
               {uniqueCategories.map((category, index) => {
-                return (
-                  <option>{category}</option>
-                )
+                return <option>{category}</option>;
               })}
             </select>
           </div>
@@ -121,11 +118,10 @@ const Header = () => {
             </div>
           );
         })}
-
-        <h5>
-          Upload your cv <img src={arrow} alt="upload file" />
-        </h5>
       </header>
+      <div className="image-container">
+        <img src={background} alt="" />
+      </div>
     </>
   );
 };

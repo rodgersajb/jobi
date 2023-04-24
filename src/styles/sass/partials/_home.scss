@@ -66,7 +66,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 800px;
+  height: auto;
   background: $lightgrey;
   h1 {
     font-style: $heading1;
@@ -74,6 +74,7 @@ header {
     text-align: center;
     width: 50%;
     line-height: normal;
+    
   }
   p {
     font-size: 2rem;
@@ -81,13 +82,17 @@ header {
   }
   form {
     display: flex;
-    // align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
-    gap: 2rem;
+    gap: 4rem;
     background: #fff;
+    padding: 1rem ;
     div {
       display: flex;
       flex-direction: column;
+      // align-items: flex-start;
+      
+      
       label,
       input {
         font-size: 1.4rem;
@@ -99,6 +104,7 @@ header {
       #title {
         font-style: $heading2;
         font-size: 1.4rem;
+        
       }
 
       select {
@@ -122,10 +128,10 @@ header {
       color: #fff;
       font-family: $heading2;
       font-size: 1.2rem;
-      padding: 0.8rem 2rem;
+      padding: 2rem;
       border-radius: 0.4rem;
       text-transform: uppercase;
-      height: 100%;
+      
       transition: ease-in-out 0.3s;
       &:hover,
       &:focus {
@@ -136,6 +142,7 @@ header {
       }
     }
   }
+  
   .results {
     width: 100%;
     display: flex;
@@ -194,9 +201,15 @@ header {
     font-size: 2.4rem;
     border-bottom: 3px solid black;
     padding: 2rem 0;
+  
   }
 }
-
+.image-container {
+   
+   img {
+    width: 100%;
+   }
+  }
 .wrapper {
   .categories {
     margin: 4rem 0 0 0;
@@ -303,6 +316,7 @@ header {
 
       .underline {
         border-bottom: 1px solid #fff;
+        color: #fff;
       }
     }
   }
@@ -448,6 +462,7 @@ header {
           padding: 0.4rem;
           border-radius: 50%;
           transition: ease-in-out 0.3s;
+          cursor: pointer;
         }
       }
       .accordion-content {
