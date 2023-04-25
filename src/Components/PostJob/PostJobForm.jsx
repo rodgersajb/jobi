@@ -3,7 +3,17 @@ import Footer from "../Footer";
 
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import { useState } from "react";
+
+import {
+  MapContainer,
+  TileLayer,
+  useMap,
+  Marker,
+  Popup,
+  useMapEvent,
+} from "react-leaflet";
+
+import { useState, useRef } from "react";
 
 import LoginModal from "../LoginModal";
 
@@ -25,6 +35,8 @@ const PostJobForm = () => {
   function handleChange(value) {
     setText(value);
   }
+
+  const position = [43.90594789926023, -78.79483667280418];
 
   return (
     <>
@@ -111,7 +123,7 @@ const PostJobForm = () => {
               <label htmlFor="">Address*</label>
               <input type="text" placeholder="Add Address" />
             </div>
-            <div className="grid-container">
+            <div className="container">
               <div className="country">
                 <label htmlFor="">Country*</label>
                 <select name="" id="">
@@ -128,9 +140,20 @@ const PostJobForm = () => {
               </div>
             </div>
             <div className="map-location">
-              <label htmlFor="">Map Location</label>
+              <label htmlFor="">Map Location*</label>
               <input type="text" placeholder="XC23+6XC, Morian,N105" />
             </div>
+            <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={position}>
+                <Popup>
+                  A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+              </Marker>
+            </MapContainer>
             <div className="button-container">
               <button>Add</button>
               <button>Cancel</button>
