@@ -24,7 +24,7 @@ const JobDetails = () => {
       <h4>Job Details</h4>
       <div className="job-title">
         <label>Job Title*</label>
-        <input type="text" placeholder="Ex: Product Designer" required />
+        <input type="text" placeholder="Ex: Product Designer"  />
       </div>
       <div className="job-description">
         <label htmlFor="">Job Description*</label>

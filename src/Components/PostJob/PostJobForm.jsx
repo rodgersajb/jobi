@@ -15,7 +15,7 @@ const PostJobForm = () => {
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    setCity(event.target.value);
+    
   };
 
   console.log(city);
@@ -24,8 +24,13 @@ const PostJobForm = () => {
     <>
       <ModalProvider>
         <Navbar />
+        <div className="content-container">
+          <h2>Post Job</h2>
+          <h5>Create an account & Start posting or hiring talents</h5>
+          <img src="src/assets/box-reg.jpg" alt="" />
+        </div>
         <section className="post-job">
-          <form action="">
+          <form action="" onSubmit={handleOnSubmit}>
             <JobDetails />
             <SkillsExperience />
             <AddressLocation />

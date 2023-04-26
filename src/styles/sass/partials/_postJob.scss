@@ -33,6 +33,9 @@
             display: flex;
             flex-direction: column;
             padding: 0 0 2rem 0;
+            label {
+                padding: 0 0 2rem 0;
+            }
         }
         .flex-container {
             justify-content: space-between;
@@ -60,6 +63,18 @@
             width: 100%;
             display: flex;
             flex-direction: column;
+        }
+        .skill-array {
+            display: flex;
+            gap: 1rem;
+            padding: 2rem 0 0 0;
+            div {
+                background: #31795A;
+                color: $lightgrey;
+                padding: 1rem 2rem;
+                font-weight: 600;
+                border-radius: 2rem;
+            }
         }
         .grid-container {
             grid-template-columns: repeat(2, 1fr);
@@ -98,7 +113,7 @@
         }
         .map {
             height: 500px;
-            padding: 10rem 0;
+            padding: 4rem 0;
             width: 100%;
             .leaflet-container {
                 height: 100%;
