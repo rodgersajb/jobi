@@ -1,27 +1,45 @@
-import {
-  MapContainer,
-  TileLayer,
-  useMap,
-  Marker,
-  Popup,
-  useMapEvent,
-} from "react-leaflet";
+import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 
-const Map = () => {
-  const position = [43.90594789926023, -78.79483667280418];
+import { useEffect, useState } from "react";
+
+const Map = ({ city }) => {
+  const [position, setPosition] = useState(null);
+  const initialPosition = [51.505, -0.09];
+
+  useEffect(() => {
+    async function fetchPosition() {
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/search?q=${city}&format=json&limit=1`
+      );
+      const data = await response.json();
+
+      if (data[0] && data[0].lat && data[0].lon) {
+        setPosition([data[0].lat, data[0].lon]);
+      }
+      console.log(position);
+    }
+    fetchPosition();
+  }, [city]);
   return (
     <>
-      <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+      <MapContainer
+        center={position || initialPosition}
+        zoom={1}
+        scrollWheelZoom={false}
+      >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
+        {position && (
+          <Marker position={position}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        )}
       </MapContainer>
+      ,
     </>
   );
 };
