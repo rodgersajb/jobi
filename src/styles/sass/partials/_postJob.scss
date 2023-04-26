@@ -92,8 +92,13 @@
             }
         }
         .map-location {
-            display: flex;
-            flex-direction: column;
+            // display: flex;
+            // flex-direction: column;
+            .location-submit {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
         }
         .button-container {
             padding: 2rem 0 0 0;
