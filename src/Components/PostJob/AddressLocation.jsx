@@ -1,5 +1,29 @@
 
 const AddressLocation = () => {
+
+    const countries = [
+      "United States",
+      "Canada",
+      "Mexico",
+      "Brazil",
+      "Argentina",
+      "United Kingdom",
+      "Germany",
+      "France",
+      "Spain",
+      "Italy",
+      "Russia",
+      "China",
+      "Japan",
+      "India",
+      "Australia",
+      "New Zealand",
+      "South Africa",
+      "Egypt",
+      "Nigeria",
+      "Kenya",
+    ];
+
     return (
       <>
         <h4>Address & Location</h4>
@@ -11,7 +35,9 @@ const AddressLocation = () => {
           <div className="country">
             <label htmlFor="">Country*</label>
             <select name="" id="">
-              <option value="">Select Country</option>
+              {countries.map((country) => {
+                return <option>{country}</option>
+              })}
             </select>
           </div>
           <div className="city">
@@ -19,7 +45,7 @@ const AddressLocation = () => {
             <input type="text" placeholder="Enter City" />
           </div>
           <div className="state">
-            <label htmlFor="">State*</label>
+            <label htmlFor="">State/Province*</label>
             <input type="text" placeholder="Enter State" />
           </div>
         </div>
