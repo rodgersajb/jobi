@@ -48,6 +48,7 @@ const JobDetails = () => {
             <option value="">Full time</option>
           </select>
         </div>
+    
 
         <div className="salary">
           <label htmlFor="">Salary*</label>

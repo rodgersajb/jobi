@@ -14,13 +14,15 @@ const SkillsExperience = () => {
       <h4>Skills & Experience</h4>
       <div className="skills">
         <label htmlFor="">Skills*</label>
-        <input
-          type="text"
-          placeholder="Add Skills"
-          value={userInput}
-          onChange={(event) => setUserInput(event.target.value)}
-        />
-        <button type="submit" onClick={onAddSkill} />
+        <div className="add-skills">
+          <input
+            type="text"
+            placeholder="Add Skills"
+            value={userInput}
+            onChange={(event) => setUserInput(event.target.value)}
+          />
+          <button type="submit" onClick={onAddSkill} />
+        </div>
       </div>
       <div className="skill-array">
         {skills.map((skill, index) => {
