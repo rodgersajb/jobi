@@ -2,23 +2,20 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useState } from "react";
 
-const JobDetails = () => {
+const JobDetails = (props) => {
 
-     const toolbarOptions = [
-       ["bold", "italic", "underline"],
-       [{ header: [1, 2, false] }],
-       [{ font: [] }],
-       [{ size: ["small", false, "large", "huge"] }],
-       [{ color: [] }, { background: [] }],
-       [{ align: [] }],
-       ["clean"],
-     ];
-
-     const [text, setText] = useState("");
-
-     function handleChange(value) {
-       setText(value);
-     }
+    const {jobTitle, handleJobTitleChange, text, handleChange, min, handleMinChange, max, handleMaxChange, jobType, handleJobTypeChange, jobCategory, handleJobCategoryChange, salaryType, handleSalaryTypeChange} = props;
+    const toolbarOptions = [
+        ["bold", "italic", "underline"],
+        [{ header: [1, 2, false] }],
+        [{ font: [] }],
+        [{ size: ["small", false, "large", "huge"] }],
+        [{ color: [] }, { background: [] }],
+        [{ align: [] }],
+        ["clean"],
+    ];
+    
+  
 
      const jobCategories = [
        "Software Development",
@@ -55,7 +52,7 @@ const JobDetails = () => {
        "Weekly",
        "Bi-weekly",
        "Monthly",
-       "Per project",
+       "Yearly",
        "Hourly",
      ];
 
@@ -66,7 +63,7 @@ const JobDetails = () => {
       <h4>Job Details</h4>
       <div className="job-title">
         <label>Job Title*</label>
-        <input type="text" placeholder="Ex: Product Designer"  />
+        <input type="text" placeholder="Ex: Product Designer"  value={jobTitle} onChange={handleJobTitleChange}/>
       </div>
       <div className="job-description">
         <label htmlFor="">Job Description*</label>
@@ -76,13 +73,13 @@ const JobDetails = () => {
           modules={{ toolbar: toolbarOptions }}
           placeholder="Write about the job in detail..."
           style={{ height: "250px", padding: "2rem 0 4rem 0" }}
-          required
+          
         />
       </div>
       <div className="flex-container">
         <div className="category">
           <label htmlFor="">Job Category*</label>
-          <select name="" id="">
+          <select name="" id="" value={jobCategory} onChange={handleJobCategoryChange}>
             {jobCategories.map((job) => {
               return <option>{job}</option>;
             })}
@@ -90,7 +87,7 @@ const JobDetails = () => {
         </div>
         <div className="job-type">
           <label htmlFor="">Job Type*</label>
-          <select name="" id="">
+          <select name="" id="" value={jobType} onChange={handleJobTypeChange}>
             {jobTypes.map((type) => {
               return <option>{type}</option>;
             })}
@@ -99,18 +96,18 @@ const JobDetails = () => {
 
         <div className="salary">
           <label htmlFor="">Salary*</label>
-          <select name="" id="">
+          <select name="" id="" value={salaryType} onChange={handleSalaryTypeChange}>
             {payments.map((payment) => {
               return <option>{payment}</option>;
             })}
           </select>
         </div>
         <div className="min">
-          <input type="text" placeholder="Min" />
+          <input type="text" placeholder="Min" value={min} onChange={handleMinChange}/>
           <span>$</span>
         </div>
         <div className="max">
-          <input type="text" placeholder="Max" />
+          <input type="text" placeholder="Max" value={max} onChange={handleMaxChange}/>
           <span>$</span>
         </div>
       </div>

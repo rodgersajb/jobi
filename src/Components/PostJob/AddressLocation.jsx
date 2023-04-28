@@ -1,6 +1,8 @@
 
-const AddressLocation = () => {
-
+const AddressLocation = (props) => {
+    const {address, handleAddressChange, country, handleCountryChange, location, handleLocationChange, state, handleStateChange} = props;
+    console.log(props)
+    
     const countries = [
       "United States",
       "Canada",
@@ -29,12 +31,12 @@ const AddressLocation = () => {
         <h4>Address & Location</h4>
         <div className="address">
           <label htmlFor="">Address*</label>
-          <input type="text" placeholder="Add Address" />
+          <input type="text" placeholder="Add Address" value={address} onChange={handleAddressChange}/>
         </div>
         <div className="container">
           <div className="country">
             <label htmlFor="">Country*</label>
-            <select name="" id="">
+            <select name="" id="" value={country} onChange={handleCountryChange}>
               {countries.map((country) => {
                 return <option>{country}</option>
               })}
@@ -42,11 +44,11 @@ const AddressLocation = () => {
           </div>
           <div className="city">
             <label htmlFor="">City*</label>
-            <input type="text" placeholder="Enter City" />
+            <input type="text" placeholder="Enter City" value={location} onChange={handleLocationChange}/>
           </div>
           <div className="state">
             <label htmlFor="">State/Province*</label>
-            <input type="text" placeholder="Enter State" />
+            <input type="text" placeholder="Enter State" value={state} onChange={handleStateChange}/>
           </div>
         </div>
       </>
