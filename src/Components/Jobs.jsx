@@ -4,7 +4,7 @@ import Home from "./Homepage/Home";
 import { db } from "./firebase";
 import { ref, onValue, push, set } from "firebase/database";
 
- export const jobPostings = [
+export const jobPostings = [
   {
     logo: "Google",
     work: "fulltime",
@@ -432,22 +432,22 @@ import { ref, onValue, push, set } from "firebase/database";
 ];
 
 const Jobs = () => {
-  // useEffect(() => {
+  const [jobList, setJobList] = useState([]);
 
-  //   jobPostings.map((job) => {
-  //     const newJobRef = push(jobsRef);
-  //     return set(newJobRef, job);
-  //   });
-  // },[])
-
-  // console.log(job, 'job')
   useEffect(() => {
-
-    
-      const jobsRef = ref(db, "jobs");
-      set(jobsRef, jobPostings)
-    
-  }, [jobPostings])
+    setJobList(jobPostings);
+    console.log(jobList, "JOB LIST");
+  }, []);
+  useEffect(() => {
+    const jobsRef = ref(db, "jobs");
+    onValue(jobsRef, (snapshot) => {
+      const data = snapshot.val();
+      const jobPostings = data
+        ? Object.keys(data).map((key) => ({ id: key, ...data[key] }))
+        : [];
+      setJobList(jobPostings);
+    });
+  }, []);
 
   // const filteredJobPostings = jobPostings.filter(
   //   (posting) => Object.keys(posting).length !== 0
@@ -459,8 +459,7 @@ const Jobs = () => {
 
   return (
     <>
-      <JobSearchForm />
-      
+      <JobSearchForm jobList={jobList}/>
     </>
   );
 };

@@ -31,8 +31,6 @@ const Navbar = () => {
 
   return (
     <>
-    
-
       <nav className={"pages"}>
         <div className="flex-container pages">
           <img src={jobiLogoDark} alt="jobi logo" />
@@ -42,9 +40,9 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
 
-            <li> 
-            <Link to ='/jobs'>Jobs</Link> </li>
-          
+            <li>
+              <Link to="/jobs">Jobs</Link>{" "}
+            </li>
 
             <li>Explore</li>
             <li>Contact</li>
@@ -52,7 +50,9 @@ const Navbar = () => {
           </ul>
           <img src={registerSquiggle} alt="a swirly design" />
           <div className="buttons pages">
-            <button>Post Job</button>
+            <button>
+              <Link to="/postjob">Post Job</Link>
+            </button>
             {currentUser ? (
               <>
                 <div className="dropdown">
@@ -77,7 +77,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    
     </>
   );
 };

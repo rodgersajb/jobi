@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import JobCard from "./JobCard";
-import { jobPostings } from "../Jobs";
 
 
-const JobSearchForm = () => {
+
+const JobSearchForm = ({jobList}) => {
   
   const [userInput, setUserInput] = useState('');
   const [userSelect, setUserSelect] = useState('');
@@ -50,8 +50,8 @@ const JobSearchForm = () => {
               <select name="category" id="category" onChange={handleSelect}>
                 {console.log(userSelect, 'USER SELECT')}
                 <option value="Web Design">Web Design</option>
-                {jobPostings &&
-                  jobPostings.map((jobPosting, index) => {
+                {jobList &&
+                  jobList.map((jobPosting, index) => {
                     return <option key={index}>{jobPosting.job}</option>;
                   })}
               </select>
@@ -66,8 +66,8 @@ const JobSearchForm = () => {
           <option value=""></option>
           <select name="filter" id="filter"></select>
         </div>
-        {jobPostings ?
-          jobPostings.filter((item) => {
+        {jobList ?
+          jobList.filter((item) => {
             
             return userInput.toLowerCase() === '' ? item : item.job.toLowerCase().includes(userInput);
           }).map((jobPosting, index) => {

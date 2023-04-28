@@ -17,7 +17,7 @@ export const jobId = uuidv4();
 const JobCard = (props) => {
   const { jobPosting, index } = props;
 
-  // console.log(props )
+
 
   const { currentUser, setCurrentUser } = useContext(AuthContext);
 

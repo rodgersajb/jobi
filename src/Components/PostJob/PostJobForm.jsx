@@ -6,12 +6,14 @@ import Map from "./Map";
 import { ModalProvider } from "../../Contexts/ModalContext";
 import SkillsExperience from "./SkillsExperience";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { db } from "../firebase";
-import { ref, onValue, push, set } from "firebase/database";
+import { ref, onValue, push, set} from "firebase/database";
+import { jobPostings } from "../Jobs";
 
 import LoginModal from "../LoginModal";
+
 
 const PostJobForm = () => {
   const [city, setCity] = useState("");
@@ -31,6 +33,7 @@ const PostJobForm = () => {
   const [jobType, setJobType] = useState('');
   const [salaryType, setSalaryType] = useState('');
   const [skills, setSkills] = useState([]);
+  const [jobPostings, setJobPostings] = useState([])
 
 
 
@@ -103,6 +106,20 @@ const PostJobForm = () => {
     event.preventDefault();
    
   };
+
+  useEffect(() => {
+    const jobsRef = ref(db, "jobs");
+    onValue(jobsRef, (snapshot) => {
+        const data = snapshot.val();
+        
+        const jobPosting = data ? Object.keys(data).map((key) => {
+            return { id: key, ...data[key]};
+        })
+        : [];
+        setJobPostings(jobPosting)
+       
+    })
+  }, [])
 
   const handleFormSubmit = () => {
      const jobsRef = ref(db, "jobs");

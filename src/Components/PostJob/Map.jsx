@@ -16,7 +16,7 @@ const Map = ({ city }) => {
       if (data[0] && data[0].lat && data[0].lon) {
         setPosition([data[0].lat, data[0].lon]);
       }
-      console.log(position);
+      
     }
     fetchPosition();
   }, [city]);
