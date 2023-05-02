@@ -1,0 +1,46 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  .post-job {
+    form {
+      width: 100%;
+      .flex-container {
+        margin: 8rem 0 0 0;
+        padding: 1rem 0;
+        gap: 1rem;
+        .category,
+        .job-type,
+        .salary {
+          width: 100%;
+        }
+        .min,
+        .max {
+          width: calc(100% / 2 - 1rem);
+        }
+      }
+      .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+      }
+      .container {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .button-container {
+        width: 100%;
+      }
+    }
+  }
+  .q1-toolbar.q1-snow {
+    padding: 2px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+@media (min-width: 1281px) {
+}

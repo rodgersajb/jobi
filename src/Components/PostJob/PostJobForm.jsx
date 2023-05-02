@@ -5,6 +5,7 @@ import JobDetails from "./JobDetails";
 import Map from "./Map";
 import { ModalProvider } from "../../Contexts/ModalContext";
 import SkillsExperience from "./SkillsExperience";
+import Hamburger from "../Hamburger";
 
 import { useState, useEffect, useRef } from "react";
 
@@ -102,8 +103,7 @@ const PostJobForm = () => {
   };
 
   const [text, setText] = useState("");
-  console.log(text);
-
+  
   function handleChange(value) {
     setText(value);
   }
@@ -154,6 +154,7 @@ const PostJobForm = () => {
     <>
       <ModalProvider>
         <Navbar />
+        <Hamburger />
         <div className="content-container">
           <h2>Post Job</h2>
           <h5>Create an account & Start posting or hiring talents</h5>
