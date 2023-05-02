@@ -103,8 +103,6 @@ select:focus {
     ul {
       display: flex;
 
-  
-
       li {
         color: #fff;
         position: relative;
@@ -214,3 +212,22 @@ select:focus {
     bottom: 0;
   }
 }
+
+.error {
+  color: red;
+  font-family: $heading2;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  margin: 0 0 0 1rem;
+  display: none;
+}
+
+// input:invalid[focused="true"] ~ span {
+//   display: block;
+// }
+
+// input:invalid[focused="true"] {
+//   border: 1px solid red;
+// }
+
+

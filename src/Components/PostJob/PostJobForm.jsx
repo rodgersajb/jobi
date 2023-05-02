@@ -9,11 +9,10 @@ import SkillsExperience from "./SkillsExperience";
 import { useState, useEffect, useRef } from "react";
 
 import { db } from "../firebase";
-import { ref, onValue, push, set} from "firebase/database";
+import { ref, onValue, push, set } from "firebase/database";
 import { jobPostings } from "../Jobs";
 
 import LoginModal from "../LoginModal";
-
 
 const PostJobForm = () => {
   const [city, setCity] = useState("");
@@ -27,22 +26,20 @@ const PostJobForm = () => {
   const [location, setLocation] = useState("");
   const [state, setState] = useState("");
   const [jobTitle, setJobTitle] = useState("");
-  const [min, setMin] = useState('');
-  const [max, setMax] = useState('');
-  const [jobCategory, setJobCategory] = useState('');
-  const [jobType, setJobType] = useState('');
-  const [salaryType, setSalaryType] = useState('');
+  const [min, setMin] = useState("");
+  const [max, setMax] = useState("");
+  const [jobCategory, setJobCategory] = useState("");
+  const [jobType, setJobType] = useState("");
+  const [salaryType, setSalaryType] = useState("");
   const [skills, setSkills] = useState([]);
-  const [jobPostings, setJobPostings] = useState([])
-  const [companyName, setCompanyName] = useState('')
+  const [jobPostings, setJobPostings] = useState([]);
+  const [companyName, setCompanyName] = useState("");
 
-  const [focused, setFocused] = useState(false)
+  const [focused, setFocused] = useState(false);
 
   const handleFocus = (e) => {
-    setFocused(true)
-  }
-
-
+    setFocused(true);
+  };
 
   const handleExperienceChange = (event) => {
     setExperienceOption(event.target.value);
@@ -81,28 +78,28 @@ const PostJobForm = () => {
   };
 
   const handleMinChange = (event) => {
-    setMin(event.target.value)
-  }
+    setMin(event.target.value);
+  };
 
-   const handleMaxChange = (event) => {
-     setMax(event.target.value);
-   };
+  const handleMaxChange = (event) => {
+    setMax(event.target.value);
+  };
 
-   const handleJobCategoryChange = (event) => {
-    setJobCategory(event.target.value)
-   }
+  const handleJobCategoryChange = (event) => {
+    setJobCategory(event.target.value);
+  };
 
-   const handleJobTypeChange = (event) => {
-    setJobType(event.target.value)
-   }
+  const handleJobTypeChange = (event) => {
+    setJobType(event.target.value);
+  };
 
-   const handleSalaryTypeChange = (event) => {
-    setSalaryType(event.target.value)
-   }
+  const handleSalaryTypeChange = (event) => {
+    setSalaryType(event.target.value);
+  };
 
-   const handleCompanyNameChange = (event) => {
-    setCompanyName(event.target.value)
-   }
+  const handleCompanyNameChange = (event) => {
+    setCompanyName(event.target.value);
+  };
 
   const [text, setText] = useState("");
   console.log(text);
@@ -111,48 +108,47 @@ const PostJobForm = () => {
     setText(value);
   }
 
-//   const date = date.Now();
+  //   const date = date.Now();
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-   
   };
 
   useEffect(() => {
     const jobsRef = ref(db, "jobs");
     onValue(jobsRef, (snapshot) => {
-        const data = snapshot.val();
-        
-        const jobPosting = data ? Object.keys(data).map((key) => {
-            return { id: key, ...data[key]};
-        })
-        : [];
-        setJobPostings(jobPosting)
-       
-    })
-  }, [])
+      const data = snapshot.val();
 
-  const datePosted = () => {
-    date.now()
-  }
+      const jobPosting = data
+        ? Object.keys(data).map((key) => {
+            return { id: key, ...data[key] };
+          })
+        : [];
+      setJobPostings(jobPosting);
+    });
+  }, []);
+
+
 
   const handleFormSubmit = () => {
-     const jobsRef = ref(db, "jobs");
-     push(jobsRef, {
-       work: careerOption,
-       job: jobTitle,
-       location: {
-        location, state
-       },
-       date: datePosted,
-       salary: `${min} - ${max} ${salaryType}`,
-       field: industryOption,
-       jobDescription: text,
-       requiredSkills: skills,
-       benefits:
-         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vitae error veniam optio cum consequatur consectetur, ab laboriosam quidem consequuntur quo quod atque itaque. Vitae sed aut voluptatem fugit quibusdam!",
-     });
-  }
+    const jobsRef = ref(db, "jobs");
+    push(jobsRef, {
+      logo: companyName,
+      work: careerOption,
+      job: jobTitle,
+      location: [
+        location,
+        state,
+      ],
+    
+      salary: `$${min} - ${max} $${salaryType}`,
+      field: industryOption,
+      jobDescription: text,
+      requiredSkills: skills,
+      benefits:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vitae error veniam optio cum consequatur consectetur, ab laboriosam quidem consequuntur quo quod atque itaque. Vitae sed aut voluptatem fugit quibusdam!",
+    });
+  };
 
   return (
     <>
@@ -173,7 +169,7 @@ const PostJobForm = () => {
               jobCategory={jobCategory}
               handleJobCategoryChange={handleJobCategoryChange}
               jobType={jobType}
-              handleJobTypeChangE={handleJobTypeChange}
+              handleJobTypeChange={handleJobTypeChange}
               min={min}
               handleMinChange={handleMinChange}
               max={max}
@@ -184,7 +180,6 @@ const PostJobForm = () => {
               handleCompanyNameChange={handleCompanyNameChange}
               handleFocus={handleFocus}
               focused={focused}
-
             />
             <SkillsExperience
               careerOption={careerOption}

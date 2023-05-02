@@ -34,14 +34,21 @@
       font-size: 1.2rem;
       cursor: pointer;
     }
-    .job-title {
+
+    .job-title,
+    .company {
       display: flex;
       flex-direction: column;
       padding: 0 0 2rem 0;
-      label:nth-of-type(2) {
-        padding: 2rem 0;
+      input:invalid[focused="true"] ~ span {
+        display: block;
       }
-       label {
+
+      input:invalid[focused="true"] {
+        border: 1px solid red;
+      }
+
+      label {
         padding: 0 0 2rem 0;
       }
     }
@@ -70,23 +77,21 @@
         border-radius: 1rem;
         gap: 1rem;
         input {
-            border: none;
-            width: 50%;
+          border: none;
+          width: 50%;
         }
         span {
-            color: black;
-           font-weight: 600;
-           text-align: right;
-           padding: 0 2rem 0 0;
+          color: black;
+          font-weight: 600;
+          text-align: right;
+          padding: 0 2rem 0 0;
         }
-        
-
       }
     }
     .skills {
       width: 100%;
-      
-      .add-skills{
+
+      .add-skills {
         width: 100%;
         border: 2px solid $lightgrey;
         margin: 1rem 0 0 0;
@@ -95,17 +100,17 @@
         justify-content: space-between;
         cursor: pointer;
         input {
-            border: none;
+          border: none;
         }
-          button {
-            background: none;
-            border: none;
-            color: $green;
-            font-size: 1.6rem;
-            transition: ease-in-out 0.3s;
-            cursor: pointer;
-            display: none;
-          }
+        button {
+          background: none;
+          border: none;
+          color: $green;
+          font-size: 1.6rem;
+          transition: ease-in-out 0.3s;
+          cursor: pointer;
+          display: none;
+        }
       }
     }
     .skill-array {

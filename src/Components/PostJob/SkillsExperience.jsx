@@ -84,7 +84,6 @@ const SkillsExperience = (props) => {
             placeholder="Add Skills"
             value={userInput}
             onChange={(event) => setUserInput(event.target.value)}
-            
           />
           <button
             type="submit"
@@ -109,7 +108,14 @@ const SkillsExperience = (props) => {
       <div className="grid-container">
         <div className="experience">
           <label htmlFor="">Experience*</label>
-          <select name="" id="" value={experienceOption} onChange={handleExperienceChange}>
+          <select
+            name=""
+            id=""
+            value={experienceOption}
+            onChange={handleExperienceChange}
+            required
+          >
+            <option value="">Please Select</option>
             {experiences.map((experience) => {
               return <option>{experience}</option>;
             })}
@@ -117,7 +123,14 @@ const SkillsExperience = (props) => {
         </div>
         <div className="qualification">
           <label htmlFor="">Qualifications*</label>
-          <select name="" id="" value={qualificationOption} onChange={handleQualificationChange}>
+          <select
+            name=""
+            id=""
+            value={qualificationOption}
+            onChange={handleQualificationChange}
+            required
+          >
+            <option value="">Please Select</option>
             {qualifications.map((qualification) => {
               return <option>{qualification}</option>;
             })}
@@ -125,7 +138,14 @@ const SkillsExperience = (props) => {
         </div>
         <div className="industry">
           <label htmlFor="">Industry*</label>
-          <select name="" id="" value={industryOption} onChange={handleIndustryChange}>
+          <select
+            name=""
+            id=""
+            value={industryOption}
+            onChange={handleIndustryChange}
+            required
+          >
+            <option value="">Please Select</option>
             {industries.map((industry) => {
               return <option>{industry}</option>;
             })}
@@ -133,9 +153,16 @@ const SkillsExperience = (props) => {
         </div>
         <div className="career-level">
           <label htmlFor="">Career Level</label>
-          <select name="" id="" value={careerOption} onChange={handleCareerChange}>
+          <select
+            name=""
+            id=""
+            value={careerOption}
+            onChange={handleCareerChange}
+            required
+          >
+            <option value="">Please Select</option>
             {careerLevels.map((career) => {
-              return <option >{career}</option>;
+              return <option>{career}</option>;
             })}
           </select>
         </div>
