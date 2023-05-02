@@ -159,6 +159,9 @@ select:focus {
     button {
       font-size: 1.4rem;
       font-weight: 600;
+      a {
+        color: #fff;
+      }
     }
 
     button:nth-child(1) {

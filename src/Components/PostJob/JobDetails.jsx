@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const JobDetails = (props) => {
 
-    const {jobTitle, handleJobTitleChange, text, handleChange, min, handleMinChange, max, handleMaxChange, jobType, handleJobTypeChange, jobCategory, handleJobCategoryChange, salaryType, handleSalaryTypeChange} = props;
+    const {jobTitle, handleJobTitleChange, text, handleChange, min, handleMinChange, max, handleMaxChange, jobType, handleJobTypeChange, jobCategory, handleJobCategoryChange, salaryType, handleSalaryTypeChange, companyName, handleCompanyChange, handleFocus, focused} = props;
     const toolbarOptions = [
         ["bold", "italic", "underline"],
         [{ header: [1, 2, false] }],
@@ -63,8 +63,16 @@ const JobDetails = (props) => {
       <h4>Job Details</h4>
       <div className="job-title">
         <label>Job Title*</label>
-        <input type="text" placeholder="Ex: Product Designer"  value={jobTitle} onChange={handleJobTitleChange}/>
-      </div>
+        <input type="text" placeholder="Ex: Product Designer"  value={jobTitle} onChange={handleJobTitleChange} onBlur={handleFocus} focused={focused.toString()}
+        />
+        <span className="error">Please fill out this field</span>
+      
+      
+        <label htmlFor="">Company Name*</label>
+        <input type="text" placeholder="Ex. Google" value={companyName} onChange={handleCompanyChange} onBlur={handleFocus} focused={focused.toString()}
+
+        />
+        </div>
       <div className="job-description">
         <label htmlFor="">Job Description*</label>
         <ReactQuill
@@ -103,7 +111,7 @@ const JobDetails = (props) => {
           </select>
         </div>
         <div className="min">
-          <input type="text" placeholder="Min" value={min} onChange={handleMinChange}/>
+          <input type="text" placeholder="Min" value={min} onChange={handleMinChange} onBlur={handleFocus} focused={focused.toString()}/>
           <span>$</span>
         </div>
         <div className="max">

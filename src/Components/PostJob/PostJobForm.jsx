@@ -6,7 +6,7 @@ import Map from "./Map";
 import { ModalProvider } from "../../Contexts/ModalContext";
 import SkillsExperience from "./SkillsExperience";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { db } from "../firebase";
 import { ref, onValue, push, set} from "firebase/database";
@@ -34,6 +34,13 @@ const PostJobForm = () => {
   const [salaryType, setSalaryType] = useState('');
   const [skills, setSkills] = useState([]);
   const [jobPostings, setJobPostings] = useState([])
+  const [companyName, setCompanyName] = useState('')
+
+  const [focused, setFocused] = useState(false)
+
+  const handleFocus = (e) => {
+    setFocused(true)
+  }
 
 
 
@@ -93,6 +100,10 @@ const PostJobForm = () => {
     setSalaryType(event.target.value)
    }
 
+   const handleCompanyNameChange = (event) => {
+    setCompanyName(event.target.value)
+   }
+
   const [text, setText] = useState("");
   console.log(text);
 
@@ -121,15 +132,20 @@ const PostJobForm = () => {
     })
   }, [])
 
+  const datePosted = () => {
+    date.now()
+  }
+
   const handleFormSubmit = () => {
      const jobsRef = ref(db, "jobs");
      push(jobsRef, {
        work: careerOption,
        job: jobTitle,
-       location: location,
-       state,
-       // date: date,
-       salary: `${min} - ${max} per ${salaryType}`,
+       location: {
+        location, state
+       },
+       date: datePosted,
+       salary: `${min} - ${max} ${salaryType}`,
        field: industryOption,
        jobDescription: text,
        requiredSkills: skills,
@@ -164,6 +180,10 @@ const PostJobForm = () => {
               handleMaxChange={handleMaxChange}
               salaryType={salaryType}
               handleSalaryTypeChange={handleSalaryTypeChange}
+              companyName={companyName}
+              handleCompanyNameChange={handleCompanyNameChange}
+              handleFocus={handleFocus}
+              focused={focused}
 
             />
             <SkillsExperience
