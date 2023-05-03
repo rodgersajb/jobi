@@ -7,7 +7,7 @@ import { ModalProvider } from "../../Contexts/ModalContext";
 import SkillsExperience from "./SkillsExperience";
 import Hamburger from "../Hamburger";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 import { db } from "../firebase";
 import { ref, onValue, push, set } from "firebase/database";
