@@ -7,6 +7,8 @@ import { ModalProvider } from "../../Contexts/ModalContext";
 import SkillsExperience from "./SkillsExperience";
 import Hamburger from "../Hamburger";
 
+import box from "../../assets/box-reg.jpg";
+
 import { useState, useEffect } from "react";
 
 import { db } from "../firebase";
@@ -158,7 +160,7 @@ const PostJobForm = () => {
         <div className="content-container">
           <h2>Post Job</h2>
           <h5>Create an account & Start posting or hiring talents</h5>
-          <img src="src/assets/box-reg.jpg" alt="" />
+          <img src={box}alt="" />
         </div>
         <section className="post-job">
           <form action="" onSubmit={handleOnSubmit}>
