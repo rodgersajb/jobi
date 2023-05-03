@@ -7,6 +7,7 @@ import JobDetails from "./Components/JobDetails";
 import ErrorPage from "./Components/ErrorPage";
 import SavedJobs from "./Components/SavedJobs";
 import PostJobForm from "./Components/PostJob/PostJobForm";
+import Contact from "./Components/Contact/Contact";
 
 
 import { AuthProvider } from "./Contexts/AuthContext";
@@ -25,6 +26,7 @@ function App() {
             <Route path="/jobs" element={<JobListings />} />
             <Route path ="/job/:id" element={<JobDetails />} />
             <Route path ="/postjob" element={<PostJobForm />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path ="/saved" element={<SavedJobs />} />
             <Route path ="*" element={<ErrorPage /> } />
           </Routes>

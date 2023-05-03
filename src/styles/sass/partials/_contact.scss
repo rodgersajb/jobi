@@ -1,0 +1,87 @@
+.contact {
+  .container {
+    width: 60%;
+    margin: 0 auto;
+    h1 {
+      font-family: $heading1;
+      font-size: 7.2rem;
+      text-align: center;
+    }
+    .flex-container {
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 3rem;
+      .address,
+      .info,
+      .support {
+        text-align: center;
+        p {
+            font-size: 1.6rem;
+            color: grey;
+        }
+    }
+    .info {
+        span {
+            color: $green;
+            font-size: 1.6rem;
+            font-family: $heading2;
+        }
+    }
+    .support {
+        span {
+            font-family: $heading2;
+            font-size: 1.2rem;
+            text-decoration: underline;
+
+        }
+    }
+      .fa-location-dot,
+      .fa-envelope,
+      .fa-message {
+        color: $green;
+        background: $lightgrey;
+        border-radius: 50%;
+        padding: 2rem;
+        font-size: 2rem;
+        
+      }
+    }
+    form {
+        width: 100%;
+        font-family: $heading2;
+        .name,
+        .email {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            
+        }
+        input, textarea {
+            background: $lightgrey;
+            border: 1px solid $lightgrey;
+            border-radius: 0.4rem;
+            padding: 1rem;
+            margin: 1rem 0 1rem 0;
+            color: black;
+        }
+        .subject {
+            display: flex;
+            flex-direction: column;
+           
+
+        }
+        button {
+            width: 100%;
+            color: $lightgrey;
+            background: $green;
+            border: none;
+            border: 1px solid $green;
+            border-radius: 0.4rem;
+            padding: 1rem 0;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+
+        }
+    }
+  }
+}
