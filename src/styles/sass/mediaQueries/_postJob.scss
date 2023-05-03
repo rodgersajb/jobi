@@ -34,32 +34,36 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    .post-job form 
-     {
-        .container {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            .state {
-                grid-column: span 2;
-            }
-        }
-     }.flex-container {
-        padding: 6rem 0 0 0;
-        .category {
-            width: 100%;
-        }
-        .min,
-        .max {
-            width: calc(100% / 2 - 2rem);
-        }
+  .post-job form {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      .state {
+        grid-column: span 2;
+      }
     }
-    
+    .flex-container {
+      padding: 6rem 0 0 0;
+      .category {
+        width: 100%;
+      }
+      .min,
+      .max {
+        width: calc(100% / 2 - 2rem);
+      }
+    }
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+  .post-job {
+    form {
+      width: 75%;
+    }
+  }
 }
 
 @media (min-width: 1281px) {
