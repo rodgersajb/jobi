@@ -138,10 +138,10 @@ const PostJobForm = () => {
       logo: companyName,
       work: careerOption,
       job: jobTitle,
-      location: [
-        location,
-        state,
-      ],
+      location: 
+        `${location, 
+        state}`
+      ,
     
       salary: `$${min} - ${max} $${salaryType}`,
       field: industryOption,

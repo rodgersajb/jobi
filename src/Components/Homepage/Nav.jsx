@@ -22,9 +22,9 @@ const Nav = () => {
           <li>
             <Link to="/jobs">Jobs</Link>
           </li>
-          <li>Explore</li>
-          <li>Category</li>
-          <li>Pages</li>
+          <li><Link to="/*">Explore</Link></li>
+          <li><Link to="/*">Category</Link></li>
+          <li><Link to="/*">Pages</Link></li>
         </ul>
         <div className="login-buttons">
           <button
